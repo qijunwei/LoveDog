@@ -17,8 +17,4 @@
 #import "MJRefresh.h"
 #import <CommonCrypto/CommonCrypto.h>//MD5编码用到的头文件
 
-
-
-
-
 #endif /* BridgerHeader_h */
