@@ -1,0 +1,200 @@
+[
+  {
+    "address" : "旧宫东路清逸园甲区1号楼4单元101室(近建设银行)",
+    "avg_price" : 0,
+    "avg_rating" : 7.2,
+    "branch_name" : "关忠宠物医院(旧宫店)",
+    "city" : "北京",
+    "comment_total" : 5,
+    "coupon_total" : 3,
+    "coupons" : [
+      {
+        "id" : 127,
+        "name" : "全身体检套餐",
+        "type" : 0
+      },
+      {
+        "id" : 126,
+        "name" : "特色体检套餐",
+        "type" : 0
+      }
+    ],
+    "distance" : 1057839,
+    "doctor_total" : 2,
+    "hours" : "8：30--21：00",
+    "id" : 394,
+    "latitude" : 39.811630249023,
+    "link" : "/web.php/hospital?id=394",
+    "longitude" : 116.45729064941,
+    "name" : "关忠宠物医院(旧宫店)",
+    "photo_url" : "http://7vzopr.com1.z0.glb.clouddn.com/c5622c60-e167-f631-d80f-8cda99eb1e78.jpg?imageView2/1/w/181/h/138/q/85",
+    "region" : "大兴区",
+    "summary" : "",
+    "telephone" : "010-87919152"
+  },
+  {
+    "address" : "康庄路康和园163底商(近兴业路)",
+    "avg_price" : 0,
+    "avg_rating" : 8,
+    "branch_name" : "宠爱伴侣动物医院",
+    "city" : "北京",
+    "comment_total" : 6,
+    "coupon_total" : 3,
+    "coupons" : [
+      {
+        "id" : 137,
+        "name" : "洁牙套餐",
+        "type" : 0
+      },
+      {
+        "id" : 136,
+        "name" : "标准套餐",
+        "type" : 0
+      }
+    ],
+    "distance" : 1057904,
+    "doctor_total" : 2,
+    "hours" : "8:00-21:30",
+    "id" : 1285,
+    "latitude" : 39.763149261475,
+    "link" : "/web.php/hospital?id=1285",
+    "longitude" : 116.33364868164,
+    "name" : "宠爱伴侣动物医院",
+    "photo_url" : "http://img1.5ichong.com/c587e20ecd91a5270b63345ac22c6dfe.jpg?imageView2/1/w/181/h/138/q/85",
+    "region" : "大兴区",
+    "summary" : "",
+    "telephone" : "010-69209769"
+  },
+  {
+    "address" : "垡头翠城馨园322号楼1楼底商104室(近欢乐谷)",
+    "avg_price" : 435,
+    "avg_rating" : 7.7,
+    "branch_name" : "中山动物医院",
+    "city" : "北京",
+    "comment_total" : 37,
+    "coupon_total" : 2,
+    "coupons" : [
+      {
+        "id" : 91,
+        "name" : "流浪猫绝育150元（母）",
+        "type" : 0
+      },
+      {
+        "id" : 90,
+        "name" : "流浪猫绝育100元（公）",
+        "type" : 0
+      }
+    ],
+    "distance" : 1061096,
+    "doctor_total" : 3,
+    "hours" : "尚无营业时间",
+    "id" : 1388,
+    "latitude" : 39.865039825439,
+    "link" : "/web.php/hospital?id=1388",
+    "longitude" : 116.510597229,
+    "name" : "中山动物医院",
+    "photo_url" : "http://7vzopr.com1.z0.glb.clouddn.com/4015b8dd-77a7-8e3f-f6e0-c852fb9e3cb5.jpg?imageView2/1/w/181/h/138/q/85",
+    "region" : "朝阳区",
+    "summary" : "",
+    "telephone" : "010-67388621"
+  },
+  {
+    "address" : "南三环中路西罗园南里22号",
+    "avg_price" : 1060,
+    "avg_rating" : 6.7,
+    "branch_name" : "仁缘动物医院",
+    "city" : "北京",
+    "comment_total" : 60,
+    "coupon_total" : 3,
+    "coupons" : [
+      {
+        "id" : 124,
+        "name" : "C猫套餐 售价765元（原价1035元）",
+        "type" : 0
+      },
+      {
+        "id" : 123,
+        "name" : "B老年犬套餐 售价735元（原价920元",
+        "type" : 0
+      }
+    ],
+    "distance" : 1064878,
+    "doctor_total" : 1,
+    "hours" : "24小时",
+    "id" : 397,
+    "latitude" : 39.860000610352,
+    "link" : "/web.php/hospital?id=397",
+    "longitude" : 116.39974212646,
+    "name" : "仁缘动物医院",
+    "photo_url" : "http://7vzopr.com1.z0.glb.clouddn.com/fccc49ca-7625-ee1d-1129-601118c2cb50.jpg?imageView2/1/w/181/h/138/q/85",
+    "region" : "丰台区",
+    "summary" : "",
+    "telephone" : "010-67273149"
+  },
+  {
+    "address" : "东花市大街东花市南里东区本家润园1号楼底商A-16",
+    "avg_price" : 0,
+    "avg_rating" : 7.8,
+    "branch_name" : "北京本家动物医院",
+    "city" : "北京",
+    "comment_total" : 7,
+    "coupon_total" : 10,
+    "coupons" : [
+      {
+        "id" : 89,
+        "name" : "流浪犬绝育400元（母）",
+        "type" : 0
+      },
+      {
+        "id" : 88,
+        "name" : "流浪犬绝育200元（公）",
+        "type" : 0
+      }
+    ],
+    "distance" : 1067109,
+    "doctor_total" : 5,
+    "hours" : "尚无营业时间",
+    "id" : 1489,
+    "latitude" : 39.900360107422,
+    "link" : "/web.php/hospital?id=1489",
+    "longitude" : 116.44557189941,
+    "name" : "北京本家动物医院",
+    "photo_url" : "http://7vzopr.com1.z0.glb.clouddn.com/c82bac004b58993377c2deb2e730fce4.jpg?imageView2/1/w/181/h/138/q/85",
+    "region" : "东城区",
+    "summary" : "",
+    "telephone" : "010-87103101"
+  },
+  {
+    "address" : "朝阳北路112号楼18号底商(罗马嘉园南门对面)",
+    "avg_price" : 272,
+    "avg_rating" : 8.4,
+    "branch_name" : "康都动物医院",
+    "city" : "北京",
+    "comment_total" : 41,
+    "coupon_total" : 6,
+    "coupons" : [
+      {
+        "id" : 97,
+        "name" : "母猫绝育550元套餐（吸麻）",
+        "type" : 0
+      },
+      {
+        "id" : 96,
+        "name" : "公猫绝育350元套餐（吸麻）",
+        "type" : 0
+      }
+    ],
+    "distance" : 1067164,
+    "doctor_total" : 2,
+    "hours" : "24小时营业",
+    "id" : 315,
+    "latitude" : 39.928890228271,
+    "link" : "/web.php/hospital?id=315",
+    "longitude" : 116.51844787598,
+    "name" : "康都动物医院",
+    "photo_url" : "http://img1.5ichong.com/c51ab46575e4c45e2564f4abdb0359db.jpg?imageView2/1/w/181/h/138/q/85",
+    "region" : "朝阳区",
+    "summary" : "",
+    "telephone" : "010-85740330"
+  }
+]
