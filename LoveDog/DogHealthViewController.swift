@@ -27,12 +27,17 @@ class DogHealthViewController: UIViewController {
         tableView1.delegate = self
         tableView1.dataSource = self
         let doctview = UIView.init(frame: CGRectMake(10, 0, SCREEN_W, 50))
-        self.lable1 = UILabel.init(frame: CGRectMake(20, 0, 80, 30))
+        doctview.backgroundColor = GRAYCOLOR2
+        var lable11 = UILabel.init(frame: CGRectMake(10, 5, 80, 50))
+        lable11.text = "已选城市:"
+        lable11.font = UIFont.systemFontOfSize(18)
+        doctview.addSubview(lable11)
+        self.lable1 = UILabel.init(frame: CGRectMake(90, 5, 100, 50))
         self.lable1.text = self.hosCity
-        self.lable1.font = UIFont.boldSystemFontOfSize(18)
-        let button = UIButton.init(frame: CGRectMake(80, 0, 30, 30))
-        button.setImage(UIImage(named: "584-location"), forState: .Normal)
-        button.backgroundColor = UIColor.whiteColor()
+        self.lable1.font = UIFont.systemFontOfSize(18)
+        let button = UIButton.init(frame: CGRectMake(SCREEN_W - 120, 5, 120, 50))
+        button.setTitle("点击选择城市>", forState: .Normal)
+        button.setTitleColor(UIColor.blackColor(), forState: .Normal)
         button.addTarget(self, action: #selector(self.citySelect), forControlEvents: .TouchUpInside)
         doctview.addSubview(self.lable1)
         doctview.addSubview(button)
@@ -58,12 +63,17 @@ class DogHealthViewController: UIViewController {
         tableView2.delegate = self
         tableView2.dataSource = self
         let doctview = UIView.init(frame: CGRectMake(10, 0, SCREEN_W, 50))
-        self.lable2 = UILabel.init(frame: CGRectMake(20, 0, 80, 30))
-        self.lable2.text = self.docCity
-        self.lable2.font = UIFont.boldSystemFontOfSize(18)
-        let button = UIButton.init(frame: CGRectMake(80, 0, 30, 30))
-        button.setImage(UIImage(named: "584-location"), forState: .Normal)
-        button.backgroundColor = UIColor.whiteColor()
+        doctview.backgroundColor = GRAYCOLOR2
+        var lable22 = UILabel.init(frame: CGRectMake(10, 5, 80, 50))
+        lable22.text = "已选城市:"
+        lable22.font = UIFont.systemFontOfSize(18)
+        doctview.addSubview(lable22)
+        self.lable2 = UILabel.init(frame: CGRectMake(90, 5, 100, 50))
+        self.lable2.text = self.hosCity
+        self.lable2.font = UIFont.systemFontOfSize(18)
+        let button = UIButton.init(frame: CGRectMake(SCREEN_W - 120, 5, 120, 50))
+        button.setTitle("点击选择城市>", forState: .Normal)
+        button.setTitleColor(UIColor.blackColor(), forState: .Normal)
         button.addTarget(self, action: #selector(self.citySelect), forControlEvents: .TouchUpInside)
         doctview.addSubview(self.lable2)
         doctview.addSubview(button)

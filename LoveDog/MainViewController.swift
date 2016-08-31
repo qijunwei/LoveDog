@@ -72,7 +72,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     
     func createTableView(){
         
-        tableView = UITableView.init(frame: CGRectMake(0, 64, SCREEN_W, SCREEN_H-64), style: UITableViewStyle.Grouped)
+        tableView = UITableView.init(frame: CGRectMake(0, 64, SCREEN_W, SCREEN_H-64-49), style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self

@@ -21,7 +21,7 @@ class MyselfViewController: UIViewController,MFMailComposeViewControllerDelegate
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
-        dataArr = [["当前版本","评价","致谢"],["清理缓存","意见反馈","联系我们"]]
+        dataArr = [["评价","致谢"],["清理缓存","意见反馈","联系我们"]]
         self.createTableView()
     }
 
@@ -136,17 +136,9 @@ extension MyselfViewController: UITableViewDelegate, UITableViewDataSource{
         cell?.textLabel?.text = dataArr[indexPath.section][indexPath.row]
         cell?.textLabel?.font = UIFont.init(name: "STHeitiSC-Light", size: 18)
         
-        if (indexPath.section == 0 && indexPath.row == 0){
-            let lable = UILabel.init(frame: CGRectMake(SCREEN_W - 40, 15, 40, 30))
-            lable.text = "1.0"
-            lable.font = UIFont.systemFontOfSize(18)
-            lable.textColor = UIColor.grayColor()
-            cell?.contentView.addSubview(lable)
-        }else{
             let imageNext = UIImageView.init(frame: CGRectMake(SCREEN_W - 35, 15, 10, 15))
             imageNext.image = UIImage.init(named: "766-arrow-right")
             cell?.contentView.addSubview(imageNext)
-        }
         
         return cell!
     }
@@ -163,7 +155,7 @@ extension MyselfViewController: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        if (indexPath.section == 0 && indexPath.row == 1) {
+        if (indexPath.section == 0 && indexPath.row == 0) {
             //跳转到appstore评价界面
             let appid = APPId
             let url = "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=\(appid)"
@@ -172,7 +164,7 @@ extension MyselfViewController: UITableViewDelegate, UITableViewDataSource{
             //清理缓存
             self.calculateCache()
             self.wipeCache()
-        }else if (indexPath.section == 0 && indexPath.row == 2) {
+        }else if (indexPath.section == 0 && indexPath.row == 1) {
             let thankVc = ThanksViewController()
             self.navigationController?.pushViewController(thankVc, animated: true)
             thankVc.hidesBottomBarWhenPushed = true
