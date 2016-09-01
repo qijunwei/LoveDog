@@ -81,6 +81,12 @@ extension  KindSearchViewController{
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        //显示时的3D效果
+            cell.layer.transform = CATransform3DMakeScale(0.8, 0.8, 1);
+            UIView.animateWithDuration(0.4, delay: 0, options: UIViewAnimationOptions.AllowUserInteraction, animations: {
+                cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
+                }, completion: nil)
+        
         if searchController?.active == true{
             tableView.frame = CGRectMake(0, 20, SCREEN_W, SCREEN_H - 20 - 49)
         }else{
