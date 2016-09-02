@@ -26,11 +26,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let dogTabBarCtl = DogTabBarController()
         window?.rootViewController = dogTabBarCtl
         
+        //设置启动页的时间
+        NSThread.sleepForTimeInterval(1)
+        
         window?.makeKeyAndVisible()
+        
+        //初始化第三方分享登录平台
+        shareQQAndWechat()
         
         return true
     }
 
+    func shareQQAndWechat(){
+        //初始化SDK、初始化三方平台,SDK和三方平台的SDK建立一个连接，需要的时候就触发
+        ShareSDK.registerApp(Appkey, activePlatforms: [SSDKPlatformType.TypeWechat.rawValue,SSDKPlatformType.TypeQQ.rawValue], onImport: { (platformType) in
+            switch platformType {
+            case SSDKPlatformType.TypeWechat:
+                ShareSDKConnector.connectWeChat(WXApi.classForCoder())
+            case SSDKPlatformType.TypeQQ:
+                ShareSDKConnector.connectQQ(QQApiInterface.classForCoder(), tencentOAuthClass: TencentOAuth.classForCoder())
+            default:
+                break
+            }
+        }) { (platformType, appInfo) in
+            switch platformType {
+            case SSDKPlatformType.TypeWechat:
+                appInfo.SSDKSetupWeChatByAppId(wechatAppID, appSecret: wechatAppSecret)
+            case SSDKPlatformType.TypeQQ:
+                appInfo.SSDKSetupQQByAppId(QQAppId, appKey: QQAppKey, authType: SSDKAuthTypeSSO)
+            default:
+                break
+            }
+        }
+
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

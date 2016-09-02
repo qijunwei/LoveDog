@@ -191,7 +191,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let viewS = UIView.init(frame: CGRectMake(0, 0, SCREEN_W, 50))
-        viewS.backgroundColor = UIColor.whiteColor()
+        viewS.backgroundColor = UIColor.grayColor()
         let label = UILabel.init(frame: CGRectMake(20, 0, SCREEN_W, 50))
         label.font = UIFont.boldSystemFontOfSize(18)
         if section == 0 {
@@ -227,7 +227,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         geocoder.reverseGeocodeLocation(location!) { (array, error) in
             if array?.count > 0{
                 let placemark = array![0]
-                var city = placemark.locality
+//                var city = placemark.locality 直辖市及省
+                var city = placemark.subLocality
                 if city != nil {
                     city = placemark.administrativeArea
                 }

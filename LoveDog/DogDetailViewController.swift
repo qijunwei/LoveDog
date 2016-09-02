@@ -15,13 +15,46 @@ class DogDetailViewController: UIViewController {
     var lable = UILabel()//下面的文字展示
     var nameLabel = UILabel()//狗的名字
     var collect = false//收藏
+
+    //增加分享按钮
+    var rightItem: UIBarButtonItem?
+    var shareTitle:String?
+    var shareUrl:String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.whiteColor()
+        self.createScrollView()
         
+        //增加分享功能
+        rightItem = UIBarButtonItem.init(title: "分享", style: .Plain, target:self, action: #selector(self.shareTo))
+        rightItem?.tintColor = UIColor.blackColor()
+        self.navigationItem.rightBarButtonItem = rightItem
+
+    }
+    
+    func shareTo(){
+        let shareParames = NSMutableDictionary()
+        shareParames.SSDKSetupShareParamsByText("骨小八狗狗图片分享", images: UIImage.init(named: "Icon-Spotlight-40"), url: NSURL.init(string: shareUrl!), title: shareTitle, type: SSDKContentType.Auto)
+        
+        ShareSDK.showShareActionSheet(view, items: [SSDKPlatformType.TypeWechat.rawValue,SSDKPlatformType.TypeQQ.rawValue], shareParams: shareParames) { (state, platformType, userdata, contentEnity, error, end) in
+            switch state {
+            case SSDKResponseState.Success:
+                print("分享成功")
+            case SSDKResponseState.Fail:
+                print("分享失败")
+            case SSDKResponseState.Cancel:
+                print("取消分享")
+            default:
+                break
+            }
+        }
+    }
+
+    func createScrollView(){
         scrollView.frame = UIScreen.mainScreen().bounds
         scrollView.showsVerticalScrollIndicator = false
         self.view.addSubview(scrollView)
@@ -50,7 +83,6 @@ class DogDetailViewController: UIViewController {
         
         scrollView.contentSize = CGSizeMake(0, imageView.frame.height + lable.frame.height + 50 )
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

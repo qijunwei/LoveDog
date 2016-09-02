@@ -36,7 +36,7 @@ class DogTabBarController: UITabBarController {
         //个人信息、设置、地理位置、发送消息、我的收藏、支付打赏等
         let vc4 = MyselfViewController()
         let nvc4 = UINavigationController(rootViewController: vc4)
-        vc4.title = "设置"
+        vc4.title = "我"
         vc4.tabBarItem.image = UIImage(named: "我")
         
         //将四个导航控制器添加到标签栏
