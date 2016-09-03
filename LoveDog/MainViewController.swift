@@ -39,7 +39,6 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
             model.name = dic["name"] as? String
             model.job = dic["job"] as? String
             docArr.append(model)
-            
         }
         
         let path1 = NSBundle.mainBundle().pathForResource("hospital", ofType: "json")!
@@ -50,7 +49,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
             model1.photo_url = dic1["photo_url"] as? String
             model1.branch_name = dic1["branch_name"] as? String
             model1.address = dic1["address"] as? String
-
+            model1.id = dic1["id"] as? NSNumber
+            
             hosArr.append(model1)
         }
         
@@ -59,7 +59,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         rightItem?.tintColor = UIColor.blackColor()
         self.navigationItem.rightBarButtonItem = rightItem
     }
-//    定位
+    //    定位
     func locateCurrent(){
         locationManger = CLLocationManager() //位置管理器.提供位置信息和高度信息
         locationManger.delegate = self //设代理
@@ -77,17 +77,16 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.registerClass(HospViewCell.self, forCellReuseIdentifier: "HospViewCell")
-        
         //头视图
-        headerView = UIView.init(frame: CGRectMake(0, 0, SCREEN_W, 240))
+        headerView = UIView.init(frame: CGRectMake(0, 0, SCREEN_W, 270))
         headerView.backgroundColor = UIColor.whiteColor()
         
         //轮播视图
-        adView = XTADScrollView.init(frame: CGRectMake(0, 0, SCREEN_W, 170))
+        adView = XTADScrollView.init(frame: CGRectMake(0, 0, SCREEN_W, 200))
         adView.infiniteLoop = true
         adView.needPageControl = true
         adView.pageControlPositionType = pageControlPositionTypeRight
-        adView.imageURLArray = ["https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1835377738,236142751&fm=206&gp=0.jpg","https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1471587414192&di=e15b8b2e1a8b1a3d21a38a30526db502&imgtype=jpg&src=http%3A%2F%2Fwww.bz55.com%2Fuploads%2Fallimg%2F150604%2F139-150604141346.jpg","https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3974732066,1891464858&fm=206&gp=0.jpg"]
+        adView.imageURLArray = ["http://img15.3lian.com/2015/h1/258/d/100.jpg","http://b.hiphotos.baidu.com/zhidao/wh%3D600%2C800/sign=779c3ac18694a4c20a76ef2d3ec437ed/cf1b9d16fdfaaf5152ca5a718d5494eef11f7ad7.jpg","http://img1.3lian.com/img13/c3/52/d/5.jpg","http://img1.3lian.com/img13/c3/52/d/14.jpg","https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1835377738,236142751&fm=206&gp=0.jpg"]
         headerView.addSubview(self.adView)
         
         //五个按钮
@@ -96,7 +95,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         let space = CGFloat(SCREEN_W - width * 5) / 6
         for i in 0...4 {
             let button = UIButton.init(type: .System)
-            button.frame = CGRectMake(space * CGFloat(i + 1) + width * CGFloat(i), adView.frame.origin.y + 180, width, width)
+            button.frame = CGRectMake(space * CGFloat(i + 1) + width * CGFloat(i), adView.frame.origin.y + 210, width, width)
             button.setTitle(btnArr[i], forState: .Normal)
             button.backgroundColor = UIColor.orangeColor()
             button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
@@ -138,11 +137,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 1
+            return 2
         }else if section == 1{
             return 1
         } else {
-            return 6
+            //加一行：查看全部
+            return 7
         }
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -152,14 +152,20 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             if cell == nil{
                 cell = UITableViewCell.init(style: .Subtitle, reuseIdentifier: "q1")
             }
-            
-                cell?.textLabel?.text = "养护手册"
+            if  indexPath.row == 0{
+                cell?.textLabel?.text = "狗狗养护手册"
                 cell?.textLabel?.textColor = UIColor.redColor()
                 cell?.detailTextLabel?.text = "新手养宠攻略"
                 cell?.detailTextLabel?.textColor = UIColor.grayColor()
                 cell?.imageView?.image = UIImage.init(named: "资讯")
-            
-            return cell!            
+            }else{
+                cell?.textLabel?.text = "萌宠养护手册"
+                cell?.textLabel?.textColor = UIColor.redColor()
+                cell?.detailTextLabel?.text = "其他萌宠攻略"
+                cell?.detailTextLabel?.textColor = UIColor.grayColor()
+                cell?.imageView?.image = UIImage.init(named: "资讯")
+            }
+            return cell!
         }
         else if section == 1 {
             let cell = DocViewCell.init(style: .Default, reuseIdentifier: "doctor", data: self.docArr)
@@ -167,15 +173,20 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             return cell
         }
         else {
-            //let cell = HospViewCell.init(style: .Default, reuseIdentifier: "hos")当内嵌tableview的时候用这个
-            let cell = tableView.dequeueReusableCellWithIdentifier("HospViewCell", forIndexPath: indexPath) as! HospViewCell
-            let model = self.hosArr[indexPath.row]
-            cell.headImage.sd_setImageWithURL(NSURL.init(string: model.photo_url))
-            cell.title.text = model.branch_name
-            cell.address.text = model.address
-            cell.address.numberOfLines = 0
-            cell.address.sizeToFit()
-            return cell
+                //let cell = HospViewCell.init(style: .Default, reuseIdentifier: "hos")当内嵌tableview的时候用这个
+                let cell = tableView.dequeueReusableCellWithIdentifier("HospViewCell", forIndexPath: indexPath) as! HospViewCell
+            
+            if indexPath.row != 6{
+                let model = self.hosArr[indexPath.row]
+                cell.headImage.sd_setImageWithURL(NSURL.init(string: model.photo_url))
+                cell.title.text = model.branch_name
+                cell.address.text = model.address
+                cell.address.numberOfLines = 0
+                cell.address.sizeToFit()
+            }else{
+                cell.seemore.text = "查看全部"
+            }
+                return cell
         }
     }
     
@@ -183,7 +194,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         if indexPath.section == 0{
             return 80
         }else if indexPath.section == 2{
-            return 100
+            if indexPath.row == 6{
+                return 44
+            }else{
+                return 100
+            }
         }else {
             return 180
         }
@@ -191,8 +206,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let viewS = UIView.init(frame: CGRectMake(0, 0, SCREEN_W, 50))
-        viewS.backgroundColor = UIColor.grayColor()
-        let label = UILabel.init(frame: CGRectMake(20, 0, SCREEN_W, 50))
+        viewS.backgroundColor = GRAYCOLOR2
+        let label = UILabel.init(frame: CGRectMake(10, 0, SCREEN_W, 46))
         label.font = UIFont.boldSystemFontOfSize(18)
         if section == 0 {
             label.text = "养护知识"
@@ -215,9 +230,29 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         if indexPath.section == 0{
-            let curingVc = CuringViewController()
-            curingVc.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(curingVc, animated: true)
+            if indexPath.row == 0{
+                let curingVc = CuringViewController()
+                curingVc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(curingVc, animated: true)
+            }else{
+                let curingVc = OtherPetsViewController()
+                curingVc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(curingVc, animated: true)
+            }
+        }else if indexPath.section == 2 {
+            
+            if indexPath.row != 6 {
+            let model = self.hosArr[indexPath.row]
+            let detailVc = HealthDetailViewController()
+            detailVc.uid = String(model.id)
+            detailVc.flag = 0
+            detailVc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(detailVc, animated: true)
+            }else{
+                //点击查看全部，跳转到医生医院界面
+                self.tabBarController!.selectedIndex = 1
+            }
+            
         }
     }
     
@@ -227,7 +262,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         geocoder.reverseGeocodeLocation(location!) { (array, error) in
             if array?.count > 0{
                 let placemark = array![0]
-//                var city = placemark.locality 直辖市及省
+                //                var city = placemark.locality 直辖市及省
                 var city = placemark.subLocality
                 if city != nil {
                     city = placemark.administrativeArea

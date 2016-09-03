@@ -38,9 +38,9 @@ class DogDetailViewController: UIViewController {
     
     func shareTo(){
         let shareParames = NSMutableDictionary()
-        shareParames.SSDKSetupShareParamsByText("骨小八狗狗图片分享", images: UIImage.init(named: "Icon-Spotlight-40"), url: NSURL.init(string: shareUrl!), title: shareTitle, type: SSDKContentType.Auto)
-        
-        ShareSDK.showShareActionSheet(view, items: [SSDKPlatformType.TypeWechat.rawValue,SSDKPlatformType.TypeQQ.rawValue], shareParams: shareParames) { (state, platformType, userdata, contentEnity, error, end) in
+        shareParames.SSDKSetupShareParamsByText("骨小八狗狗图片分享", images: UIImage.init(named: "graylogo"), url: NSURL.init(string: shareUrl!), title: shareTitle, type: SSDKContentType.Auto)
+//        ,SSDKPlatformType.TypeQQ.rawValue
+        ShareSDK.showShareActionSheet(view, items: [SSDKPlatformType.TypeWechat.rawValue], shareParams: shareParames) { (state, platformType, userdata, contentEnity, error, end) in
             switch state {
             case SSDKResponseState.Success:
                 print("分享成功")
@@ -65,7 +65,7 @@ class DogDetailViewController: UIViewController {
         //遮挡网络图片上的logo
         let coverView = UIView()
         coverView.backgroundColor = UIColor.whiteColor()
-        coverView.frame = CGRectMake(0, 220, SCREEN_W - 6, 30)
+        coverView.frame = CGRectMake(0, 230, SCREEN_W - 6, 20)
         imageView.addSubview(coverView)
         
         nameLabel.frame = CGRectMake(11, CGFloat(imageView.frame.origin.y + 250), SCREEN_W - 20, 20)

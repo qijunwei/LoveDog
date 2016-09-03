@@ -14,6 +14,8 @@ class HospViewCell: UITableViewCell {
     var title = UILabel()
     var address = UILabel()
     var tel = UILabel()
+    //查看全部
+    var seemore = UILabel()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -33,6 +35,14 @@ class HospViewCell: UITableViewCell {
         address.font = UIFont.init(name: "STHeitiSC-Light", size: 15)
         address.numberOfLines = 2
         self.contentView.addSubview(address)
+        
+        //“查看全部”cell单独列出来，
+        seemore.frame = CGRectMake((SCREEN_W - 100) / 2, 10, 100, 20)
+        seemore.center.x = SCREEN_W / 2
+        seemore.textAlignment = .Center
+        seemore.font = UIFont.systemFontOfSize(15)
+        seemore.textColor = UIColor.grayColor()
+        self.contentView.addSubview(seemore)
      
     }
     

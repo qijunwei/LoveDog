@@ -16,6 +16,7 @@ class MyselfViewController: UIViewController,MFMailComposeViewControllerDelegate
     var big:Int? //用于统计文件夹所有文件大小
     var files:[String]?
     var cachePath: String?
+    var headView:UIView!//头视图
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,17 @@ class MyselfViewController: UIViewController,MFMailComposeViewControllerDelegate
         self.view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
+        
+        headView = UIView.init(frame: CGRectMake(0, 64, SCREEN_W, 120))
+        let logoview = UIImageView.init(frame: CGRectMake((SCREEN_W - 100) / 2, 0, 100, 100))
+        logoview.image = UIImage.init(named: "graylogo")
+        headView.addSubview(logoview)
+        let logolabel = UILabel.init(frame: CGRectMake((SCREEN_W - 80) / 2, 100, 100, 10))
+        logolabel.text = "骨小八 v2.0"
+        logolabel.textColor = UIColor.grayColor()
+        logolabel.font = UIFont.systemFontOfSize(15)
+        headView.addSubview(logolabel)
+        tableView.tableHeaderView = headView
     }
     
     //计算缓存

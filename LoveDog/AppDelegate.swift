@@ -43,8 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch platformType {
             case SSDKPlatformType.TypeWechat:
                 ShareSDKConnector.connectWeChat(WXApi.classForCoder())
-            case SSDKPlatformType.TypeQQ:
-                ShareSDKConnector.connectQQ(QQApiInterface.classForCoder(), tencentOAuthClass: TencentOAuth.classForCoder())
+//            case SSDKPlatformType.TypeQQ:
+//                ShareSDKConnector.connectQQ(QQApiInterface.classForCoder(), tencentOAuthClass: TencentOAuth.classForCoder())
             default:
                 break
             }
@@ -52,8 +52,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch platformType {
             case SSDKPlatformType.TypeWechat:
                 appInfo.SSDKSetupWeChatByAppId(wechatAppID, appSecret: wechatAppSecret)
-            case SSDKPlatformType.TypeQQ:
-                appInfo.SSDKSetupQQByAppId(QQAppId, appKey: QQAppKey, authType: SSDKAuthTypeSSO)
+//            case SSDKPlatformType.TypeQQ:
+//                appInfo.SSDKSetupQQByAppId(QQAppId, appKey: QQAppKey, authType: SSDKAuthTypeSSO)
             default:
                 break
             }

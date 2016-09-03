@@ -18,6 +18,7 @@
 #import <CommonCrypto/CommonCrypto.h>//MD5编码用到的头文件
 
 //微信、qq分享及第三方登录 shareSDK
+
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
 #import <ShareSDKUI/ShareSDK+SSUI.h>
