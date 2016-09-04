@@ -86,7 +86,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         adView.infiniteLoop = true
         adView.needPageControl = true
         adView.pageControlPositionType = pageControlPositionTypeRight
-        adView.imageURLArray = ["http://img15.3lian.com/2015/h1/258/d/100.jpg","http://b.hiphotos.baidu.com/zhidao/wh%3D600%2C800/sign=779c3ac18694a4c20a76ef2d3ec437ed/cf1b9d16fdfaaf5152ca5a718d5494eef11f7ad7.jpg","http://img1.3lian.com/img13/c3/52/d/5.jpg","http://img1.3lian.com/img13/c3/52/d/14.jpg","https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1835377738,236142751&fm=206&gp=0.jpg"]
+        adView.imageURLArray = ["http://b.hiphotos.baidu.com/zhidao/wh%3D600%2C800/sign=779c3ac18694a4c20a76ef2d3ec437ed/cf1b9d16fdfaaf5152ca5a718d5494eef11f7ad7.jpg","http://img1.3lian.com/img13/c3/52/d/5.jpg","http://img1.3lian.com/img13/c3/52/d/14.jpg","https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1835377738,236142751&fm=206&gp=0.jpg"]
         headerView.addSubview(self.adView)
         
         //五个按钮
@@ -137,7 +137,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 2
+            return 1
         }else if section == 1{
             return 1
         } else {
@@ -158,13 +158,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
                 cell?.detailTextLabel?.text = "新手养宠攻略"
                 cell?.detailTextLabel?.textColor = UIColor.grayColor()
                 cell?.imageView?.image = UIImage.init(named: "资讯")
-            }else{
-                cell?.textLabel?.text = "萌宠养护手册"
-                cell?.textLabel?.textColor = UIColor.redColor()
-                cell?.detailTextLabel?.text = "其他萌宠攻略"
-                cell?.detailTextLabel?.textColor = UIColor.grayColor()
-                cell?.imageView?.image = UIImage.init(named: "资讯")
             }
+//            else{
+//                cell?.textLabel?.text = "萌宠养护手册"
+//                cell?.textLabel?.textColor = UIColor.redColor()
+//                cell?.detailTextLabel?.text = "其他萌宠攻略"
+//                cell?.detailTextLabel?.textColor = UIColor.grayColor()
+//                cell?.imageView?.image = UIImage.init(named: "资讯")
+//            }
             return cell!
         }
         else if section == 1 {

@@ -394,10 +394,10 @@
 		2E4689BC1D7C054F00529E44 /* LoveDog */ = {
 			isa = PBXGroup;
 			children = (
-				2E4689E21D7C05F500529E44 /* 个人 */,
+				2E4689F91D7C05F500529E44 /* 主页 */,
 				2E4689E51D7C05F500529E44 /* 健康 */,
 				2E4689F21D7C05F500529E44 /* 种类 */,
-				2E4689F91D7C05F500529E44 /* 主页 */,
+				2E4689E21D7C05F500529E44 /* 个人 */,
 				2E468A0A1D7C05F500529E44 /* DogTabBarController.swift */,
 				2E468A0B1D7C05F500529E44 /* Source */,
 				2E4689BD1D7C054F00529E44 /* AppDelegate.swift */,
@@ -497,9 +497,9 @@
 				2E4689FA1D7C05F500529E44 /* DocCollectionViewCell.swift */,
 				2E4689FB1D7C05F500529E44 /* DocViewCell.swift */,
 				2E4689FC1D7C05F500529E44 /* MainViewController.swift */,
-				2E4689FD1D7C05F500529E44 /* 其他宠物 */,
-				2E4689FF1D7C05F500529E44 /* 养护手册 */,
 				2E468A041D7C05F500529E44 /* 按钮详情 */,
+				2E4689FF1D7C05F500529E44 /* 养护手册 */,
+				2E4689FD1D7C05F500529E44 /* 其他宠物 */,
 			);
 			path = "主页";
 			sourceTree = "<group>";

@@ -39,7 +39,7 @@ class MyselfViewController: UIViewController,MFMailComposeViewControllerDelegate
         logoview.image = UIImage.init(named: "graylogo")
         headView.addSubview(logoview)
         let logolabel = UILabel.init(frame: CGRectMake((SCREEN_W - 80) / 2, 100, 100, 10))
-        logolabel.text = "骨小八 v2.0"
+        logolabel.text = "骨小八 v1.1"
         logolabel.textColor = UIColor.grayColor()
         logolabel.font = UIFont.systemFontOfSize(15)
         headView.addSubview(logolabel)
