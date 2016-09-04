@@ -137,7 +137,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 1
+            return 2
         }else if section == 1{
             return 1
         } else {
@@ -158,14 +158,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
                 cell?.detailTextLabel?.text = "新手养宠攻略"
                 cell?.detailTextLabel?.textColor = UIColor.grayColor()
                 cell?.imageView?.image = UIImage.init(named: "资讯")
+            }else{
+                cell?.textLabel?.text = "萌宠养护手册"
+                cell?.textLabel?.textColor = UIColor.redColor()
+                cell?.detailTextLabel?.text = "其他萌宠攻略"
+                cell?.detailTextLabel?.textColor = UIColor.grayColor()
+                cell?.imageView?.image = UIImage.init(named: "资讯")
             }
-//            else{
-//                cell?.textLabel?.text = "萌宠养护手册"
-//                cell?.textLabel?.textColor = UIColor.redColor()
-//                cell?.detailTextLabel?.text = "其他萌宠攻略"
-//                cell?.detailTextLabel?.textColor = UIColor.grayColor()
-//                cell?.imageView?.image = UIImage.init(named: "资讯")
-//            }
             return cell!
         }
         else if section == 1 {

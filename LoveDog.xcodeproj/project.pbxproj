@@ -177,6 +177,9 @@
 		2E468B261D7C05F500529E44 /* 药箱_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A881D7C05F500529E44 /* 药箱_03.png */; };
 		2E468B271D7C05F500529E44 /* 资讯@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A891D7C05F500529E44 /* 资讯@2x.png */; };
 		2E468B281D7C05F500529E44 /* 资讯@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A8A1D7C05F500529E44 /* 资讯@3x.png */; };
+		2EF4EC0A1D7C6CEB003CD779 /* 726-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC081D7C6CEB003CD779 /* 726-star@2x.png */; };
+		2EF4EC0B1D7C6CEB003CD779 /* 726-star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC091D7C6CEB003CD779 /* 726-star@3x.png */; };
+		2EF4EC0D1D7C7022003CD779 /* tab_c1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC0C1D7C7022003CD779 /* tab_c1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -356,6 +359,9 @@
 		2E468A881D7C05F500529E44 /* 药箱_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "药箱_03.png"; sourceTree = "<group>"; };
 		2E468A891D7C05F500529E44 /* 资讯@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "资讯@2x.png"; sourceTree = "<group>"; };
 		2E468A8A1D7C05F500529E44 /* 资讯@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "资讯@3x.png"; sourceTree = "<group>"; };
+		2EF4EC081D7C6CEB003CD779 /* 726-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "726-star@2x.png"; sourceTree = "<group>"; };
+		2EF4EC091D7C6CEB003CD779 /* 726-star@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "726-star@3x.png"; sourceTree = "<group>"; };
+		2EF4EC0C1D7C7022003CD779 /* tab_c1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_c1.png; sourceTree = "<group>"; };
 		2F867E9D4A2D784DEEA583BD /* Pods_LoveDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B5D8266DFB1053C14C8520 /* Pods-LoveDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -481,12 +487,12 @@
 		2E4689F21D7C05F500529E44 /* 种类 */ = {
 			isa = PBXGroup;
 			children = (
-				2E4689F31D7C05F500529E44 /* DogDetailViewController.swift */,
 				2E4689F41D7C05F500529E44 /* DogKindViewController.swift */,
-				2E4689F51D7C05F500529E44 /* DogModel.swift */,
 				2E4689F61D7C05F500529E44 /* KindSearchViewController.swift */,
+				2E4689F31D7C05F500529E44 /* DogDetailViewController.swift */,
 				2E4689F71D7C05F500529E44 /* SearchDogCell.swift */,
 				2E4689F81D7C05F500529E44 /* SearchDogCell.xib */,
+				2E4689F51D7C05F500529E44 /* DogModel.swift */,
 			);
 			path = "种类";
 			sourceTree = "<group>";
@@ -660,6 +666,9 @@
 		2E468A771D7C05F500529E44 /* tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				2EF4EC0C1D7C7022003CD779 /* tab_c1.png */,
+				2EF4EC081D7C6CEB003CD779 /* 726-star@2x.png */,
+				2EF4EC091D7C6CEB003CD779 /* 726-star@3x.png */,
 				2E468A781D7C05F500529E44 /* 584-location@2x.png */,
 				2E468A791D7C05F500529E44 /* 584-location@3x.png */,
 				2E468A7A1D7C05F500529E44 /* 766-arrow-right-selected@2x.png */,
@@ -833,6 +842,7 @@
 				2E468B251D7C05F500529E44 /* 药箱@3x.png in Resources */,
 				2E468ACA1D7C05F500529E44 /* 130.png in Resources */,
 				2E468AB61D7C05F500529E44 /* 110.png in Resources */,
+				2EF4EC0D1D7C7022003CD779 /* tab_c1.png in Resources */,
 				2E468B031D7C05F500529E44 /* 187.png in Resources */,
 				2E468ABA1D7C05F500529E44 /* 114.png in Resources */,
 				2E468AC71D7C05F500529E44 /* 127.png in Resources */,
@@ -842,6 +852,7 @@
 				2E468AD31D7C05F500529E44 /* 139.png in Resources */,
 				2E468ADC1D7C05F500529E44 /* 148.png in Resources */,
 				2E468ACC1D7C05F500529E44 /* 132.png in Resources */,
+				2EF4EC0A1D7C6CEB003CD779 /* 726-star@2x.png in Resources */,
 				2E468ADE1D7C05F500529E44 /* 150.png in Resources */,
 				2E468AEA1D7C05F500529E44 /* 162.png in Resources */,
 				2E468B041D7C05F500529E44 /* 188.png in Resources */,
@@ -886,6 +897,7 @@
 				2E468AFC1D7C05F500529E44 /* 180.png in Resources */,
 				2E468AE41D7C05F500529E44 /* 156.png in Resources */,
 				2E468B121D7C05F500529E44 /* gooddoctor.json in Resources */,
+				2EF4EC0B1D7C6CEB003CD779 /* 726-star@3x.png in Resources */,
 				2E468B261D7C05F500529E44 /* 药箱_03.png in Resources */,
 				2E468AF51D7C05F500529E44 /* 173.png in Resources */,
 				2E468B0F1D7C05F500529E44 /* 199.png in Resources */,

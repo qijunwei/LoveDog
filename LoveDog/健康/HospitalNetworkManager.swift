@@ -25,10 +25,10 @@ extension HospitalModel {
                 let dict = obj.objectForKey("data") as! NSDictionary
                 
                 //解析医生模型
-                let listArray = dict.objectForKey("list") as? [AnyObject]
-                
+                let listArray = dict.objectForKey("list") as? [AnyObject]                
                 
                 let array = HospitalModel.arrayOfModelsFromDictionaries(listArray)
+
                 hospitalArray.addObjectsFromArray(array as [AnyObject])
                 }
                 //NSURLSession发起的请求，系统会开辟一个子线程，并在子线程中去完成下载数据的任务，所有跟UI相关的操作，都应该在主线程队列中执行
