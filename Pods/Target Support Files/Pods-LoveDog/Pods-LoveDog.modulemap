@@ -1,6 +1,0 @@
-framework module Pods_LoveDog {
-  umbrella header "Pods-LoveDog-umbrella.h"
-
-  export *
-  module * { export * }
-}
