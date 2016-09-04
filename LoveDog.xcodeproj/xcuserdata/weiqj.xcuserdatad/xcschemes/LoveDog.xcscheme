@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BCC25E301D33029D0026C15D"
+               BlueprintIdentifier = "2E4689B91D7C054F00529E44"
                BuildableName = "LoveDog.app"
                BlueprintName = "LoveDog"
                ReferencedContainer = "container:LoveDog.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BCC25E301D33029D0026C15D"
+            BlueprintIdentifier = "2E4689B91D7C054F00529E44"
             BuildableName = "LoveDog.app"
             BlueprintName = "LoveDog"
             ReferencedContainer = "container:LoveDog.xcodeproj">
@@ -42,7 +42,7 @@
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BCC25E301D33029D0026C15D"
+            BlueprintIdentifier = "2E4689B91D7C054F00529E44"
             BuildableName = "LoveDog.app"
             BlueprintName = "LoveDog"
             ReferencedContainer = "container:LoveDog.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BCC25E301D33029D0026C15D"
+            BlueprintIdentifier = "2E4689B91D7C054F00529E44"
             BuildableName = "LoveDog.app"
             BlueprintName = "LoveDog"
             ReferencedContainer = "container:LoveDog.xcodeproj">
@@ -82,7 +82,7 @@
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Release">
+      buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
