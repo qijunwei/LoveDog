@@ -26,8 +26,8 @@ let APPId = "1146119863"
 
 //分享及第三方登录的key
 let Appkey = "16a56394b8151"//ShareSDK的appkey
-let wechatAppID = "wxd930ea5d5a258f4f"
-let wechatAppSecret = "db426a9829e4b49a0dcac7b4162da6b6"
+let wechatAppID = "wx5056b9bf88f8e76e"
+let wechatAppSecret = "959741b527b5b9ec4acb4c57ad308d84"
 
 let QQAppId = "100371282"
 let QQAppKey = "aed9b0303e3ed1e27bae87c33761161d"

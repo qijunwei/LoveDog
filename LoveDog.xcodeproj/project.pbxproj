@@ -20,7 +20,6 @@
 		2E4689E01D7C05D900529E44 /* MD5Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4689DA1D7C05D900529E44 /* MD5Tool.swift */; };
 		2E4689E11D7C05D900529E44 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4689DB1D7C05D900529E44 /* Tools.swift */; };
 		2E468A8B1D7C05F500529E44 /* MyselfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4689E31D7C05F500529E44 /* MyselfViewController.swift */; };
-		2E468A8C1D7C05F500529E44 /* ThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4689E41D7C05F500529E44 /* ThanksViewController.swift */; };
 		2E468A8D1D7C05F500529E44 /* DoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4689E61D7C05F500529E44 /* DoctorModel.swift */; };
 		2E468A8E1D7C05F500529E44 /* DoctorNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4689E71D7C05F500529E44 /* DoctorNetworkManager.swift */; };
 		2E468A8F1D7C05F500529E44 /* DoctorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4689E81D7C05F500529E44 /* DoctorViewCell.swift */; };
@@ -180,6 +179,11 @@
 		2EF4EC0A1D7C6CEB003CD779 /* 726-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC081D7C6CEB003CD779 /* 726-star@2x.png */; };
 		2EF4EC0B1D7C6CEB003CD779 /* 726-star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC091D7C6CEB003CD779 /* 726-star@3x.png */; };
 		2EF4EC0D1D7C7022003CD779 /* tab_c1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC0C1D7C7022003CD779 /* tab_c1.png */; };
+		2EF4EC101D7C7711003CD779 /* ThankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC0E1D7C7711003CD779 /* ThankViewController.swift */; };
+		2EF4EC111D7C7711003CD779 /* ThankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC0F1D7C7711003CD779 /* ThankViewController.xib */; };
+		2EF4EC181D7D83B7003CD779 /* FMDBDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC171D7D83B7003CD779 /* FMDBDataManager.swift */; };
+		2EF4EC1A1D7D994C003CD779 /* LikeDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC191D7D994C003CD779 /* LikeDogViewController.swift */; };
+		2EF4EC1C1D7DA72B003CD779 /* LikeDogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC1B1D7DA72B003CD779 /* LikeDogCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,7 +206,6 @@
 		2E4689DA1D7C05D900529E44 /* MD5Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5Tool.swift; sourceTree = "<group>"; };
 		2E4689DB1D7C05D900529E44 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		2E4689E31D7C05F500529E44 /* MyselfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyselfViewController.swift; sourceTree = "<group>"; };
-		2E4689E41D7C05F500529E44 /* ThanksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksViewController.swift; sourceTree = "<group>"; };
 		2E4689E61D7C05F500529E44 /* DoctorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorModel.swift; sourceTree = "<group>"; };
 		2E4689E71D7C05F500529E44 /* DoctorNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorNetworkManager.swift; sourceTree = "<group>"; };
 		2E4689E81D7C05F500529E44 /* DoctorViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorViewCell.swift; sourceTree = "<group>"; };
@@ -362,6 +365,11 @@
 		2EF4EC081D7C6CEB003CD779 /* 726-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "726-star@2x.png"; sourceTree = "<group>"; };
 		2EF4EC091D7C6CEB003CD779 /* 726-star@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "726-star@3x.png"; sourceTree = "<group>"; };
 		2EF4EC0C1D7C7022003CD779 /* tab_c1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_c1.png; sourceTree = "<group>"; };
+		2EF4EC0E1D7C7711003CD779 /* ThankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankViewController.swift; sourceTree = "<group>"; };
+		2EF4EC0F1D7C7711003CD779 /* ThankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThankViewController.xib; sourceTree = "<group>"; };
+		2EF4EC171D7D83B7003CD779 /* FMDBDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDBDataManager.swift; sourceTree = "<group>"; };
+		2EF4EC191D7D994C003CD779 /* LikeDogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeDogViewController.swift; sourceTree = "<group>"; };
+		2EF4EC1B1D7DA72B003CD779 /* LikeDogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeDogCell.swift; sourceTree = "<group>"; };
 		2F867E9D4A2D784DEEA583BD /* Pods_LoveDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B5D8266DFB1053C14C8520 /* Pods-LoveDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -453,7 +461,10 @@
 			isa = PBXGroup;
 			children = (
 				2E4689E31D7C05F500529E44 /* MyselfViewController.swift */,
-				2E4689E41D7C05F500529E44 /* ThanksViewController.swift */,
+				2EF4EC0E1D7C7711003CD779 /* ThankViewController.swift */,
+				2EF4EC0F1D7C7711003CD779 /* ThankViewController.xib */,
+				2EF4EC191D7D994C003CD779 /* LikeDogViewController.swift */,
+				2EF4EC1B1D7DA72B003CD779 /* LikeDogCell.swift */,
 			);
 			path = "个人";
 			sourceTree = "<group>";
@@ -493,6 +504,7 @@
 				2E4689F71D7C05F500529E44 /* SearchDogCell.swift */,
 				2E4689F81D7C05F500529E44 /* SearchDogCell.xib */,
 				2E4689F51D7C05F500529E44 /* DogModel.swift */,
+				2EF4EC161D7D83A1003CD779 /* 收藏 */,
 			);
 			path = "种类";
 			sourceTree = "<group>";
@@ -690,6 +702,14 @@
 				2E468A8A1D7C05F500529E44 /* 资讯@3x.png */,
 			);
 			path = tabbar;
+			sourceTree = "<group>";
+		};
+		2EF4EC161D7D83A1003CD779 /* 收藏 */ = {
+			isa = PBXGroup;
+			children = (
+				2EF4EC171D7D83B7003CD779 /* FMDBDataManager.swift */,
+			);
+			path = "收藏";
 			sourceTree = "<group>";
 		};
 		A52E216D3EAA7EEFFE7896EB /* Pods */ = {
@@ -903,6 +923,7 @@
 				2E468B0F1D7C05F500529E44 /* 199.png in Resources */,
 				2E468AD91D7C05F500529E44 /* 145.png in Resources */,
 				2E4689C31D7C054F00529E44 /* Main.storyboard in Resources */,
+				2EF4EC111D7C7711003CD779 /* ThankViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -965,6 +986,7 @@
 				2E468AA11D7C05F500529E44 /* OtherPetsViewController.swift in Sources */,
 				2E468A9E1D7C05F500529E44 /* DocCollectionViewCell.swift in Sources */,
 				2E468A911D7C05F500529E44 /* HealthDetailViewController.swift in Sources */,
+				2EF4EC1A1D7D994C003CD779 /* LikeDogViewController.swift in Sources */,
 				2E468A971D7C05F500529E44 /* RegionViewController.swift in Sources */,
 				2E468A901D7C05F500529E44 /* DogHealthViewController.swift in Sources */,
 				2E468A9A1D7C05F500529E44 /* DogModel.swift in Sources */,
@@ -988,7 +1010,6 @@
 				2E468AA61D7C05F500529E44 /* MainDetailCell.swift in Sources */,
 				2E468A9B1D7C05F500529E44 /* KindSearchViewController.swift in Sources */,
 				2E468AA71D7C05F500529E44 /* MainDetailViewController.swift in Sources */,
-				2E468A8C1D7C05F500529E44 /* ThanksViewController.swift in Sources */,
 				2E4689C01D7C054F00529E44 /* ViewController.swift in Sources */,
 				2E468AA81D7C05F500529E44 /* MainModel.swift in Sources */,
 				2E4689DD1D7C05D900529E44 /* XTADScrollView.m in Sources */,
@@ -997,9 +1018,12 @@
 				2E4689BE1D7C054F00529E44 /* AppDelegate.swift in Sources */,
 				2E468A8E1D7C05F500529E44 /* DoctorNetworkManager.swift in Sources */,
 				2E468A9F1D7C05F500529E44 /* DocViewCell.swift in Sources */,
+				2EF4EC181D7D83B7003CD779 /* FMDBDataManager.swift in Sources */,
+				2EF4EC1C1D7DA72B003CD779 /* LikeDogCell.swift in Sources */,
 				2E4689E11D7C05D900529E44 /* Tools.swift in Sources */,
 				2E468AA41D7C05F500529E44 /* CuringModel.swift in Sources */,
 				2E468AA91D7C05F500529E44 /* MainNetManager.swift in Sources */,
+				2EF4EC101D7C7711003CD779 /* ThankViewController.swift in Sources */,
 				2E468A8D1D7C05F500529E44 /* DoctorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1116,8 +1140,8 @@
 			baseConfigurationReference = 87B5D8266DFB1053C14C8520 /* Pods-LoveDog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hao sheng (3V5VPDV58H)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hao sheng (3V5VPDV58H)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/JSONModel\"",
@@ -1143,8 +1167,8 @@
 			baseConfigurationReference = 08B49F9B0B570A495650E4F2 /* Pods-LoveDog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hao sheng (3V5VPDV58H)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hao sheng (3V5VPDV58H)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LoveDog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

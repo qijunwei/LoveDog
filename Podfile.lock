@@ -1,4 +1,7 @@
 PODS:
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
   - JSONModel (1.4.0)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
@@ -13,6 +16,7 @@ PODS:
   - ShareSDK3/ShareSDKUI (3.4.1)
 
 DEPENDENCIES:
+  - FMDB
   - JSONModel
   - MBProgressHUD
   - MJRefresh
@@ -23,6 +27,7 @@ DEPENDENCIES:
   - ShareSDK3/ShareSDKUI
 
 SPEC CHECKSUMS:
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   JSONModel: 58fe3f8c29ff95ed94e7ee7dde87e807f5da5371
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
@@ -30,6 +35,6 @@ SPEC CHECKSUMS:
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   ShareSDK3: e7bcdfeb95338f89efd6fff82b4793d2bfee76f8
 
-PODFILE CHECKSUM: a3a28db6a07147791a04d6275ed4dcf86e246743
+PODFILE CHECKSUM: eb67940a696c3bbc0bda1ebbd2b5c79774521427
 
 COCOAPODS: 1.0.1

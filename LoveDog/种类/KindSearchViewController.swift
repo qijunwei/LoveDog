@@ -106,12 +106,7 @@ extension  KindSearchViewController{
         }
         
         let detailVC = DogDetailViewController()
-        detailVC.lable.text = model!.details
-        detailVC.nameLabel.text = model!.name
-        detailVC.imageView.sd_setImageWithURL(NSURL.init(string: model!.imgUrl!))
-        
-        detailVC.shareTitle = model?.name
-        detailVC.shareUrl = model?.imgUrl
+        detailVC.model = model!
     
         self.navigationController?.pushViewController(detailVC, animated: true)
         searchController?.active = false

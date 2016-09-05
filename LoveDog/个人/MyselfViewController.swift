@@ -22,10 +22,11 @@ class MyselfViewController: UIViewController,MFMailComposeViewControllerDelegate
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
-        dataArr = [["评价","致谢"],["清理缓存","意见反馈","联系我们"]]
+        //推送设置暂时不加
+        dataArr = [["我的收藏"],["评价","声明"],["清理缓存","意见反馈","联系我们"]]
         self.createTableView()
     }
-
+    
     func createTableView(){
         
         tableView = UITableView.init(frame: CGRectMake(0, 64, SCREEN_W, SCREEN_H-64-49), style: UITableViewStyle.Grouped)
@@ -92,7 +93,7 @@ class MyselfViewController: UIViewController,MFMailComposeViewControllerDelegate
     }
     
     //发送邮件
-//    配置发邮件的视窗
+    //    配置发邮件的视窗
     func configuredMailComposeViewController() -> MFMailComposeViewController {
         
         let mailComposeVC = MFMailComposeViewController()
@@ -105,7 +106,7 @@ class MyselfViewController: UIViewController,MFMailComposeViewControllerDelegate
         
         return mailComposeVC
     }
-//    鉴于这种发送邮件的方式，要求用户已经在设备上至少添加有一个邮箱，所以对没有设置邮箱的用户，还应予以提示。因此这里再写一个函数，来配置针对未设置邮箱用户的弹窗提醒
+    //    鉴于这种发送邮件的方式，要求用户已经在设备上至少添加有一个邮箱，所以对没有设置邮箱的用户，还应予以提示。因此这里再写一个函数，来配置针对未设置邮箱用户的弹窗提醒
     func showSendMailErrorAlert() {
         
         let sendMailErrorAlert = UIAlertController(title: "无法发送邮件", message: "您的设备尚未设置邮箱，请在“邮件”应用中设置后再尝试发送。", preferredStyle: .Alert)
@@ -113,7 +114,7 @@ class MyselfViewController: UIViewController,MFMailComposeViewControllerDelegate
         self.presentViewController(sendMailErrorAlert, animated: true){}
         
     }
-//    写上 dismiss 邮件视窗的函数
+    //    写上 dismiss 邮件视窗的函数
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         
         switch result.rawValue {
@@ -148,9 +149,9 @@ extension MyselfViewController: UITableViewDelegate, UITableViewDataSource{
         cell?.textLabel?.text = dataArr[indexPath.section][indexPath.row]
         cell?.textLabel?.font = UIFont.init(name: "STHeitiSC-Light", size: 18)
         
-            let imageNext = UIImageView.init(frame: CGRectMake(SCREEN_W - 35, 15, 10, 15))
-            imageNext.image = UIImage.init(named: "766-arrow-right")
-            cell?.contentView.addSubview(imageNext)
+        let imageNext = UIImageView.init(frame: CGRectMake(SCREEN_W - 35, 15, 10, 15))
+        imageNext.image = UIImage.init(named: "766-arrow-right")
+        cell?.contentView.addSubview(imageNext)
         
         return cell!
     }
@@ -159,7 +160,7 @@ extension MyselfViewController: UITableViewDelegate, UITableViewDataSource{
         if section == 0{
             return 0.1
         }else{
-        return 40
+            return 20
         }
     }
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -167,34 +168,43 @@ extension MyselfViewController: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        if (indexPath.section == 0 && indexPath.row == 0) {
-            //跳转到appstore评价界面
-            let appid = APPId
-            let url = "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=\(appid)"
-            UIApplication.sharedApplication().openURL(NSURL.init(string: url)!)
-        }else if (indexPath.section == 1 && indexPath.row == 0) {
-            //清理缓存
-            self.calculateCache()
-            self.wipeCache()
-        }else if (indexPath.section == 0 && indexPath.row == 1) {
-            let thankVc = ThanksViewController()
-            self.navigationController?.pushViewController(thankVc, animated: true)
-            thankVc.hidesBottomBarWhenPushed = true
+        if indexPath.section == 0{
+            let likeVc = LikeDogViewController()
+            self.navigationController?.pushViewController(likeVc, animated: true)
+            likeVc.hidesBottomBarWhenPushed = true
             
-        }else if (indexPath.section == 1 && indexPath.row == 1) {
-            if MFMailComposeViewController.canSendMail() {
-                // 注意这个实例要写在 if block 里，否则无法发送邮件时会出现两次提示弹窗（一次是系统的）
-                let mailComposeViewController = configuredMailComposeViewController()
-                self.presentViewController(mailComposeViewController, animated: true, completion: nil)
-            } else {
-                self.showSendMailErrorAlert()
+        }else if indexPath.section == 1 {
+            if indexPath.row == 0 {
+                //跳转到appstore评价界面
+                let appid = APPId
+                let url = "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=\(appid)"
+                UIApplication.sharedApplication().openURL(NSURL.init(string: url)!)
             }
-        }else if (indexPath.section == 1 && indexPath.row == 2) {
-            //联系我们 跳转到拨打电话
-            let webview = UIWebView()
-            let url = NSURL.init(string: "tel:18221506195")
-            webview.loadRequest(NSURLRequest.init(URL: url!))
-            self.view.addSubview(webview)
+            else if indexPath.row == 1 {
+                let thankVc = ThankViewController()
+                self.navigationController?.pushViewController(thankVc, animated: true)
+                thankVc.hidesBottomBarWhenPushed = true
+            }
+        }else if indexPath.section == 2 {
+            if indexPath.row == 0{
+                //清理缓存
+                self.calculateCache()
+                self.wipeCache()
+            }else if indexPath.row == 1 {
+                if MFMailComposeViewController.canSendMail() {
+                    // 注意这个实例要写在 if block 里，否则无法发送邮件时会出现两次提示弹窗（一次是系统的）
+                    let mailComposeViewController = configuredMailComposeViewController()
+                    self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+                } else {
+                    self.showSendMailErrorAlert()
+                }
+            }else if indexPath.row == 2 {
+                //联系我们 跳转到拨打电话
+                let webview = UIWebView()
+                let url = NSURL.init(string: "tel:18221506195")
+                webview.loadRequest(NSURLRequest.init(URL: url!))
+                self.view.addSubview(webview)
+            }
         }
     }
 }
