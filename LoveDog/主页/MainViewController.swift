@@ -137,7 +137,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 1
+            return 2
         }else if section == 1{
             return 1
         } else {
@@ -158,14 +158,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
                 cell?.detailTextLabel?.text = "新手养宠攻略"
                 cell?.detailTextLabel?.textColor = UIColor.grayColor()
                 cell?.imageView?.image = UIImage.init(named: "资讯")
+            }else{
+                cell?.textLabel?.text = "萌宠养护手册"
+                cell?.textLabel?.textColor = UIColor.redColor()
+                cell?.detailTextLabel?.text = "其他萌宠攻略"
+                cell?.detailTextLabel?.textColor = UIColor.grayColor()
+                cell?.imageView?.image = UIImage.init(named: "资讯")
             }
-//            else{
-//                cell?.textLabel?.text = "萌宠养护手册"
-//                cell?.textLabel?.textColor = UIColor.redColor()
-//                cell?.detailTextLabel?.text = "其他萌宠攻略"
-//                cell?.detailTextLabel?.textColor = UIColor.grayColor()
-//                cell?.imageView?.image = UIImage.init(named: "资讯")
-//            }
             return cell!
         }
         else if section == 1 {
@@ -235,12 +234,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
                 let curingVc = CuringViewController()
                 curingVc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(curingVc, animated: true)
+            }else{
+                let otherVc = OtherPetsViewController()
+                otherVc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(otherVc, animated: true)
             }
-//            else{
-//                let curingVc = OtherPetsViewController()
-//                curingVc.hidesBottomBarWhenPushed = true
-//                self.navigationController?.pushViewController(curingVc, animated: true)
-//            }
         }else if indexPath.section == 2 {
             
             if indexPath.row != 6 {

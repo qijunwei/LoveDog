@@ -48,6 +48,12 @@ class DogHealthViewController: UIViewController {
         tableView1.registerClass(HospViewCell.self, forCellReuseIdentifier: "HospViewCell")
         
         tableView1.mj_header = QFRefeshHeader.init(refreshingBlock: {
+            
+            let header = self.tableView1.mj_header as! MJRefreshNormalHeader
+            header.setTitle("小八想你啦!", forState: .Idle)
+            header.setTitle("小八爱你哟!", forState: .Pulling)
+            header.setTitle("小八等你哟!", forState: .Refreshing)
+            
             self.page1 = 1
             self.loadData1()
         })
@@ -84,6 +90,12 @@ class DogHealthViewController: UIViewController {
         tableView2.registerClass(DoctorViewCell.self, forCellReuseIdentifier: "DoctorViewCell")
         
         tableView2.mj_header = QFRefeshHeader.init(refreshingBlock: {
+            
+            let header = self.tableView2.mj_header as! MJRefreshNormalHeader
+            header.setTitle("小八想你啦!", forState: .Idle)
+            header.setTitle("小八爱你哟!", forState: .Pulling)
+            header.setTitle("小八等你哟!", forState: .Refreshing)
+            
             self.page2 = 1
             self.loadData2()
         })

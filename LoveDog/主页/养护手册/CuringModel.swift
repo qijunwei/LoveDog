@@ -19,10 +19,11 @@ class CuringModel:JSONModel {
     class func requestData(type: NSInteger,page:NSInteger, callBack:(cureArray:[AnyObject]?,error:NSError?)->Void)->Void{
 //        http://api.5ichong.com/v2.3/handbooks?limit=20&page=1&type=0
         
-        let para = ["limit":"20","page":String(page),"id":String(type)]
+        let para = ["limit":"20","page":String(page),"type":String(type)]
         BaseRequest.getWithURL("http://api.5ichong.com/v2.3/handbooks", para: para) { (data, error) in
             
             if error == nil{
+
                 //解析根目录的字典
                 let obj = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                 let cureArray = NSMutableArray()

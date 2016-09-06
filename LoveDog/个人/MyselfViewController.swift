@@ -169,9 +169,11 @@ extension MyselfViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         if indexPath.section == 0{
+            if indexPath.row == 0{
             let likeVc = LikeDogViewController()
-            self.navigationController?.pushViewController(likeVc, animated: true)
             likeVc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(likeVc, animated: true)
+            }
             
         }else if indexPath.section == 1 {
             if indexPath.row == 0 {
@@ -182,8 +184,8 @@ extension MyselfViewController: UITableViewDelegate, UITableViewDataSource{
             }
             else if indexPath.row == 1 {
                 let thankVc = ThankViewController()
-                self.navigationController?.pushViewController(thankVc, animated: true)
                 thankVc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(thankVc, animated: true)
             }
         }else if indexPath.section == 2 {
             if indexPath.row == 0{

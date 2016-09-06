@@ -10,14 +10,14 @@ import UIKit
 import FMDB
 
 class DogDetailViewController: UIViewController {
-
+    
     var model = DogModel()
     var scrollView = UIScrollView()//整个页面可以滚动
     var imageView = UIImageView()//上面的大图展示
     var lable = UILabel()//下面的文字展示
     var nameLabel = UILabel()//狗的名字
     var isCollect = false//收藏状态
-
+    
     //增加分享按钮
     var rightItem: UIBarButtonItem?
     var shareTitle:String?
@@ -44,7 +44,7 @@ class DogDetailViewController: UIViewController {
         rightItem = UIBarButtonItem.init(title: "分享", style: .Plain, target:self, action: #selector(self.shareTo))
         rightItem?.tintColor = UIColor.blackColor()
         self.navigationItem.rightBarButtonItem = rightItem
-
+        
     }
     
     func shareTo(){
@@ -54,7 +54,7 @@ class DogDetailViewController: UIViewController {
         
         let shareParames = NSMutableDictionary()
         shareParames.SSDKSetupShareParamsByText("骨小八狗狗图片分享", images: UIImage.init(named: "graylogo"), url: NSURL.init(string: shareUrl!), title: shareTitle, type: SSDKContentType.Auto)
-//        ,SSDKPlatformType.TypeQQ.rawValue
+        //        ,SSDKPlatformType.TypeQQ.rawValue
         ShareSDK.showShareActionSheet(view, items: [SSDKPlatformType.TypeWechat.rawValue], shareParams: shareParames) { (state, platformType, userdata, contentEnity, error, end) in
             switch state {
             case SSDKResponseState.Success:
@@ -68,7 +68,7 @@ class DogDetailViewController: UIViewController {
             }
         }
     }
-
+    
     func createScrollView(){
         scrollView.frame = UIScreen.mainScreen().bounds
         scrollView.showsVerticalScrollIndicator = false
@@ -93,13 +93,13 @@ class DogDetailViewController: UIViewController {
         
         //收藏按钮
         let button = UIButton.init(type: .System)
-        button.frame = CGRectMake(SCREEN_W - 30, CGFloat(imageView.frame.origin.y + 250), 20, 20)
+        button.frame = CGRectMake(SCREEN_W - 33, CGFloat(imageView.frame.origin.y + 250), 20, 20)
+        button.tintColor = UIColor.redColor()
         if isCollect {
-            button.setImage(UIImage.init(named: "tab_c1"), forState: .Normal)
+            button.setImage(UIImage.init(named: "748-heart-toolbar-selected")?.imageWithRenderingMode(.AlwaysTemplate), forState: .Normal)
         }else{
-        button.setImage(UIImage.init(named: "726-star"), forState: .Normal)
+            button.setImage(UIImage.init(named: "748-heart-toolbar"), forState: .Normal)
         }
-        button.tintColor = UIColor.orangeColor()
         button.addTarget(self, action: #selector(self.collectDog(_:)), forControlEvents: .TouchUpInside)
         scrollView.addSubview(button)
         
@@ -113,19 +113,17 @@ class DogDetailViewController: UIViewController {
         
         scrollView.contentSize = CGSizeMake(0, imageView.frame.height + lable.frame.height + 50 )
         
-  }
+    }
     
     func collectDog(button:UIButton){
         //被选中
         isCollect = !isCollect
-        //由于没有合适的图片作为收藏按钮，所以两张不同类型的图片，设置了线条颜色
         if isCollect {
-            button.setImage(UIImage.init(named: "tab_c1")?.imageWithRenderingMode(.AlwaysOriginal), forState: .Normal)
+            button.setImage(UIImage.init(named: "748-heart-toolbar-selected")?.imageWithRenderingMode(.AlwaysTemplate), forState: .Normal)
             FMDBDataManager.defaultManger.insertWith(model)
             
         }else{
-            button.setImage(UIImage.init(named: "726-star"), forState: .Normal)
-            button.tintColor = UIColor.orangeColor()
+            button.setImage(UIImage.init(named: "748-heart-toolbar"), forState: .Normal)
             FMDBDataManager.defaultManger.deleteSql(model, uid: model.id!)
         }
     }
@@ -134,5 +132,5 @@ class DogDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }

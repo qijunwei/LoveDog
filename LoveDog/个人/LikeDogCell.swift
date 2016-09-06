@@ -14,7 +14,6 @@ class LikeDogCell: UITableViewCell {
     var headImage = UIImageView()
     var title = UILabel()
 
-    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         

@@ -25,6 +25,7 @@ class LikeDogViewController: UIViewController {
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorColor = GRAYCOLOR2
+        //tableview不允许被被选中
         tableView.allowsSelection = false
         tableView.registerClass(LikeDogCell.self, forCellReuseIdentifier: "LikeDogCell")
         //强制在页脚加一个空视图，让多余的分割线消失
@@ -59,5 +60,25 @@ extension  LikeDogViewController:UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     
+    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        //返回编辑操作的风格为删除操作
+        return .Delete
+    }
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        //删除的操作要写在这个方法里
+        //如果使用的默认的删除风格，那么在实现了这个方法时，在非编辑状态下，左划会出现一个单行删除的操作
+        
+        //要删除就要在数据中操作
+        let model = dataArray[indexPath.row]
+        FMDBDataManager.defaultManger.deleteSql(model, uid: model.id!)
+        dataArray = FMDBDataManager.defaultManger.selectAll()
+        //还是要刷新
+        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Right)
+        
+    }
+    //tableview自带删除改成汉字
+    func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
+        return "删除收藏"
+    }
 
 }

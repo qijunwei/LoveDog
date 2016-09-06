@@ -74,7 +74,7 @@ extension DogKindViewController: UITableViewDelegate, UITableViewDataSource {
         detailVC.lable.text = model.details
         detailVC.nameLabel.text = model.name
         detailVC.imageView.sd_setImageWithURL(NSURL.init(string: model.imgUrl!))
-        self.hidesBottomBarWhenPushed = true
+//        self.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

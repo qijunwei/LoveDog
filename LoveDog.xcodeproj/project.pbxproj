@@ -184,6 +184,17 @@
 		2EF4EC181D7D83B7003CD779 /* FMDBDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC171D7D83B7003CD779 /* FMDBDataManager.swift */; };
 		2EF4EC1A1D7D994C003CD779 /* LikeDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC191D7D994C003CD779 /* LikeDogViewController.swift */; };
 		2EF4EC1C1D7DA72B003CD779 /* LikeDogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC1B1D7DA72B003CD779 /* LikeDogCell.swift */; };
+		2EF4EC231D7DB298003CD779 /* 748-heart-toolbar-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC1D1D7DB298003CD779 /* 748-heart-toolbar-selected.png */; };
+		2EF4EC241D7DB298003CD779 /* 748-heart-toolbar-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC1E1D7DB298003CD779 /* 748-heart-toolbar-selected@2x.png */; };
+		2EF4EC251D7DB298003CD779 /* 748-heart-toolbar-selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC1F1D7DB298003CD779 /* 748-heart-toolbar-selected@3x.png */; };
+		2EF4EC261D7DB298003CD779 /* 748-heart-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC201D7DB298003CD779 /* 748-heart-toolbar.png */; };
+		2EF4EC271D7DB298003CD779 /* 748-heart-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC211D7DB298003CD779 /* 748-heart-toolbar@2x.png */; };
+		2EF4EC281D7DB298003CD779 /* 748-heart-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC221D7DB298003CD779 /* 748-heart-toolbar@3x.png */; };
+		2EF4EC2A1D7F0C74003CD779 /* NaviTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC291D7F0C74003CD779 /* NaviTitleView.swift */; };
+		2EF4EC2C1D7F0FE8003CD779 /* OtherPetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC2B1D7F0FE8003CD779 /* OtherPetsCell.swift */; };
+		2EF4EC301D7F1B82003CD779 /* OtherPetsCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC2D1D7F1B82003CD779 /* OtherPetsCell1.swift */; };
+		2EF4EC311D7F1B82003CD779 /* OtherPetsCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC2E1D7F1B82003CD779 /* OtherPetsCell2.swift */; };
+		2EF4EC321D7F1B82003CD779 /* OtherPetsCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC2F1D7F1B82003CD779 /* OtherPetsCell3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -370,6 +381,17 @@
 		2EF4EC171D7D83B7003CD779 /* FMDBDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDBDataManager.swift; sourceTree = "<group>"; };
 		2EF4EC191D7D994C003CD779 /* LikeDogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeDogViewController.swift; sourceTree = "<group>"; };
 		2EF4EC1B1D7DA72B003CD779 /* LikeDogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeDogCell.swift; sourceTree = "<group>"; };
+		2EF4EC1D1D7DB298003CD779 /* 748-heart-toolbar-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "748-heart-toolbar-selected.png"; sourceTree = "<group>"; };
+		2EF4EC1E1D7DB298003CD779 /* 748-heart-toolbar-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "748-heart-toolbar-selected@2x.png"; sourceTree = "<group>"; };
+		2EF4EC1F1D7DB298003CD779 /* 748-heart-toolbar-selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "748-heart-toolbar-selected@3x.png"; sourceTree = "<group>"; };
+		2EF4EC201D7DB298003CD779 /* 748-heart-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "748-heart-toolbar.png"; sourceTree = "<group>"; };
+		2EF4EC211D7DB298003CD779 /* 748-heart-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "748-heart-toolbar@2x.png"; sourceTree = "<group>"; };
+		2EF4EC221D7DB298003CD779 /* 748-heart-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "748-heart-toolbar@3x.png"; sourceTree = "<group>"; };
+		2EF4EC291D7F0C74003CD779 /* NaviTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviTitleView.swift; sourceTree = "<group>"; };
+		2EF4EC2B1D7F0FE8003CD779 /* OtherPetsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherPetsCell.swift; sourceTree = "<group>"; };
+		2EF4EC2D1D7F1B82003CD779 /* OtherPetsCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherPetsCell1.swift; sourceTree = "<group>"; };
+		2EF4EC2E1D7F1B82003CD779 /* OtherPetsCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherPetsCell2.swift; sourceTree = "<group>"; };
+		2EF4EC2F1D7F1B82003CD779 /* OtherPetsCell3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherPetsCell3.swift; sourceTree = "<group>"; };
 		2F867E9D4A2D784DEEA583BD /* Pods_LoveDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B5D8266DFB1053C14C8520 /* Pods-LoveDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -472,10 +494,10 @@
 		2E4689E51D7C05F500529E44 /* 健康 */ = {
 			isa = PBXGroup;
 			children = (
+				2E4689E91D7C05F500529E44 /* DogHealthViewController.swift */,
 				2E4689E61D7C05F500529E44 /* DoctorModel.swift */,
 				2E4689E71D7C05F500529E44 /* DoctorNetworkManager.swift */,
 				2E4689E81D7C05F500529E44 /* DoctorViewCell.swift */,
-				2E4689E91D7C05F500529E44 /* DogHealthViewController.swift */,
 				2E4689EA1D7C05F500529E44 /* HealthDetailViewController.swift */,
 				2E4689EB1D7C05F500529E44 /* HospitalModel.swift */,
 				2E4689EC1D7C05F500529E44 /* HospitalNetworkManager.swift */,
@@ -512,9 +534,9 @@
 		2E4689F91D7C05F500529E44 /* 主页 */ = {
 			isa = PBXGroup;
 			children = (
-				2E4689FA1D7C05F500529E44 /* DocCollectionViewCell.swift */,
-				2E4689FB1D7C05F500529E44 /* DocViewCell.swift */,
 				2E4689FC1D7C05F500529E44 /* MainViewController.swift */,
+				2E4689FB1D7C05F500529E44 /* DocViewCell.swift */,
+				2E4689FA1D7C05F500529E44 /* DocCollectionViewCell.swift */,
 				2E468A041D7C05F500529E44 /* 按钮详情 */,
 				2E4689FF1D7C05F500529E44 /* 养护手册 */,
 				2E4689FD1D7C05F500529E44 /* 其他宠物 */,
@@ -526,6 +548,11 @@
 			isa = PBXGroup;
 			children = (
 				2E4689FE1D7C05F500529E44 /* OtherPetsViewController.swift */,
+				2EF4EC291D7F0C74003CD779 /* NaviTitleView.swift */,
+				2EF4EC2B1D7F0FE8003CD779 /* OtherPetsCell.swift */,
+				2EF4EC2D1D7F1B82003CD779 /* OtherPetsCell1.swift */,
+				2EF4EC2E1D7F1B82003CD779 /* OtherPetsCell2.swift */,
+				2EF4EC2F1D7F1B82003CD779 /* OtherPetsCell3.swift */,
 			);
 			path = "其他宠物";
 			sourceTree = "<group>";
@@ -533,10 +560,10 @@
 		2E4689FF1D7C05F500529E44 /* 养护手册 */ = {
 			isa = PBXGroup;
 			children = (
-				2E468A001D7C05F500529E44 /* CureDetailViewController.swift */,
+				2E468A031D7C05F500529E44 /* CuringViewController.swift */,
 				2E468A011D7C05F500529E44 /* CuringCell.swift */,
 				2E468A021D7C05F500529E44 /* CuringModel.swift */,
-				2E468A031D7C05F500529E44 /* CuringViewController.swift */,
+				2E468A001D7C05F500529E44 /* CureDetailViewController.swift */,
 			);
 			path = "养护手册";
 			sourceTree = "<group>";
@@ -678,6 +705,12 @@
 		2E468A771D7C05F500529E44 /* tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				2EF4EC1D1D7DB298003CD779 /* 748-heart-toolbar-selected.png */,
+				2EF4EC1E1D7DB298003CD779 /* 748-heart-toolbar-selected@2x.png */,
+				2EF4EC1F1D7DB298003CD779 /* 748-heart-toolbar-selected@3x.png */,
+				2EF4EC201D7DB298003CD779 /* 748-heart-toolbar.png */,
+				2EF4EC211D7DB298003CD779 /* 748-heart-toolbar@2x.png */,
+				2EF4EC221D7DB298003CD779 /* 748-heart-toolbar@3x.png */,
 				2EF4EC0C1D7C7022003CD779 /* tab_c1.png */,
 				2EF4EC081D7C6CEB003CD779 /* 726-star@2x.png */,
 				2EF4EC091D7C6CEB003CD779 /* 726-star@3x.png */,
@@ -801,6 +834,7 @@
 				2E468B0E1D7C05F500529E44 /* 198.png in Resources */,
 				2E468AAD1D7C05F500529E44 /* 101.png in Resources */,
 				2E4689C81D7C054F00529E44 /* LaunchScreen.storyboard in Resources */,
+				2EF4EC241D7DB298003CD779 /* 748-heart-toolbar-selected@2x.png in Resources */,
 				2E4689C51D7C054F00529E44 /* Assets.xcassets in Resources */,
 				2E468B0C1D7C05F500529E44 /* 196.png in Resources */,
 				2E468ADD1D7C05F500529E44 /* 149.png in Resources */,
@@ -812,7 +846,9 @@
 				2E468B0B1D7C05F500529E44 /* 195.png in Resources */,
 				2E468ABC1D7C05F500529E44 /* 116.png in Resources */,
 				2E468AE61D7C05F500529E44 /* 158.png in Resources */,
+				2EF4EC231D7DB298003CD779 /* 748-heart-toolbar-selected.png in Resources */,
 				2E468AE21D7C05F500529E44 /* 154.png in Resources */,
+				2EF4EC281D7DB298003CD779 /* 748-heart-toolbar@3x.png in Resources */,
 				2E468ADF1D7C05F500529E44 /* 151.png in Resources */,
 				2E468B151D7C05F500529E44 /* qd1.png in Resources */,
 				2E468AF41D7C05F500529E44 /* 172.png in Resources */,
@@ -832,6 +868,7 @@
 				2E468AFF1D7C05F500529E44 /* 183.png in Resources */,
 				2E468B281D7C05F500529E44 /* 资讯@3x.png in Resources */,
 				2E468A9D1D7C05F500529E44 /* SearchDogCell.xib in Resources */,
+				2EF4EC251D7DB298003CD779 /* 748-heart-toolbar-selected@3x.png in Resources */,
 				2E468B181D7C05F500529E44 /* 766-arrow-right-selected@2x.png in Resources */,
 				2E468AE11D7C05F500529E44 /* 153.png in Resources */,
 				2E468AC91D7C05F500529E44 /* 129.png in Resources */,
@@ -839,6 +876,7 @@
 				2E468AE51D7C05F500529E44 /* 157.png in Resources */,
 				2E468AC31D7C05F500529E44 /* 123.png in Resources */,
 				2E468ADA1D7C05F500529E44 /* 146.png in Resources */,
+				2EF4EC271D7DB298003CD779 /* 748-heart-toolbar@2x.png in Resources */,
 				2E468AE31D7C05F500529E44 /* 155.png in Resources */,
 				2E468AE91D7C05F500529E44 /* 161.png in Resources */,
 				2E468AC61D7C05F500529E44 /* 126.png in Resources */,
@@ -897,6 +935,7 @@
 				2E468AB71D7C05F500529E44 /* 111.png in Resources */,
 				2E468AB91D7C05F500529E44 /* 113.png in Resources */,
 				2E468AEB1D7C05F500529E44 /* 163.png in Resources */,
+				2EF4EC261D7DB298003CD779 /* 748-heart-toolbar.png in Resources */,
 				2E468ABE1D7C05F500529E44 /* 118.png in Resources */,
 				2E468AE01D7C05F500529E44 /* 152.png in Resources */,
 				2E468B101D7C05F500529E44 /* 200.png in Resources */,
@@ -992,6 +1031,7 @@
 				2E468A9A1D7C05F500529E44 /* DogModel.swift in Sources */,
 				2E468A921D7C05F500529E44 /* HospitalModel.swift in Sources */,
 				2E468A951D7C05F500529E44 /* QFRefeshHeader.swift in Sources */,
+				2EF4EC2C1D7F0FE8003CD779 /* OtherPetsCell.swift in Sources */,
 				2E468A8F1D7C05F500529E44 /* DoctorViewCell.swift in Sources */,
 				2E468A961D7C05F500529E44 /* LocationCell.swift in Sources */,
 				2E468A991D7C05F500529E44 /* DogKindViewController.swift in Sources */,
@@ -1008,9 +1048,12 @@
 				2E468AAB1D7C05F500529E44 /* DogTabBarController.swift in Sources */,
 				2E468A941D7C05F500529E44 /* HospViewCell.swift in Sources */,
 				2E468AA61D7C05F500529E44 /* MainDetailCell.swift in Sources */,
+				2EF4EC311D7F1B82003CD779 /* OtherPetsCell2.swift in Sources */,
 				2E468A9B1D7C05F500529E44 /* KindSearchViewController.swift in Sources */,
 				2E468AA71D7C05F500529E44 /* MainDetailViewController.swift in Sources */,
 				2E4689C01D7C054F00529E44 /* ViewController.swift in Sources */,
+				2EF4EC2A1D7F0C74003CD779 /* NaviTitleView.swift in Sources */,
+				2EF4EC321D7F1B82003CD779 /* OtherPetsCell3.swift in Sources */,
 				2E468AA81D7C05F500529E44 /* MainModel.swift in Sources */,
 				2E4689DD1D7C05D900529E44 /* XTADScrollView.m in Sources */,
 				2E468AA51D7C05F500529E44 /* CuringViewController.swift in Sources */,
@@ -1022,6 +1065,7 @@
 				2EF4EC1C1D7DA72B003CD779 /* LikeDogCell.swift in Sources */,
 				2E4689E11D7C05D900529E44 /* Tools.swift in Sources */,
 				2E468AA41D7C05F500529E44 /* CuringModel.swift in Sources */,
+				2EF4EC301D7F1B82003CD779 /* OtherPetsCell1.swift in Sources */,
 				2E468AA91D7C05F500529E44 /* MainNetManager.swift in Sources */,
 				2EF4EC101D7C7711003CD779 /* ThankViewController.swift in Sources */,
 				2E468A8D1D7C05F500529E44 /* DoctorModel.swift in Sources */,
