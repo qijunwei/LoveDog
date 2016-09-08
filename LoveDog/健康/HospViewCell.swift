@@ -20,7 +20,7 @@ class HospViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        headImage.frame = CGRectMake(16, 10, 110, 80)
+        headImage.frame = CGRectMake(16, 10, 100, 70)
         self.contentView.addSubview(headImage)
         
         title.frame = CGRectMake(140, 10, SCREEN_W - 145, 20)

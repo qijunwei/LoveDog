@@ -16,6 +16,15 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     var headerView: UIView!//头视图：滚动视图和五个按钮
     //定位相关
     var locationManger : CLLocationManager!
+//    //经纬度海拔 以下是算两个点的距离，放在这里记录一下
+//    var longtitude:CLLocationDegrees = 0
+//    var latitude:CLLocationDegrees = 0
+//    var  altitude:CLLocationDistance = 0
+//    
+//    let currentLocation = CLLocation.init(latitude: latitude, longitude: longtitude)
+//    let shopLocation = CLLocation.init(latitude: Double(model.latitude), longitude: Double(model.longitude))
+//    dis = currentLocation.distanceFromLocation(shopLocation)/1000
+    
     var rightItem: UIBarButtonItem?
     
     var docArr = [DoctorModel]()
@@ -58,6 +67,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         rightItem = UIBarButtonItem.init(title: "定位", style: .Plain, target:self, action: #selector(self.locateCurrent))
         rightItem?.tintColor = UIColor.blackColor()
         self.navigationItem.rightBarButtonItem = rightItem
+        tableView.reloadData()
     }
     //    定位
     func locateCurrent(){
@@ -183,6 +193,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
                 cell.address.text = model.address
                 cell.address.numberOfLines = 0
                 cell.address.sizeToFit()
+                
             }else{
                 cell.seemore.text = "查看全部"
             }
@@ -258,6 +269,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
+//        
+//        longtitude  = (location?.coordinate.longitude)! //经度 纬度 海拔
+//        latitude = (location?.coordinate.latitude)!
+//        altitude = (location?.altitude)!
+        
         let geocoder = CLGeocoder.init()
         geocoder.reverseGeocodeLocation(location!) { (array, error) in
             if array?.count > 0{

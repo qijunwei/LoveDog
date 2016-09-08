@@ -27,11 +27,17 @@ class DogTabBarController: UITabBarController {
         vc2.tabBarItem.image = UIImage(named: "药箱")
 
         
-        //自家狗狗的展现、分享
+        //主页
         let vc3 = MainViewController()
         let nvc3 = UINavigationController(rootViewController: vc3)
         vc3.title = "主页"
-        vc3.tabBarItem.image = UIImage(named: "社区")
+        vc3.tabBarItem.image = UIImage(named: "资讯")
+        
+        //自家狗狗的展现、分享
+        let vc5 = FeedsViewController()
+        let nvc5 = UINavigationController(rootViewController: vc5)
+        vc5.title = "圈子"
+        vc5.tabBarItem.image = UIImage(named: "社区")
         
         //个人信息、设置、地理位置、发送消息、我的收藏、支付打赏等
         let vc4 = MyselfViewController()
@@ -40,7 +46,7 @@ class DogTabBarController: UITabBarController {
         vc4.tabBarItem.image = UIImage(named: "我")
         
         //将四个导航控制器添加到标签栏
-        self.viewControllers = [nvc3,nvc2,nvc1,nvc4]
+        self.viewControllers = [nvc3,nvc2,nvc1,nvc5,nvc4]
         //设置标签选中颜色
         self.tabBar.barTintColor = GRAYCOLOR2
         self.tabBar.tintColor = UIColor.orangeColor()

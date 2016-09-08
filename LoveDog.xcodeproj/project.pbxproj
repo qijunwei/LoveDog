@@ -195,6 +195,9 @@
 		2EF4EC301D7F1B82003CD779 /* OtherPetsCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC2D1D7F1B82003CD779 /* OtherPetsCell1.swift */; };
 		2EF4EC311D7F1B82003CD779 /* OtherPetsCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC2E1D7F1B82003CD779 /* OtherPetsCell2.swift */; };
 		2EF4EC321D7F1B82003CD779 /* OtherPetsCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC2F1D7F1B82003CD779 /* OtherPetsCell3.swift */; };
+		2EF4EC371D804651003CD779 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC361D804651003CD779 /* FeedsViewController.swift */; };
+		2EF4EC391D8046EE003CD779 /* FeedsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC381D8046EE003CD779 /* FeedsCell.swift */; };
+		2EF4EC3B1D8047F6003CD779 /* FeedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -378,7 +381,7 @@
 		2EF4EC0C1D7C7022003CD779 /* tab_c1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_c1.png; sourceTree = "<group>"; };
 		2EF4EC0E1D7C7711003CD779 /* ThankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankViewController.swift; sourceTree = "<group>"; };
 		2EF4EC0F1D7C7711003CD779 /* ThankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThankViewController.xib; sourceTree = "<group>"; };
-		2EF4EC171D7D83B7003CD779 /* FMDBDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDBDataManager.swift; sourceTree = "<group>"; };
+		2EF4EC171D7D83B7003CD779 /* FMDBDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FMDBDataManager.swift; path = "../LoveDog/种类/收藏/FMDBDataManager.swift"; sourceTree = "<group>"; };
 		2EF4EC191D7D994C003CD779 /* LikeDogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeDogViewController.swift; sourceTree = "<group>"; };
 		2EF4EC1B1D7DA72B003CD779 /* LikeDogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeDogCell.swift; sourceTree = "<group>"; };
 		2EF4EC1D1D7DB298003CD779 /* 748-heart-toolbar-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "748-heart-toolbar-selected.png"; sourceTree = "<group>"; };
@@ -392,6 +395,9 @@
 		2EF4EC2D1D7F1B82003CD779 /* OtherPetsCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherPetsCell1.swift; sourceTree = "<group>"; };
 		2EF4EC2E1D7F1B82003CD779 /* OtherPetsCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherPetsCell2.swift; sourceTree = "<group>"; };
 		2EF4EC2F1D7F1B82003CD779 /* OtherPetsCell3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherPetsCell3.swift; sourceTree = "<group>"; };
+		2EF4EC361D804651003CD779 /* FeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
+		2EF4EC381D8046EE003CD779 /* FeedsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsCell.swift; sourceTree = "<group>"; };
+		2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsModel.swift; sourceTree = "<group>"; };
 		2F867E9D4A2D784DEEA583BD /* Pods_LoveDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B5D8266DFB1053C14C8520 /* Pods-LoveDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -433,6 +439,7 @@
 				2E4689F91D7C05F500529E44 /* 主页 */,
 				2E4689E51D7C05F500529E44 /* 健康 */,
 				2E4689F21D7C05F500529E44 /* 种类 */,
+				2EF4EC351D80460B003CD779 /* 圈子 */,
 				2E4689E21D7C05F500529E44 /* 个人 */,
 				2E468A0A1D7C05F500529E44 /* DogTabBarController.swift */,
 				2E468A0B1D7C05F500529E44 /* Source */,
@@ -455,6 +462,7 @@
 				2E4689D71D7C05D900529E44 /* HDManager */,
 				2E4689DA1D7C05D900529E44 /* MD5Tool.swift */,
 				2E4689DB1D7C05D900529E44 /* Tools.swift */,
+				2EF4EC171D7D83B7003CD779 /* FMDBDataManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -526,7 +534,6 @@
 				2E4689F71D7C05F500529E44 /* SearchDogCell.swift */,
 				2E4689F81D7C05F500529E44 /* SearchDogCell.xib */,
 				2E4689F51D7C05F500529E44 /* DogModel.swift */,
-				2EF4EC161D7D83A1003CD779 /* 收藏 */,
 			);
 			path = "种类";
 			sourceTree = "<group>";
@@ -737,12 +744,14 @@
 			path = tabbar;
 			sourceTree = "<group>";
 		};
-		2EF4EC161D7D83A1003CD779 /* 收藏 */ = {
+		2EF4EC351D80460B003CD779 /* 圈子 */ = {
 			isa = PBXGroup;
 			children = (
-				2EF4EC171D7D83B7003CD779 /* FMDBDataManager.swift */,
+				2EF4EC361D804651003CD779 /* FeedsViewController.swift */,
+				2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */,
+				2EF4EC381D8046EE003CD779 /* FeedsCell.swift */,
 			);
-			path = "收藏";
+			path = "圈子";
 			sourceTree = "<group>";
 		};
 		A52E216D3EAA7EEFFE7896EB /* Pods */ = {
@@ -1023,6 +1032,7 @@
 			files = (
 				2E4689DE1D7C05D900529E44 /* BaseRequest.swift in Sources */,
 				2E468AA11D7C05F500529E44 /* OtherPetsViewController.swift in Sources */,
+				2EF4EC371D804651003CD779 /* FeedsViewController.swift in Sources */,
 				2E468A9E1D7C05F500529E44 /* DocCollectionViewCell.swift in Sources */,
 				2E468A911D7C05F500529E44 /* HealthDetailViewController.swift in Sources */,
 				2EF4EC1A1D7D994C003CD779 /* LikeDogViewController.swift in Sources */,
@@ -1055,6 +1065,7 @@
 				2EF4EC2A1D7F0C74003CD779 /* NaviTitleView.swift in Sources */,
 				2EF4EC321D7F1B82003CD779 /* OtherPetsCell3.swift in Sources */,
 				2E468AA81D7C05F500529E44 /* MainModel.swift in Sources */,
+				2EF4EC3B1D8047F6003CD779 /* FeedsModel.swift in Sources */,
 				2E4689DD1D7C05D900529E44 /* XTADScrollView.m in Sources */,
 				2E468AA51D7C05F500529E44 /* CuringViewController.swift in Sources */,
 				2E468AA21D7C05F500529E44 /* CureDetailViewController.swift in Sources */,
@@ -1067,6 +1078,7 @@
 				2E468AA41D7C05F500529E44 /* CuringModel.swift in Sources */,
 				2EF4EC301D7F1B82003CD779 /* OtherPetsCell1.swift in Sources */,
 				2E468AA91D7C05F500529E44 /* MainNetManager.swift in Sources */,
+				2EF4EC391D8046EE003CD779 /* FeedsCell.swift in Sources */,
 				2EF4EC101D7C7711003CD779 /* ThankViewController.swift in Sources */,
 				2E468A8D1D7C05F500529E44 /* DoctorModel.swift in Sources */,
 			);

@@ -40,10 +40,12 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oT9-SU-0U1">
                     <rect key="frame" x="5" y="0.0" width="590" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <mutableString key="text">---------------------------------------------- UI设计  HZY ---------------------------------------------- 技术支持  superk589 ---------------------------------------------- 本程序使用的第三方库  SDWebImage(MIT License) Copyright (c) 2016 Olivier Poitrey rs@dailymotion.co  JSONModel(MIT License) Copyright (c) 2012-2016 Marin Todorov and JSONModel contributors
+                    <string key="text">---------------------------------------------- UI设计  HZY ---------------------------------------------- 技术支持  superk589 ---------------------------------------------- 本程序使用的第三方库  SDWebImage(MIT License) Copyright (c) 2016 Olivier Poitrey rs@dailymotion.co  JSONModel(MIT License) Copyright (c) 2012-2016 Marin Todorov and JSONModel contributors
  MBProgressHUD(MIT License) Copyright © 2009-2016 Matej Bukovinski
- MJRefresh(MIT License) Copyright (c) 2013-2015 MJRefresh (https://github.com/CoderMJLee/MJRefresh)  FMDB(MIT License) Copyright (c) 2008-2014 Flying Meat Inc.  ShareSDK
-----------------------------------------------  本程序中所使用的图片、链接等数据来源于网络，其版权在不违反官方版权的前提下遵循提供者的版权声明  The program uses pictures, links and other data from the network, which copyrights without violating copyright follow the official provider claims. ----------------------------------------------   </mutableString>
+ MJRefresh(MIT License) Copyright (c) 2013-2015 MJRefresh (https://github.com/CoderMJLee/MJRefresh)  FMDB(MIT License) Copyright (c) 2008-2014 Flying Meat Inc.
+
+SwiftyJSON(MIT License) Copyright (c) 2014 Ruoyu Fu  ShareSDK
+----------------------------------------------  本程序中所使用的图片、链接等数据来源于网络，其版权在不违反官方版权的前提下遵循提供者的版权声明  The program uses pictures, links and other data from the network, which copyrights without violating copyright follow the official provider claims. ----------------------------------------------   </string>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>

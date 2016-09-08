@@ -18,7 +18,6 @@ class BaseRequest{
         if para != nil {
 //            urlStr.appendString(self.parasToString(para as! [String:String]))
             urlStr.appendString(self.encodeUniCode(self.parasToString(para!)) as String)
-
             
         }
         let request = NSMutableURLRequest.init(URL: (NSURL.init(string: urlStr as String))!)
