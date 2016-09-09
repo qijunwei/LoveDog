@@ -156,7 +156,6 @@
 		2E468B121D7C05F500529E44 /* gooddoctor.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A731D7C05F500529E44 /* gooddoctor.json */; };
 		2E468B131D7C05F500529E44 /* graylogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A741D7C05F500529E44 /* graylogo.png */; };
 		2E468B141D7C05F500529E44 /* hospital.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A751D7C05F500529E44 /* hospital.json */; };
-		2E468B151D7C05F500529E44 /* qd1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A761D7C05F500529E44 /* qd1.png */; };
 		2E468B161D7C05F500529E44 /* 584-location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A781D7C05F500529E44 /* 584-location@2x.png */; };
 		2E468B171D7C05F500529E44 /* 584-location@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A791D7C05F500529E44 /* 584-location@3x.png */; };
 		2E468B181D7C05F500529E44 /* 766-arrow-right-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A7A1D7C05F500529E44 /* 766-arrow-right-selected@2x.png */; };
@@ -199,6 +198,7 @@
 		2EF4EC391D8046EE003CD779 /* FeedsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC381D8046EE003CD779 /* FeedsCell.swift */; };
 		2EF4EC3B1D8047F6003CD779 /* FeedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */; };
 		2EF4EC5F1D82C557003CD779 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC5E1D82C557003CD779 /* PhotoView.swift */; };
+		2EF4EC611D82E96F003CD779 /* qdy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC601D82E96F003CD779 /* qdy.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -357,7 +357,6 @@
 		2E468A731D7C05F500529E44 /* gooddoctor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gooddoctor.json; sourceTree = "<group>"; };
 		2E468A741D7C05F500529E44 /* graylogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graylogo.png; sourceTree = "<group>"; };
 		2E468A751D7C05F500529E44 /* hospital.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hospital.json; sourceTree = "<group>"; };
-		2E468A761D7C05F500529E44 /* qd1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qd1.png; sourceTree = "<group>"; };
 		2E468A781D7C05F500529E44 /* 584-location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "584-location@2x.png"; sourceTree = "<group>"; };
 		2E468A791D7C05F500529E44 /* 584-location@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "584-location@3x.png"; sourceTree = "<group>"; };
 		2E468A7A1D7C05F500529E44 /* 766-arrow-right-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "766-arrow-right-selected@2x.png"; sourceTree = "<group>"; };
@@ -400,6 +399,7 @@
 		2EF4EC381D8046EE003CD779 /* FeedsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsCell.swift; sourceTree = "<group>"; };
 		2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsModel.swift; sourceTree = "<group>"; };
 		2EF4EC5E1D82C557003CD779 /* PhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		2EF4EC601D82E96F003CD779 /* qdy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qdy.png; sourceTree = "<group>"; };
 		2F867E9D4A2D784DEEA583BD /* Pods_LoveDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B5D8266DFB1053C14C8520 /* Pods-LoveDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -592,12 +592,12 @@
 		2E468A0B1D7C05F500529E44 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				2EF4EC601D82E96F003CD779 /* qdy.png */,
 				2E468A0C1D7C05F500529E44 /* dog.txt */,
 				2E468A0D1D7C05F500529E44 /* DogPicture */,
 				2E468A731D7C05F500529E44 /* gooddoctor.json */,
 				2E468A741D7C05F500529E44 /* graylogo.png */,
 				2E468A751D7C05F500529E44 /* hospital.json */,
-				2E468A761D7C05F500529E44 /* qd1.png */,
 				2E468A771D7C05F500529E44 /* tabbar */,
 			);
 			path = Source;
@@ -862,7 +862,6 @@
 				2E468AE21D7C05F500529E44 /* 154.png in Resources */,
 				2EF4EC281D7DB298003CD779 /* 748-heart-toolbar@3x.png in Resources */,
 				2E468ADF1D7C05F500529E44 /* 151.png in Resources */,
-				2E468B151D7C05F500529E44 /* qd1.png in Resources */,
 				2E468AF41D7C05F500529E44 /* 172.png in Resources */,
 				2E468AF21D7C05F500529E44 /* 170.png in Resources */,
 				2E468B001D7C05F500529E44 /* 184.png in Resources */,
@@ -915,6 +914,7 @@
 				2EF4EC0D1D7C7022003CD779 /* tab_c1.png in Resources */,
 				2E468B031D7C05F500529E44 /* 187.png in Resources */,
 				2E468ABA1D7C05F500529E44 /* 114.png in Resources */,
+				2EF4EC611D82E96F003CD779 /* qdy.png in Resources */,
 				2E468AC71D7C05F500529E44 /* 127.png in Resources */,
 				2E468B131D7C05F500529E44 /* graylogo.png in Resources */,
 				2E468AFE1D7C05F500529E44 /* 182.png in Resources */,
@@ -1128,7 +1128,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hao sheng (3V5VPDV58H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hao sheng (3V5VPDV58H)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1174,7 +1175,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hao sheng (3V5VPDV58H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hao sheng (3V5VPDV58H)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;

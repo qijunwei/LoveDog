@@ -62,21 +62,21 @@ class FeedsCell: UITableViewCell {
             photo.sd_setImageWithURL(NSURL.init(string: photoArr[i].a360))
             photos.append(photo)
             photosView.addSubview(photo)
-            
-            //创建手势1
-            let tap = UITapGestureRecognizer(target: photo, action: #selector(self.tapAction(_:)))
-            photo.userInteractionEnabled = true
-            //将手势加到图片上
-            photo.addGestureRecognizer(tap)
-            photo.tag = i + 1000
+//            
+//            //创建手势1
+//            let tap = UITapGestureRecognizer(target: photo, action: #selector(self.tapAction(_:)))
+//            photo.userInteractionEnabled = true
+//            //将手势加到图片上
+//            photo.addGestureRecognizer(tap)
+//            photo.tag = i + 1000
         }
     }
-    
-    func tapAction(tap:UITapGestureRecognizer){
-        
-        
-    }
-    
+//    
+//    func tapAction(tap:UITapGestureRecognizer){
+//        
+//        
+//    }
+//    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

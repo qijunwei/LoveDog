@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class FeedsViewController: UIViewController,FeedCellDelegate {
+class FeedsViewController: UIViewController {
     
     var page: NSInteger = 1
     var feedArr = NSMutableArray()
@@ -23,6 +23,7 @@ class FeedsViewController: UIViewController,FeedCellDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.registerClass(FeedsCell.self, forCellReuseIdentifier: "FeedsCell")
+        tableView.allowsSelection = false
         return tableView
     }()
     
@@ -106,16 +107,8 @@ extension FeedsViewController: UITableViewDelegate, UITableViewDataSource{
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let model = feedArr[indexPath.row]  as! FeedModel
         
-        let photoView = PhotoView.init(frame: UIScreen.mainScreen().bounds)
-        photoView.photo.sd_setImageWithURL(NSURL.init(string: model.imageUrls[pid!].origin))
-        
-        
-        
     }
-    
-    func sendId(id: Int) {
-        pid = id
-    }
+
 }
 
 
