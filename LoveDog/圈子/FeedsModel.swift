@@ -15,7 +15,7 @@ extension FeedModel{
     
     class func requestFeedsData(page: NSInteger, callBack:(feedArray:[AnyObject]?,error:NSError?)->Void)->Void{
     
-        let para = ["os":"iOS","ak":"5587b6d167e58e151a0056be","count":"20","anonymous":"1","sdkv":"2.2.1","openudidopenudid":"3a0f9c6a417b25a73457a925e96602b279cc8c25"]
+        let para = ["os":"iOS","ak":"5587b6d167e58e151a0056be","count":"40","anonymous":"1","sdkv":"2.2.1","openudidopenudid":"3a0f9c6a417b25a73457a925e96602b279cc8c25"]
         BaseRequest.getWithURL("http://api.wsq.umeng.com/v2/feeds/stream", para: para) { (data, error) in
             
             if error == nil{
@@ -39,6 +39,22 @@ extension FeedModel{
         
         }
 
+    }
+    
+    //计算显示的评论内容
+    var attr:NSMutableAttributedString!{
+        var atrSring:NSMutableAttributedString? = nil
+        let content:NSMutableString = NSMutableString.init(string: "")
+            content.appendString(self.content)
+            atrSring = NSMutableAttributedString.init(string: content as String)
+            return atrSring!
+    }
+    var cellH :CGFloat{
+        //给定一个尺寸，宽、高计算一个字符串的大小
+        let str = NSString.init(string: self.attr.string)
+        
+        let rect = str.boundingRectWithSize(CGSizeMake(SCREEN_W - 20, 99999), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(14)], context: nil)
+        return rect.size.height
     }
 }
 

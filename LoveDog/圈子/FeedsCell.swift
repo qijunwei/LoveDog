@@ -16,28 +16,67 @@ class FeedsCell: UITableViewCell {
     var dateW = UILabel()
     var sharePhotos = UIView()
     
+    var photos = [UIImageView]()
+    var photosView = UIView()
+    
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        headImage.frame = CGRectMake(16, 10, 70, 70)
+        headImage.frame = CGRectMake(10, 10, 40, 40)
+        headImage.layer.cornerRadius = headImage.frame.size.height / 2
+        headImage.clipsToBounds = true
         self.contentView.addSubview(headImage)
         
-        name.frame = CGRectMake(110, 10, SCREEN_W - 115, 20)
-        name.font = UIFont.init(name: "STHeitiSC-Light", size: 16)
+        name.frame = CGRectMake(60, 10, SCREEN_W - 115, 20)
+        name.font = UIFont.systemFontOfSize(16)
         self.contentView.addSubview(name)
-        
-        detailL.frame = CGRectMake(110, 30, SCREEN_W - 115, 50)
-        detailL.font = UIFont.init(name: "STHeitiSC-Light", size: 14)
-        detailL.numberOfLines = 0
-        
-        self.contentView.addSubview(detailL)
 
-        dateW.frame = CGRectMake(110, 60, SCREEN_W - 115, 40)
-        dateW.font = UIFont.init(name: "STHeitiSC-Light", size: 13)
-        dateW.numberOfLines = 2
+        dateW.frame = CGRectMake(60, 30, SCREEN_W - 115, 20)
+        dateW.font = UIFont.init(name: "STHeitiSC-Light", size: 10)
         self.contentView.addSubview(dateW)
         
+        detailL.frame = CGRectMake(10, 60, SCREEN_W - 20, 0)
+        detailL.font = UIFont.init(name: "STHeitiSC-Light", size: 14)
+        detailL.numberOfLines = 0
+        self.contentView.addSubview(detailL)
+        
+        photosView.frame = CGRectMake(0, 60, SCREEN_W - 20, 0)
+        self.contentView.addSubview(photosView)
+
     }
+    
+    func wipePhotos(){
+        for photo in photos{
+            photo.removeFromSuperview()
+        }
+        photos.removeAll()
+    }
+    
+    func createPhotos(photoArr:[ImageUrl]){
+        self.wipePhotos()
+        let photoW = (SCREEN_W - 32) / 3
+        for i in 0...photoArr.count - 1{
+            let photo = UIImageView()
+            photo.frame = CGRectMake((8 + photoW) * CGFloat(i % 3), ((8 + photoW) * CGFloat(i / 3)), photoW, photoW)
+            photo.sd_setImageWithURL(NSURL.init(string: photoArr[i].a360))
+            photos.append(photo)
+            photosView.addSubview(photo)
+            
+            //创建手势1
+            let tap = UITapGestureRecognizer(target: photo, action: #selector(self.tapAction(_:)))
+            photo.userInteractionEnabled = true
+            //将手势加到图片上
+            photo.addGestureRecognizer(tap)
+            photo.tag = i + 1000
+        }
+    }
+    
+    func tapAction(tap:UITapGestureRecognizer){
+        
+        
+    }
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

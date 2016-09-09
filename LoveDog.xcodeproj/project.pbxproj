@@ -198,6 +198,7 @@
 		2EF4EC371D804651003CD779 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC361D804651003CD779 /* FeedsViewController.swift */; };
 		2EF4EC391D8046EE003CD779 /* FeedsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC381D8046EE003CD779 /* FeedsCell.swift */; };
 		2EF4EC3B1D8047F6003CD779 /* FeedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */; };
+		2EF4EC5F1D82C557003CD779 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC5E1D82C557003CD779 /* PhotoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -398,6 +399,7 @@
 		2EF4EC361D804651003CD779 /* FeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
 		2EF4EC381D8046EE003CD779 /* FeedsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsCell.swift; sourceTree = "<group>"; };
 		2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsModel.swift; sourceTree = "<group>"; };
+		2EF4EC5E1D82C557003CD779 /* PhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		2F867E9D4A2D784DEEA583BD /* Pods_LoveDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B5D8266DFB1053C14C8520 /* Pods-LoveDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -750,6 +752,7 @@
 				2EF4EC361D804651003CD779 /* FeedsViewController.swift */,
 				2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */,
 				2EF4EC381D8046EE003CD779 /* FeedsCell.swift */,
+				2EF4EC5E1D82C557003CD779 /* PhotoView.swift */,
 			);
 			path = "圈子";
 			sourceTree = "<group>";
@@ -1057,6 +1060,7 @@
 				2E4689DC1D7C05D900529E44 /* CycleImageCell.m in Sources */,
 				2E468AAB1D7C05F500529E44 /* DogTabBarController.swift in Sources */,
 				2E468A941D7C05F500529E44 /* HospViewCell.swift in Sources */,
+				2EF4EC5F1D82C557003CD779 /* PhotoView.swift in Sources */,
 				2E468AA61D7C05F500529E44 /* MainDetailCell.swift in Sources */,
 				2EF4EC311D7F1B82003CD779 /* OtherPetsCell2.swift in Sources */,
 				2E468A9B1D7C05F500529E44 /* KindSearchViewController.swift in Sources */,
