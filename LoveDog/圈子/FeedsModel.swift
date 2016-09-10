@@ -11,11 +11,12 @@ import SwiftyJSON
 
 extension FeedModel{
     
-//    http://api.wsq.umeng.com/v2/feeds/stream?os=iOS&ak=5587b6d167e58e151a0056be&count=20&anonymous=1&sdkv=2.2.1&openudidopenudid=3a0f9c6a417b25a73457a925e96602b279cc8c25
+//    http://api.wsq.umeng.com/v2/feeds/stream?os=iOS&ak=5587b6d167e58e151a0056be&count=20&anonymous=1&sdkv=2.2.1&openudidopenudid=3a0f9c6a417b25a73457a925e96602b279cc8c25 start=20
     
     class func requestFeedsData(page: NSInteger, callBack:(feedArray:[AnyObject]?,error:NSError?)->Void)->Void{
     
-        let para = ["os":"iOS","ak":"5587b6d167e58e151a0056be","count":"40","anonymous":"1","sdkv":"2.2.1","openudidopenudid":"3a0f9c6a417b25a73457a925e96602b279cc8c25"]
+        let start = String(20 * page)
+        let para = ["os":"iOS","ak":"5587b6d167e58e151a0056be","count":"20","anonymous":"1","sdkv":"2.2.1","openudidopenudid":"3a0f9c6a417b25a73457a925e96602b279cc8c25","start":start]
         BaseRequest.getWithURL("http://api.wsq.umeng.com/v2/feeds/stream", para: para) { (data, error) in
             
             if error == nil{

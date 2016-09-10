@@ -197,8 +197,8 @@
 		2EF4EC371D804651003CD779 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC361D804651003CD779 /* FeedsViewController.swift */; };
 		2EF4EC391D8046EE003CD779 /* FeedsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC381D8046EE003CD779 /* FeedsCell.swift */; };
 		2EF4EC3B1D8047F6003CD779 /* FeedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */; };
-		2EF4EC5F1D82C557003CD779 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC5E1D82C557003CD779 /* PhotoView.swift */; };
 		2EF4EC611D82E96F003CD779 /* qdy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC601D82E96F003CD779 /* qdy.png */; };
+		2EF4EC631D838EBA003CD779 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC621D838EBA003CD779 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -398,8 +398,8 @@
 		2EF4EC361D804651003CD779 /* FeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
 		2EF4EC381D8046EE003CD779 /* FeedsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsCell.swift; sourceTree = "<group>"; };
 		2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsModel.swift; sourceTree = "<group>"; };
-		2EF4EC5E1D82C557003CD779 /* PhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		2EF4EC601D82E96F003CD779 /* qdy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qdy.png; sourceTree = "<group>"; };
+		2EF4EC621D838EBA003CD779 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		2F867E9D4A2D784DEEA583BD /* Pods_LoveDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B5D8266DFB1053C14C8520 /* Pods-LoveDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -752,7 +752,7 @@
 				2EF4EC361D804651003CD779 /* FeedsViewController.swift */,
 				2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */,
 				2EF4EC381D8046EE003CD779 /* FeedsCell.swift */,
-				2EF4EC5E1D82C557003CD779 /* PhotoView.swift */,
+				2EF4EC621D838EBA003CD779 /* PhotoViewController.swift */,
 			);
 			path = "圈子";
 			sourceTree = "<group>";
@@ -1058,9 +1058,9 @@
 				2E468AAA1D7C05F500529E44 /* MainWebviewViewController.swift in Sources */,
 				2E468AA31D7C05F500529E44 /* CuringCell.swift in Sources */,
 				2E4689DC1D7C05D900529E44 /* CycleImageCell.m in Sources */,
+				2EF4EC631D838EBA003CD779 /* PhotoViewController.swift in Sources */,
 				2E468AAB1D7C05F500529E44 /* DogTabBarController.swift in Sources */,
 				2E468A941D7C05F500529E44 /* HospViewCell.swift in Sources */,
-				2EF4EC5F1D82C557003CD779 /* PhotoView.swift in Sources */,
 				2E468AA61D7C05F500529E44 /* MainDetailCell.swift in Sources */,
 				2EF4EC311D7F1B82003CD779 /* OtherPetsCell2.swift in Sources */,
 				2E468A9B1D7C05F500529E44 /* KindSearchViewController.swift in Sources */,
@@ -1202,8 +1202,8 @@
 			baseConfigurationReference = 87B5D8266DFB1053C14C8520 /* Pods-LoveDog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hao sheng (3V5VPDV58H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hao sheng (3V5VPDV58H)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/JSONModel\"",
@@ -1229,8 +1229,8 @@
 			baseConfigurationReference = 08B49F9B0B570A495650E4F2 /* Pods-LoveDog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hao sheng (3V5VPDV58H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hao sheng (3V5VPDV58H)";
 				INFOPLIST_FILE = LoveDog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

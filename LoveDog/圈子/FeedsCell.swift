@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol FeedsCellDelegate:class {
+    
+    func itemDidSelectedInRow(id:Int,row:Int)->Void
+}
+
 class FeedsCell: UITableViewCell {
 
     var headImage = UIImageView()
@@ -19,6 +24,9 @@ class FeedsCell: UITableViewCell {
     var photos = [UIImageView]()
     var photosView = UIView()
     
+    //点击哪张照片
+    weak var delegate:FeedsCellDelegate?
+    var row = 0
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -62,21 +70,21 @@ class FeedsCell: UITableViewCell {
             photo.sd_setImageWithURL(NSURL.init(string: photoArr[i].a360))
             photos.append(photo)
             photosView.addSubview(photo)
-//            
-//            //创建手势1
-//            let tap = UITapGestureRecognizer(target: photo, action: #selector(self.tapAction(_:)))
-//            photo.userInteractionEnabled = true
-//            //将手势加到图片上
-//            photo.addGestureRecognizer(tap)
-//            photo.tag = i + 1000
+            
+            //创建手势1
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapAction(_:)))
+            photo.userInteractionEnabled = true
+            //将手势加到图片上
+            photo.addGestureRecognizer(tap)
+            photo.tag = i + 1000
         }
     }
-//    
-//    func tapAction(tap:UITapGestureRecognizer){
-//        
-//        
-//    }
-//    
+    
+    func tapAction(tap:UITapGestureRecognizer){
+        delegate?.itemDidSelectedInRow(((tap.view?.tag)! - 1000),row: self.row)
+        
+    }
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

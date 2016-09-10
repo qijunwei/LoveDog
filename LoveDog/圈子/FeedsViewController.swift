@@ -8,14 +8,12 @@
 
 import UIKit
 import SwiftyJSON
+import MJRefresh
 
 class FeedsViewController: UIViewController {
     
-    var page: NSInteger = 1
+    var page: NSInteger = 0
     var feedArr = NSMutableArray()
-    
-//    接收图片id的参数
-    var pid : Int?
     
     lazy var tableView:UITableView = {
         let tableView = UITableView.init(frame: CGRectMake(0, 64, SCREEN_W, SCREEN_H-64-49), style: UITableViewStyle.Plain)
@@ -23,7 +21,25 @@ class FeedsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.registerClass(FeedsCell.self, forCellReuseIdentifier: "FeedsCell")
-        tableView.allowsSelection = false
+//        tableView.allowsSelection = false
+        
+        tableView.mj_header = QFRefeshHeader.init(refreshingBlock: {
+            
+            let header = self.tableView.mj_header as! MJRefreshNormalHeader
+            header.setTitle("小八想你啦!", forState: .Idle)
+            header.setTitle("小八爱你哟!", forState: .Pulling)
+            header.setTitle("小八等你哟!", forState: .Refreshing)
+            
+            self.page = 0
+            self.loadData()
+        })
+        
+        tableView.mj_footer = MJRefreshAutoNormalFooter.init(refreshingBlock: {
+            self.page += 1
+            self.loadData()
+        })
+
+        
         return tableView
     }()
     
@@ -32,24 +48,29 @@ class FeedsViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         self.automaticallyAdjustsScrollViewInsets = false
-
         
         self.loadData()
-        
         
     }
     
     func loadData(){
         HDManager.startLoading()
-        FeedModel.requestFeedsData(1) { (feedArray, error) in
+        FeedModel.requestFeedsData(self.page) { (feedArray, error) in
             if error == nil{
                 
-                self.feedArr.removeAllObjects()
+                
+                if self.page == 0
+                {
+                    self.feedArr.removeAllObjects()
+                }
+                
                 self.feedArr.addObjectsFromArray(feedArray!)
                 self.tableView.reloadData()
+                self.tableView.mj_footer.endRefreshing()
+                self.tableView.mj_header.endRefreshing()
             }
+            HDManager.stopLoading()
         }
-        HDManager.stopLoading()
         
     }
     
@@ -85,6 +106,10 @@ extension FeedsViewController: UITableViewDelegate, UITableViewDataSource{
         cell.dateW.text = model.createTime
         
         cell.createPhotos(model.imageUrls)
+        cell.row = indexPath.row
+        cell.delegate = self
+        
+        
         let h = (8 + (SCREEN_W - 32) / 3) * (CGFloat(model.imageUrls.count - 1)/3 + 1)
         cell.photosView.frame = CGRectMake(10, 80 + model.cellH, SCREEN_W - 20, h)
 //        cell.contentView.frame.size.height = cell.photosView.frame.size.height + cell.photosView.frame.origin.y
@@ -105,11 +130,22 @@ extension FeedsViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let model = feedArr[indexPath.row]  as! FeedModel
-        
+
     }
 
 }
 
+extension FeedsViewController:FeedsCellDelegate{
+    func itemDidSelectedInRow(id: Int,row:Int) {
+        let photoView = PhotoViewController()
+        let model = self.feedArr[row] as! FeedModel
+        
+        photoView.photoArray = model.imageUrls
+        photoView.id = id
+        
+//        photoView.photoView.sd_setImageWithURL(NSURL.init(string: model.imageUrls[id].a750))
+        self.presentViewController(photoView, animated: false, completion: nil)
+    }
+}
 
 
