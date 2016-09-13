@@ -21,7 +21,7 @@ class FeedsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.registerClass(FeedsCell.self, forCellReuseIdentifier: "FeedsCell")
-//        tableView.allowsSelection = false
+        tableView.allowsSelection = false
         
         tableView.mj_header = QFRefeshHeader.init(refreshingBlock: {
             

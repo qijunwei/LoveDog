@@ -21,9 +21,9 @@ class DoctorModel: JSONModel {
     var introduce : String!
     var is_online : Int!
     var job : String!
-    var latitude : Float!
+    var latitude : NSNumber!
     var link : String!
-    var longitude : Float!
+    var longitude : NSNumber!
     var name : String!
     var nickname : String!
     var region : String!

@@ -10,9 +10,9 @@ import UIKit
 
 extension HospitalModel {
 
-    class func requestHosData(hosCity:String, page:NSInteger, callBack:(hospitalArray:[AnyObject]?,error:NSError?)->Void)->Void{
+    class func requestHosData(hosCity:String, page:NSInteger, sort:NSInteger,latitude:NSNumber,longitude:NSNumber,callBack:(hospitalArray:[AnyObject]?,error:NSError?)->Void)->Void{
 //        http://api.5ichong.com/v1.2/hospital/find_hospital_with_region?city=%E5%8C%97%E4%BA%AC&latitude=31.237787&limit=20&longitude=121.479662&page=1&region=%E5%85%A8%E9%83%A8&sort=1
-        let para = ["city":hosCity,"job":"0","latitude":"31.237787","longitude":"121.479662","region":"全部","limit":"20","page":String(page),"sort":"2"]
+        let para = ["city":hosCity,"job":"0","latitude":String(latitude),"longitude":String(longitude),"region":"全部","limit":"20","page":String(page),"sort":String(sort)]
         BaseRequest.getWithURL("http://api.5ichong.com/v1.2/hospital/find_hospital_with_region", para: para) { (data, error) in
             
             if error == nil{

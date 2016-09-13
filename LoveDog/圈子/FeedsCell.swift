@@ -45,7 +45,7 @@ class FeedsCell: UITableViewCell {
         self.contentView.addSubview(dateW)
         
         detailL.frame = CGRectMake(10, 60, SCREEN_W - 20, 0)
-        detailL.font = UIFont.init(name: "STHeitiSC-Light", size: 14)
+        detailL.font = UIFont.init(name: "STHeitiSC-Light", size: 15)
         detailL.numberOfLines = 0
         self.contentView.addSubview(detailL)
         

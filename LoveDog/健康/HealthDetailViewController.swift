@@ -29,6 +29,10 @@ class HealthDetailViewController: UIViewController {
         let request = NSURLRequest.init(URL: url!)
         self.webView.loadRequest(request)
         self.view.addSubview(self.webView)
+        
+//        隐藏toolbar
+        self.navigationController!.toolbarHidden = true
+
     }
     
 }

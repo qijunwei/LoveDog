@@ -10,9 +10,9 @@ import UIKit
 
 extension DoctorModel {
 
-    class func requestDocData(docCity: String, page: NSInteger, callBack:(doctorArray:[AnyObject]?,error:NSError?)->Void)->Void{
+    class func requestDocData(docCity: String, page: NSInteger, sort:NSInteger,latitude:NSNumber,longitude:NSNumber, callBack:(doctorArray:[AnyObject]?,error:NSError?)->Void)->Void{
         //http://api.5ichong.com/v2.1/doctor/find_doctor_with_list?city=%E5%8C%97%E4%BA%AC&job=0&latitude=31.237787&limit=20&longitude=121.479662&page=1&sort=1
-        let para = ["city":docCity,"job":"0","latitude":"31.237787","limit":"20","longitude":"121.479662","page":String(page),"sort":"2"]
+        let para = ["city":docCity,"job":"0","latitude":String(latitude),"limit":"20","longitude":String(longitude),"page":String(page),"sort":String(sort)]
         BaseRequest.getWithURL("http://api.5ichong.com/v2.1/doctor/find_doctor_with_list", para: para) { (data, error) in
             
             if error == nil{

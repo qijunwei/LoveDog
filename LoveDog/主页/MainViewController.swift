@@ -7,15 +7,15 @@
 //
 
 import UIKit
-import CoreLocation
+//import CoreLocation
 
-class MainViewController: UIViewController, CLLocationManagerDelegate {
+class MainViewController: UIViewController {
     
     var tableView: UITableView!//整个页面
     var adView: XTADScrollView!//轮播视图
     var headerView: UIView!//头视图：滚动视图和五个按钮
     //定位相关
-    var locationManger : CLLocationManager!
+//    var locationManger : CLLocationManager!
 //    //经纬度海拔 以下是算两个点的距离，放在这里记录一下
 //    var longtitude:CLLocationDegrees = 0
 //    var latitude:CLLocationDegrees = 0
@@ -63,23 +63,23 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
             hosArr.append(model1)
         }
         
-        //定位
-        rightItem = UIBarButtonItem.init(title: "定位", style: .Plain, target:self, action: #selector(self.locateCurrent))
-        rightItem?.tintColor = UIColor.blackColor()
-        self.navigationItem.rightBarButtonItem = rightItem
+//        //定位
+//        rightItem = UIBarButtonItem.init(title: "定位", style: .Plain, target:self, action: #selector(self.locateCurrent))
+//        rightItem?.tintColor = UIColor.blackColor()
+//        self.navigationItem.rightBarButtonItem = rightItem
         tableView.reloadData()
     }
     //    定位
-    func locateCurrent(){
-        locationManger = CLLocationManager() //位置管理器.提供位置信息和高度信息
-        locationManger.delegate = self //设代理
-        locationManger.desiredAccuracy = kCLLocationAccuracyHundredMeters // 定位精度
-        locationManger.distanceFilter = 5 //500m之后更新数据
-        locationManger.requestAlwaysAuthorization() //必须发起授权
-        locationManger.requestWhenInUseAuthorization()
-        locationManger.startUpdatingLocation()
-    }
-    
+//    func locateCurrent(){
+//        locationManger = CLLocationManager() //位置管理器.提供位置信息和高度信息
+//        locationManger.delegate = self //设代理
+//        locationManger.desiredAccuracy = kCLLocationAccuracyHundredMeters // 定位精度
+//        locationManger.distanceFilter = 5 //500m之后更新数据
+//        locationManger.requestAlwaysAuthorization() //必须发起授权
+//        locationManger.requestWhenInUseAuthorization()
+//        locationManger.startUpdatingLocation()
+//    }
+//    
     func createTableView(){
         
         tableView = UITableView.init(frame: CGRectMake(0, 64, SCREEN_W, SCREEN_H-64-49), style: UITableViewStyle.Grouped)
@@ -266,36 +266,36 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             
         }
     }
-    
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.last
+//   CLLocationManagerDelegate
+//    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        let location = locations.last
+////        
+////        longtitude  = (location?.coordinate.longitude)! //经度 纬度 海拔
+////        latitude = (location?.coordinate.latitude)!
+////        altitude = (location?.altitude)!
 //        
-//        longtitude  = (location?.coordinate.longitude)! //经度 纬度 海拔
-//        latitude = (location?.coordinate.latitude)!
-//        altitude = (location?.altitude)!
-        
-        let geocoder = CLGeocoder.init()
-        geocoder.reverseGeocodeLocation(location!) { (array, error) in
-            if array?.count > 0{
-                let placemark = array![0]
-                //                var city = placemark.locality 直辖市及省
-                var city = placemark.subLocality
-                if city != nil {
-                    city = placemark.administrativeArea
-                }
-                self.rightItem?.title = city
-                print(city!)
-                manager.stopUpdatingLocation()
-            }else if (error == nil && array?.count == 0){
-                print("没有返回结果")
-            }else if error != nil {
-                print(error)
-            }
-        }
-    }
-    
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        //NSLocationWhenInUseUsageDescription
-    }
+//        let geocoder = CLGeocoder.init()
+//        geocoder.reverseGeocodeLocation(location!) { (array, error) in
+//            if array?.count > 0{
+//                let placemark = array![0]
+//                //                var city = placemark.locality 直辖市及省
+//                var city = placemark.subLocality
+//                if city != nil {
+//                    city = placemark.administrativeArea
+//                }
+//                self.rightItem?.title = city
+//                print(city!)
+//                manager.stopUpdatingLocation()
+//            }else if (error == nil && array?.count == 0){
+//                print("没有返回结果")
+//            }else if error != nil {
+//                print(error)
+//            }
+//        }
+//    }
+//    
+//    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+//        //NSLocationWhenInUseUsageDescription
+//    }
 }
 

@@ -17,15 +17,22 @@ class HospViewCell: UITableViewCell {
     //查看全部
     var seemore = UILabel()
     
+    //距离
+    var disL = UILabel()
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         headImage.frame = CGRectMake(16, 10, 100, 70)
         self.contentView.addSubview(headImage)
         
-        title.frame = CGRectMake(140, 10, SCREEN_W - 145, 20)
+        title.frame = CGRectMake(140, 10, SCREEN_W - 220, 20)
         title.font = UIFont.systemFontOfSize(17)
         self.contentView.addSubview(title)
+        
+        disL.frame = CGRectMake(SCREEN_W - 60, 10, 60, 20)
+        disL.font = UIFont.init(name: "STHeitiSC-Light", size: 12)
+        self.contentView.addSubview(disL)
         
         tel.frame = CGRectMake(140, 30, SCREEN_W - 145, 30)
         tel.font = UIFont.init(name: "STHeitiSC-Light", size: 15)

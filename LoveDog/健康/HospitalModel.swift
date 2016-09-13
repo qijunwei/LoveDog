@@ -23,9 +23,9 @@ class HospitalModel: JSONModel {
     var doctor_total : Int!
     var hours : String!
     var id : NSNumber!
-    var latitude : Float!
+    var latitude : NSNumber!
     var link : String!
-    var longitude : Float!
+    var longitude : NSNumber!
     var name : String!
     var photo_url : String!
     var region : String!

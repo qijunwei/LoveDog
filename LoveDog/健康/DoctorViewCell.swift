@@ -16,6 +16,9 @@ class DoctorViewCell: UITableViewCell {
     var intro = UILabel()
     var hos = UILabel()
     
+    //距离
+    var disL = UILabel()
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -26,9 +29,13 @@ class DoctorViewCell: UITableViewCell {
         job.font = UIFont.init(name: "STHeitiSC-Light", size: 15)
         self.contentView.addSubview(job)
         
-        name.frame = CGRectMake(110, 10, SCREEN_W - 115, 20)
-        name.font = UIFont.init(name: "STHeitiSC-Light", size: 18)
+        name.frame = CGRectMake(110, 10, SCREEN_W - 195, 20)
+        name.font = UIFont.init(name: "STHeitiSC-Light", size: 17)
         self.contentView.addSubview(name)
+        
+        disL.frame = CGRectMake(SCREEN_W - 60, 10, 60, 20)
+        disL.font = UIFont.init(name: "STHeitiSC-Light", size: 12)
+        self.contentView.addSubview(disL)
         
         hos.frame = CGRectMake(110, 35, SCREEN_W - 115, 20)
         self.contentView.addSubview(hos)

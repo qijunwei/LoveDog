@@ -54,7 +54,7 @@ extension FeedModel{
         //给定一个尺寸，宽、高计算一个字符串的大小
         let str = NSString.init(string: self.attr.string)
         
-        let rect = str.boundingRectWithSize(CGSizeMake(SCREEN_W - 20, 99999), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(14)], context: nil)
+        let rect = str.boundingRectWithSize(CGSizeMake(SCREEN_W - 20, 99999), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(15)], context: nil)
         return rect.size.height
     }
 }
