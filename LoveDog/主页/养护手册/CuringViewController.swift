@@ -36,6 +36,7 @@ class CuringViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "养护手册"
         self.view.backgroundColor = UIColor.whiteColor()
         self.automaticallyAdjustsScrollViewInsets = false
         self.loadData()

@@ -147,7 +147,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 2
+            return 3
         }else if section == 1{
             return 1
         } else {
@@ -168,21 +168,25 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
                 cell?.detailTextLabel?.text = "新手养宠攻略"
                 cell?.detailTextLabel?.textColor = UIColor.grayColor()
                 cell?.imageView?.image = UIImage.init(named: "资讯")
-            }else{
+            }else if indexPath.row == 1{
                 cell?.textLabel?.text = "萌宠养护手册"
                 cell?.textLabel?.textColor = UIColor.redColor()
                 cell?.detailTextLabel?.text = "其他萌宠攻略"
                 cell?.detailTextLabel?.textColor = UIColor.grayColor()
                 cell?.imageView?.image = UIImage.init(named: "资讯")
+            }else{
+                cell?.textLabel?.text = "症状自查手册"
+                cell?.textLabel?.textColor = UIColor.redColor()
+                cell?.detailTextLabel?.text = "典型症状自查"
+                cell?.detailTextLabel?.textColor = UIColor.grayColor()
+                cell?.imageView?.image = UIImage.init(named: "资讯")
             }
             return cell!
-        }
-        else if section == 1 {
+        }else if section == 1 {
             let cell = DocViewCell.init(style: .Default, reuseIdentifier: "doctor", data: self.docArr)
             cell.backgroundColor = UIColor.whiteColor()
             return cell
-        }
-        else {
+        }else {
                 //let cell = HospViewCell.init(style: .Default, reuseIdentifier: "hos")当内嵌tableview的时候用这个
                 let cell = tableView.dequeueReusableCellWithIdentifier("HospViewCell", forIndexPath: indexPath) as! HospViewCell
             
@@ -203,7 +207,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0{
-            return 80
+            return 50
         }else if indexPath.section == 2{
             if indexPath.row == 6{
                 return 44
@@ -245,10 +249,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
                 let curingVc = CuringViewController()
                 curingVc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(curingVc, animated: true)
-            }else{
+            }else if indexPath.row == 1{
                 let otherVc = OtherPetsViewController()
                 otherVc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(otherVc, animated: true)
+            }else{
+                let checkVc = CheckSelfViewController()
+                checkVc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(checkVc, animated: true)
             }
         }else if indexPath.section == 2 {
             

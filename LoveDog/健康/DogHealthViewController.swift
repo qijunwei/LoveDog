@@ -40,16 +40,16 @@ class DogHealthViewController: UIViewController {
         tableView1.dataSource = self
         let doctview = UIView.init(frame: CGRectMake(10, 0, SCREEN_W, 40))
         doctview.backgroundColor = GRAYCOLOR2
-        var lable11 = UILabel.init(frame: CGRectMake(10, 3, 80, 40))
+        var lable11 = UILabel.init(frame: CGRectMake(10, 0, 80, 40))
         lable11.text = "已选城市:"
-        lable11.font = UIFont.systemFontOfSize(15)
+        lable11.font = UIFont.systemFontOfSize(17)
         doctview.addSubview(lable11)
-        self.lable1 = UILabel.init(frame: CGRectMake(90, 3, 100, 40))
+        self.lable1 = UILabel.init(frame: CGRectMake(90, 0, 100, 40))
         self.lable1.text = self.hosCity
-        self.lable1.font = UIFont.systemFontOfSize(15)
-        let button = UIButton.init(frame: CGRectMake(SCREEN_W - 120, 3, 120, 40))
+        self.lable1.font = UIFont.systemFontOfSize(17)
+        let button = UIButton.init(frame: CGRectMake(SCREEN_W - 120, 0, 120, 40))
         button.setTitle("点击选择城市>", forState: .Normal)
-        button.titleLabel?.font = UIFont.systemFontOfSize(15)
+        button.titleLabel?.font = UIFont.systemFontOfSize(17)
         button.setTitleColor(UIColor.blackColor(), forState: .Normal)
         button.addTarget(self, action: #selector(self.citySelect), forControlEvents: .TouchUpInside)
         doctview.addSubview(self.lable1)
@@ -83,16 +83,16 @@ class DogHealthViewController: UIViewController {
         tableView2.dataSource = self
         let doctview = UIView.init(frame: CGRectMake(10, 0, SCREEN_W, 40))
         doctview.backgroundColor = GRAYCOLOR2
-        var lable22 = UILabel.init(frame: CGRectMake(10, 3, 80, 40))
+        var lable22 = UILabel.init(frame: CGRectMake(10, 0, 80, 40))
         lable22.text = "已选城市:"
-        lable22.font = UIFont.systemFontOfSize(15)
+        lable22.font = UIFont.systemFontOfSize(17)
         doctview.addSubview(lable22)
-        self.lable2 = UILabel.init(frame: CGRectMake(90, 3, 100, 40))
+        self.lable2 = UILabel.init(frame: CGRectMake(90, 0, 100, 40))
         self.lable2.text = self.hosCity
-        self.lable2.font = UIFont.systemFontOfSize(15)
-        let button = UIButton.init(frame: CGRectMake(SCREEN_W - 120, 3, 120, 40))
+        self.lable2.font = UIFont.systemFontOfSize(17)
+        let button = UIButton.init(frame: CGRectMake(SCREEN_W - 120, 0, 120, 40))
         button.setTitle("点击选择城市>", forState: .Normal)
-        button.titleLabel?.font = UIFont.systemFontOfSize(15)
+        button.titleLabel?.font = UIFont.systemFontOfSize(17)
         button.setTitleColor(UIColor.blackColor(), forState: .Normal)
         button.addTarget(self, action: #selector(self.citySelect), forControlEvents: .TouchUpInside)
         doctview.addSubview(self.lable2)
@@ -295,7 +295,6 @@ extension DogHealthViewController: UITableViewDelegate, UITableViewDataSource{
             cell.headImage.sd_setImageWithURL(NSURL.init(string: model.photo_url))
             
             let hosLocation = CLLocation.init(latitude: Double(model.latitude), longitude: Double(model.longitude))
-            print(currentLocation,model.longitude,model.latitude)
             let dis = currentLocation.distanceFromLocation(hosLocation)/1000
             cell.disL.text = String.init(format:"%.1fkm",dis)
             

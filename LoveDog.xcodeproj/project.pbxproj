@@ -175,6 +175,12 @@
 		2E468B261D7C05F500529E44 /* 药箱_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A881D7C05F500529E44 /* 药箱_03.png */; };
 		2E468B271D7C05F500529E44 /* 资讯@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A891D7C05F500529E44 /* 资讯@2x.png */; };
 		2E468B281D7C05F500529E44 /* 资讯@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A8A1D7C05F500529E44 /* 资讯@3x.png */; };
+		2E6FB4F11D87D8B7005B11AC /* CheckSelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB4F01D87D8B7005B11AC /* CheckSelfViewController.swift */; };
+		2E6FB4F31D87DE44005B11AC /* autognosisTags.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E6FB4F21D87DE44005B11AC /* autognosisTags.json */; };
+		2E6FB4F51D87DF99005B11AC /* CheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB4F41D87DF99005B11AC /* CheckModel.swift */; };
+		2E6FB4F91D87F7A5005B11AC /* CheckDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB4F81D87F7A5005B11AC /* CheckDetailViewController.swift */; };
+		2E6FB4FB1D87F86C005B11AC /* CheckDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB4FA1D87F86C005B11AC /* CheckDetailModel.swift */; };
+		2E6FB4FD1D881568005B11AC /* qd1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6FB4FC1D881568005B11AC /* qd1.png */; };
 		2EF4EC0A1D7C6CEB003CD779 /* 726-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC081D7C6CEB003CD779 /* 726-star@2x.png */; };
 		2EF4EC0B1D7C6CEB003CD779 /* 726-star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC091D7C6CEB003CD779 /* 726-star@3x.png */; };
 		2EF4EC0D1D7C7022003CD779 /* tab_c1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC0C1D7C7022003CD779 /* tab_c1.png */; };
@@ -197,7 +203,6 @@
 		2EF4EC371D804651003CD779 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC361D804651003CD779 /* FeedsViewController.swift */; };
 		2EF4EC391D8046EE003CD779 /* FeedsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC381D8046EE003CD779 /* FeedsCell.swift */; };
 		2EF4EC3B1D8047F6003CD779 /* FeedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */; };
-		2EF4EC611D82E96F003CD779 /* qdy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC601D82E96F003CD779 /* qdy.png */; };
 		2EF4EC631D838EBA003CD779 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC621D838EBA003CD779 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -376,6 +381,12 @@
 		2E468A881D7C05F500529E44 /* 药箱_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "药箱_03.png"; sourceTree = "<group>"; };
 		2E468A891D7C05F500529E44 /* 资讯@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "资讯@2x.png"; sourceTree = "<group>"; };
 		2E468A8A1D7C05F500529E44 /* 资讯@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "资讯@3x.png"; sourceTree = "<group>"; };
+		2E6FB4F01D87D8B7005B11AC /* CheckSelfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckSelfViewController.swift; sourceTree = "<group>"; };
+		2E6FB4F21D87DE44005B11AC /* autognosisTags.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = autognosisTags.json; sourceTree = "<group>"; };
+		2E6FB4F41D87DF99005B11AC /* CheckModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckModel.swift; sourceTree = "<group>"; };
+		2E6FB4F81D87F7A5005B11AC /* CheckDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckDetailViewController.swift; sourceTree = "<group>"; };
+		2E6FB4FA1D87F86C005B11AC /* CheckDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckDetailModel.swift; sourceTree = "<group>"; };
+		2E6FB4FC1D881568005B11AC /* qd1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qd1.png; sourceTree = "<group>"; };
 		2EF4EC081D7C6CEB003CD779 /* 726-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "726-star@2x.png"; sourceTree = "<group>"; };
 		2EF4EC091D7C6CEB003CD779 /* 726-star@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "726-star@3x.png"; sourceTree = "<group>"; };
 		2EF4EC0C1D7C7022003CD779 /* tab_c1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_c1.png; sourceTree = "<group>"; };
@@ -398,7 +409,6 @@
 		2EF4EC361D804651003CD779 /* FeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
 		2EF4EC381D8046EE003CD779 /* FeedsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsCell.swift; sourceTree = "<group>"; };
 		2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsModel.swift; sourceTree = "<group>"; };
-		2EF4EC601D82E96F003CD779 /* qdy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qdy.png; sourceTree = "<group>"; };
 		2EF4EC621D838EBA003CD779 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		2F867E9D4A2D784DEEA583BD /* Pods_LoveDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B5D8266DFB1053C14C8520 /* Pods-LoveDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog.debug.xcconfig"; sourceTree = "<group>"; };
@@ -549,6 +559,7 @@
 				2E468A041D7C05F500529E44 /* 按钮详情 */,
 				2E4689FF1D7C05F500529E44 /* 养护手册 */,
 				2E4689FD1D7C05F500529E44 /* 其他宠物 */,
+				2E6FB4EF1D87D87A005B11AC /* 症状自查 */,
 			);
 			path = "主页";
 			sourceTree = "<group>";
@@ -592,7 +603,8 @@
 		2E468A0B1D7C05F500529E44 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				2EF4EC601D82E96F003CD779 /* qdy.png */,
+				2E6FB4FC1D881568005B11AC /* qd1.png */,
+				2E6FB4F21D87DE44005B11AC /* autognosisTags.json */,
 				2E468A0C1D7C05F500529E44 /* dog.txt */,
 				2E468A0D1D7C05F500529E44 /* DogPicture */,
 				2E468A731D7C05F500529E44 /* gooddoctor.json */,
@@ -746,6 +758,17 @@
 			path = tabbar;
 			sourceTree = "<group>";
 		};
+		2E6FB4EF1D87D87A005B11AC /* 症状自查 */ = {
+			isa = PBXGroup;
+			children = (
+				2E6FB4F01D87D8B7005B11AC /* CheckSelfViewController.swift */,
+				2E6FB4F41D87DF99005B11AC /* CheckModel.swift */,
+				2E6FB4F81D87F7A5005B11AC /* CheckDetailViewController.swift */,
+				2E6FB4FA1D87F86C005B11AC /* CheckDetailModel.swift */,
+			);
+			path = "症状自查";
+			sourceTree = "<group>";
+		};
 		2EF4EC351D80460B003CD779 /* 圈子 */ = {
 			isa = PBXGroup;
 			children = (
@@ -842,6 +865,7 @@
 				2E468AD51D7C05F500529E44 /* 141.png in Resources */,
 				2E468AD21D7C05F500529E44 /* 138.png in Resources */,
 				2E468AD61D7C05F500529E44 /* 142.png in Resources */,
+				2E6FB4F31D87DE44005B11AC /* autognosisTags.json in Resources */,
 				2E468B1C1D7C05F500529E44 /* 分享@2x.png in Resources */,
 				2E468B0E1D7C05F500529E44 /* 198.png in Resources */,
 				2E468AAD1D7C05F500529E44 /* 101.png in Resources */,
@@ -914,7 +938,6 @@
 				2EF4EC0D1D7C7022003CD779 /* tab_c1.png in Resources */,
 				2E468B031D7C05F500529E44 /* 187.png in Resources */,
 				2E468ABA1D7C05F500529E44 /* 114.png in Resources */,
-				2EF4EC611D82E96F003CD779 /* qdy.png in Resources */,
 				2E468AC71D7C05F500529E44 /* 127.png in Resources */,
 				2E468B131D7C05F500529E44 /* graylogo.png in Resources */,
 				2E468AFE1D7C05F500529E44 /* 182.png in Resources */,
@@ -956,6 +979,7 @@
 				2E468AF81D7C05F500529E44 /* 176.png in Resources */,
 				2E468AFA1D7C05F500529E44 /* 178.png in Resources */,
 				2E468B1E1D7C05F500529E44 /* 分类@2x.png in Resources */,
+				2E6FB4FD1D881568005B11AC /* qd1.png in Resources */,
 				2E468B1A1D7C05F500529E44 /* 766-arrow-right@2x.png in Resources */,
 				2E468AF31D7C05F500529E44 /* 171.png in Resources */,
 				2E468ACF1D7C05F500529E44 /* 135.png in Resources */,
@@ -1038,6 +1062,7 @@
 				2EF4EC371D804651003CD779 /* FeedsViewController.swift in Sources */,
 				2E468A9E1D7C05F500529E44 /* DocCollectionViewCell.swift in Sources */,
 				2E468A911D7C05F500529E44 /* HealthDetailViewController.swift in Sources */,
+				2E6FB4F11D87D8B7005B11AC /* CheckSelfViewController.swift in Sources */,
 				2EF4EC1A1D7D994C003CD779 /* LikeDogViewController.swift in Sources */,
 				2E468A971D7C05F500529E44 /* RegionViewController.swift in Sources */,
 				2E468A901D7C05F500529E44 /* DogHealthViewController.swift in Sources */,
@@ -1066,7 +1091,9 @@
 				2E468A9B1D7C05F500529E44 /* KindSearchViewController.swift in Sources */,
 				2E468AA71D7C05F500529E44 /* MainDetailViewController.swift in Sources */,
 				2E4689C01D7C054F00529E44 /* ViewController.swift in Sources */,
+				2E6FB4F51D87DF99005B11AC /* CheckModel.swift in Sources */,
 				2EF4EC2A1D7F0C74003CD779 /* NaviTitleView.swift in Sources */,
+				2E6FB4F91D87F7A5005B11AC /* CheckDetailViewController.swift in Sources */,
 				2EF4EC321D7F1B82003CD779 /* OtherPetsCell3.swift in Sources */,
 				2E468AA81D7C05F500529E44 /* MainModel.swift in Sources */,
 				2EF4EC3B1D8047F6003CD779 /* FeedsModel.swift in Sources */,
@@ -1081,6 +1108,7 @@
 				2E4689E11D7C05D900529E44 /* Tools.swift in Sources */,
 				2E468AA41D7C05F500529E44 /* CuringModel.swift in Sources */,
 				2EF4EC301D7F1B82003CD779 /* OtherPetsCell1.swift in Sources */,
+				2E6FB4FB1D87F86C005B11AC /* CheckDetailModel.swift in Sources */,
 				2E468AA91D7C05F500529E44 /* MainNetManager.swift in Sources */,
 				2EF4EC391D8046EE003CD779 /* FeedsCell.swift in Sources */,
 				2EF4EC101D7C7711003CD779 /* ThankViewController.swift in Sources */,

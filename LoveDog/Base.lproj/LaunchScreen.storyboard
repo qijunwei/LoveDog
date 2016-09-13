@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qdy.png" translatesAutoresizingMaskIntoConstraints="NO" id="PEL-6P-AgY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qd1.png" translatesAutoresizingMaskIntoConstraints="NO" id="PEL-6P-AgY">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
                         </subviews>
@@ -36,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="qdy.png" width="828" height="1472"/>
+        <image name="qd1.png" width="828" height="1472"/>
     </resources>
 </document>
