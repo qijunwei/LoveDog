@@ -181,6 +181,8 @@
 		2E6FB4F91D87F7A5005B11AC /* CheckDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB4F81D87F7A5005B11AC /* CheckDetailViewController.swift */; };
 		2E6FB4FB1D87F86C005B11AC /* CheckDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB4FA1D87F86C005B11AC /* CheckDetailModel.swift */; };
 		2E6FB4FD1D881568005B11AC /* qd1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6FB4FC1D881568005B11AC /* qd1.png */; };
+		2E732A961D8995DA005AD9AB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E732A951D8995DA005AD9AB /* SettingsViewController.swift */; };
+		2E732A981D899D3C005AD9AB /* 兔兔1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2E732A971D899D3C005AD9AB /* 兔兔1.jpg */; };
 		2EF4EC0A1D7C6CEB003CD779 /* 726-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC081D7C6CEB003CD779 /* 726-star@2x.png */; };
 		2EF4EC0B1D7C6CEB003CD779 /* 726-star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC091D7C6CEB003CD779 /* 726-star@3x.png */; };
 		2EF4EC0D1D7C7022003CD779 /* tab_c1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC0C1D7C7022003CD779 /* tab_c1.png */; };
@@ -387,6 +389,8 @@
 		2E6FB4F81D87F7A5005B11AC /* CheckDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckDetailViewController.swift; sourceTree = "<group>"; };
 		2E6FB4FA1D87F86C005B11AC /* CheckDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckDetailModel.swift; sourceTree = "<group>"; };
 		2E6FB4FC1D881568005B11AC /* qd1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qd1.png; sourceTree = "<group>"; };
+		2E732A951D8995DA005AD9AB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2E732A971D899D3C005AD9AB /* 兔兔1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "兔兔1.jpg"; sourceTree = "<group>"; };
 		2EF4EC081D7C6CEB003CD779 /* 726-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "726-star@2x.png"; sourceTree = "<group>"; };
 		2EF4EC091D7C6CEB003CD779 /* 726-star@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "726-star@3x.png"; sourceTree = "<group>"; };
 		2EF4EC0C1D7C7022003CD779 /* tab_c1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_c1.png; sourceTree = "<group>"; };
@@ -503,6 +507,7 @@
 			isa = PBXGroup;
 			children = (
 				2E4689E31D7C05F500529E44 /* MyselfViewController.swift */,
+				2E732A951D8995DA005AD9AB /* SettingsViewController.swift */,
 				2EF4EC0E1D7C7711003CD779 /* ThankViewController.swift */,
 				2EF4EC0F1D7C7711003CD779 /* ThankViewController.xib */,
 				2EF4EC191D7D994C003CD779 /* LikeDogViewController.swift */,
@@ -603,6 +608,7 @@
 		2E468A0B1D7C05F500529E44 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				2E732A971D899D3C005AD9AB /* 兔兔1.jpg */,
 				2E6FB4FC1D881568005B11AC /* qd1.png */,
 				2E6FB4F21D87DE44005B11AC /* autognosisTags.json */,
 				2E468A0C1D7C05F500529E44 /* dog.txt */,
@@ -832,7 +838,7 @@
 				TargetAttributes = {
 					2E4689B91D7C054F00529E44 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 3V5VPDV58H;
+						DevelopmentTeam = 297RFZJENF;
 					};
 				};
 			};
@@ -859,6 +865,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E732A981D899D3C005AD9AB /* 兔兔1.jpg in Resources */,
 				2E468B051D7C05F500529E44 /* 189.png in Resources */,
 				2E468B011D7C05F500529E44 /* 185.png in Resources */,
 				2E468AFD1D7C05F500529E44 /* 181.png in Resources */,
@@ -1100,6 +1107,7 @@
 				2E4689DD1D7C05D900529E44 /* XTADScrollView.m in Sources */,
 				2E468AA51D7C05F500529E44 /* CuringViewController.swift in Sources */,
 				2E468AA21D7C05F500529E44 /* CureDetailViewController.swift in Sources */,
+				2E732A961D8995DA005AD9AB /* SettingsViewController.swift in Sources */,
 				2E4689BE1D7C054F00529E44 /* AppDelegate.swift in Sources */,
 				2E468A8E1D7C05F500529E44 /* DoctorNetworkManager.swift in Sources */,
 				2E468A9F1D7C05F500529E44 /* DocViewCell.swift in Sources */,
@@ -1156,8 +1164,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hao sheng (3V5VPDV58H)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hao sheng (3V5VPDV58H)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Boliang Liu (297RFZJENF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Boliang Liu (297RFZJENF)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1179,7 +1187,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "9360ac38-472a-4289-9e6b-5a0c58f09218";
+				PROVISIONING_PROFILE = "0d6570b9-a836-4b9b-87ee-bdee333e7b2f";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1204,8 +1212,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hao sheng (3V5VPDV58H)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hao sheng (3V5VPDV58H)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Boliang Liu (297RFZJENF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Boliang Liu (297RFZJENF)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1220,7 +1228,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "9360ac38-472a-4289-9e6b-5a0c58f09218";
+				PROVISIONING_PROFILE = "0d6570b9-a836-4b9b-87ee-bdee333e7b2f";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

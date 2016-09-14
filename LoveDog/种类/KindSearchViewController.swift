@@ -107,10 +107,10 @@ extension  KindSearchViewController{
         
         let detailVC = DogDetailViewController()
         detailVC.model = model!
-    
+        detailVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(detailVC, animated: true)
         searchController?.active = false
-        detailVC.hidesBottomBarWhenPushed = true
+        
     }
     
     func willPresentSearchController(searchController: UISearchController) {
