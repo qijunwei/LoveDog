@@ -9,19 +9,24 @@
 import UIKit
 import FMDB
 
-class DogDetailViewController: UIViewController {
+class DogDetailViewController: UIViewController,IFlySpeechSynthesizerDelegate {
     
     var model = DogModel()
     var scrollView = UIScrollView()//整个页面可以滚动
     var imageView = UIImageView()//上面的大图展示
     var lable = UILabel()//下面的文字展示
     var nameLabel = UILabel()//狗的名字
-    var isCollect = false//收藏状态
     
     //增加分享按钮
     var rightItem: UIBarButtonItem?
     var shareTitle:String?
     var shareUrl:String?
+    var isCollect = false//收藏状态
+    
+    //增加语音合成功能
+    var midItem:UIButton?
+    var isSpeech = false//播放语音状态
+    var iflySpeechSynthesizer = IFlySpeechSynthesizer()
     
     
     override func viewDidLoad() {
@@ -45,8 +50,20 @@ class DogDetailViewController: UIViewController {
         rightItem?.tintColor = UIColor.blackColor()
         self.navigationItem.rightBarButtonItem = rightItem
         
+        //语音合成按钮
+        midItem = UIButton.init(type: .System)
+        midItem!.frame = CGRectMake(0, 100, 30, 25)
+        midItem?.center = CGPointMake(SCREEN_W / 2, 30)
+        midItem?.addTarget(self, action: #selector(self.speechSyn), forControlEvents: .TouchUpInside)
+        midItem?.setImage(UIImage(named: "615-sound-2")?.imageWithRenderingMode(.AlwaysOriginal), forState: .Normal)
+        self.navigationItem.titleView = midItem
+//        self.view.addSubview(midItem!)
+        
+        self.createSpeech()
+        
     }
     
+    //分享
     func shareTo(){
         
         shareTitle = model.name
@@ -115,6 +132,7 @@ class DogDetailViewController: UIViewController {
         
     }
     
+    //收藏功能
     func collectDog(button:UIButton){
         //被选中
         isCollect = !isCollect
@@ -128,9 +146,52 @@ class DogDetailViewController: UIViewController {
         }
     }
     
+    
+    //语音合成按钮
+    func speechSyn(button:UIButton){
+        
+        isSpeech = !isSpeech
+        
+        if isSpeech {
+            iflySpeechSynthesizer.startSpeaking(self.lable.text)
+        }else {
+            iflySpeechSynthesizer.pauseSpeaking()
+        }
+    }
+    
+    //语音合成
+    func createSpeech(){
+        let initString =  String.init(format: "appid = %@", "57da6a66")
+        IFlySpeechUtility.createUtility(initString)
+        //        返回合成对象的单例
+        IFlySpeechSynthesizer.sharedInstance()
+        iflySpeechSynthesizer.delegate = self
+        
+        //设置语音合成的参数
+        //合成的语速,取值范围 0~100
+        iflySpeechSynthesizer.setParameter("50", forKey: IFlySpeechConstant.SPEED())
+        iflySpeechSynthesizer.setParameter("50", forKey: IFlySpeechConstant.VOLUME())
+        //发音人,默认为”xiaoyan”;可以设置的参数列表可参考个性化发音人列表
+        iflySpeechSynthesizer.setParameter("xiaoyan", forKey: IFlySpeechConstant.VOICE_NAME())
+        //合成、识别、唤醒、评测、声纹等业务采样率
+        iflySpeechSynthesizer.setParameter("8000", forKey: IFlySpeechConstant.SAMPLE_RATE())
+        
+        //asr_audio_path保存录音文件路径，如不再需要，设置value为nil表示取消，默认目录是d
+        
+        iflySpeechSynthesizer.setParameter("tts.pcm", forKey: IFlySpeechConstant.TTS_AUDIO_PATH())
+
+    }
+    
+    //   语音合成的结束回调
+    func onCompleted(error:IFlySpeechError){
+        
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 }
+

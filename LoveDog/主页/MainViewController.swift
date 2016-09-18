@@ -31,6 +31,13 @@ class MainViewController: UIViewController {
     var hosArr = [HospitalModel]()
     
     
+    //为主页中五个button设置的颜色
+    let COLOR1 = UIColor.init(red: 249 / 255, green: 149 / 255, blue: 54 / 255, alpha: 1)
+    let COLOR2 = UIColor.init(red: 121 / 255, green: 203 / 255, blue: 84 / 255, alpha: 1)
+    let COLOR3 = UIColor.init(red: 167 / 255, green: 179 / 255, blue: 246 / 255, alpha: 1)
+    let COLOR4 = UIColor.init(red: 149 / 255, green: 216 / 255, blue: 241 / 255, alpha: 1)
+    let COLOR5 = UIColor.init(red: 233 / 255, green: 192 / 255, blue: 235 / 255, alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -103,11 +110,13 @@ class MainViewController: UIViewController {
         let btnArr = ["细小","感冒","拉稀","绝育","脱毛"]
         let width:CGFloat = 50
         let space = CGFloat(SCREEN_W - width * 5) / 6
+        
+        let color = [COLOR1,COLOR2,COLOR3,COLOR4,COLOR5]
         for i in 0...4 {
             let button = UIButton.init(type: .System)
             button.frame = CGRectMake(space * CGFloat(i + 1) + width * CGFloat(i), adView.frame.origin.y + 210, width, width)
             button.setTitle(btnArr[i], forState: .Normal)
-            button.backgroundColor = UIColor.orangeColor()
+            button.backgroundColor = color[i]
             button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             button.tag = 100 + i
             button.addTarget(self, action: #selector(self.btnAction(_:)), forControlEvents: .TouchUpInside)
@@ -161,24 +170,21 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             var cell = tableView.dequeueReusableCellWithIdentifier("q1")
             if cell == nil{
                 cell = UITableViewCell.init(style: .Subtitle, reuseIdentifier: "q1")
+                cell?.textLabel?.font = UIFont.systemFontOfSize(16)
+                cell?.textLabel?.textColor = UIColor.blackColor()
+                cell?.detailTextLabel?.textColor = UIColor.grayColor()
             }
             if  indexPath.row == 0{
                 cell?.textLabel?.text = "狗狗养护手册"
-                cell?.textLabel?.textColor = UIColor.redColor()
                 cell?.detailTextLabel?.text = "新手养宠攻略"
-                cell?.detailTextLabel?.textColor = UIColor.grayColor()
                 cell?.imageView?.image = UIImage.init(named: "资讯")
             }else if indexPath.row == 1{
                 cell?.textLabel?.text = "萌宠养护手册"
-                cell?.textLabel?.textColor = UIColor.redColor()
                 cell?.detailTextLabel?.text = "其他萌宠攻略"
-                cell?.detailTextLabel?.textColor = UIColor.grayColor()
                 cell?.imageView?.image = UIImage.init(named: "资讯")
             }else{
                 cell?.textLabel?.text = "症状自查手册"
-                cell?.textLabel?.textColor = UIColor.redColor()
                 cell?.detailTextLabel?.text = "典型症状自查"
-                cell?.detailTextLabel?.textColor = UIColor.grayColor()
                 cell?.imageView?.image = UIImage.init(named: "资讯")
             }
             return cell!
@@ -215,7 +221,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
                 return 100
             }
         }else {
-            return 180
+            return 140
         }
     }
     
@@ -223,7 +229,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         let viewS = UIView.init(frame: CGRectMake(0, 0, SCREEN_W, 50))
         viewS.backgroundColor = GRAYCOLOR2
         let label = UILabel.init(frame: CGRectMake(10, 0, SCREEN_W, 46))
-        label.font = UIFont.boldSystemFontOfSize(18)
+        label.font = UIFont.boldSystemFontOfSize(17)
+        label.textColor = BLUECOLOR2
         if section == 0 {
             label.text = "养护知识"
         }else if section == 1 {

@@ -7,7 +7,7 @@ target 'LoveDog' do
   pod 'MJRefresh'
   pod 'MOBFoundation'
   pod 'SwiftyJSON'
-  pod ‘FMDB’
+  pod 'FMDB'
   pod 'ShareSDK3'
 # UI模块(非必须，需要用到ShareSDK提供的分享菜单栏和分享编辑页面需要以下1行)
   pod 'ShareSDK3/ShareSDKUI'

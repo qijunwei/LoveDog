@@ -175,6 +175,8 @@
 		2E468B261D7C05F500529E44 /* 药箱_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A881D7C05F500529E44 /* 药箱_03.png */; };
 		2E468B271D7C05F500529E44 /* 资讯@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A891D7C05F500529E44 /* 资讯@2x.png */; };
 		2E468B281D7C05F500529E44 /* 资讯@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E468A8A1D7C05F500529E44 /* 资讯@3x.png */; };
+		2E6A03A11D8AA4B80034F637 /* 615-sound-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6A039F1D8AA4B80034F637 /* 615-sound-2@2x.png */; };
+		2E6A03A21D8AA4B80034F637 /* 615-sound-2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6A03A01D8AA4B80034F637 /* 615-sound-2@3x.png */; };
 		2E6FB4F11D87D8B7005B11AC /* CheckSelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB4F01D87D8B7005B11AC /* CheckSelfViewController.swift */; };
 		2E6FB4F31D87DE44005B11AC /* autognosisTags.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E6FB4F21D87DE44005B11AC /* autognosisTags.json */; };
 		2E6FB4F51D87DF99005B11AC /* CheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FB4F41D87DF99005B11AC /* CheckModel.swift */; };
@@ -183,6 +185,16 @@
 		2E6FB4FD1D881568005B11AC /* qd1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6FB4FC1D881568005B11AC /* qd1.png */; };
 		2E732A961D8995DA005AD9AB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E732A951D8995DA005AD9AB /* SettingsViewController.swift */; };
 		2E732A981D899D3C005AD9AB /* 兔兔1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2E732A971D899D3C005AD9AB /* 兔兔1.jpg */; };
+		2EA389651D8E73AA00F68439 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA389641D8E73AA00F68439 /* iflyMSC.framework */; };
+		2EA389671D8E73E000F68439 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA389661D8E73E000F68439 /* AudioToolbox.framework */; };
+		2EA389691D8E73ED00F68439 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA389681D8E73ED00F68439 /* AddressBook.framework */; };
+		2EA389721D8E7D8200F68439 /* LBXPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA3896B1D8E7D8200F68439 /* LBXPermissions.swift */; };
+		2EA389731D8E7D8200F68439 /* LBXScanLineAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA3896C1D8E7D8200F68439 /* LBXScanLineAnimation.swift */; };
+		2EA389741D8E7D8200F68439 /* LBXScanNetAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA3896D1D8E7D8200F68439 /* LBXScanNetAnimation.swift */; };
+		2EA389751D8E7D8200F68439 /* LBXScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA3896E1D8E7D8200F68439 /* LBXScanView.swift */; };
+		2EA389761D8E7D8200F68439 /* LBXScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA3896F1D8E7D8200F68439 /* LBXScanViewController.swift */; };
+		2EA389771D8E7D8200F68439 /* LBXScanViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA389701D8E7D8200F68439 /* LBXScanViewStyle.swift */; };
+		2EA389781D8E7D8200F68439 /* LBXScanWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA389711D8E7D8200F68439 /* LBXScanWrapper.swift */; };
 		2EF4EC0A1D7C6CEB003CD779 /* 726-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC081D7C6CEB003CD779 /* 726-star@2x.png */; };
 		2EF4EC0B1D7C6CEB003CD779 /* 726-star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC091D7C6CEB003CD779 /* 726-star@3x.png */; };
 		2EF4EC0D1D7C7022003CD779 /* tab_c1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4EC0C1D7C7022003CD779 /* tab_c1.png */; };
@@ -383,6 +395,8 @@
 		2E468A881D7C05F500529E44 /* 药箱_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "药箱_03.png"; sourceTree = "<group>"; };
 		2E468A891D7C05F500529E44 /* 资讯@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "资讯@2x.png"; sourceTree = "<group>"; };
 		2E468A8A1D7C05F500529E44 /* 资讯@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "资讯@3x.png"; sourceTree = "<group>"; };
+		2E6A039F1D8AA4B80034F637 /* 615-sound-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "615-sound-2@2x.png"; sourceTree = "<group>"; };
+		2E6A03A01D8AA4B80034F637 /* 615-sound-2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "615-sound-2@3x.png"; sourceTree = "<group>"; };
 		2E6FB4F01D87D8B7005B11AC /* CheckSelfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckSelfViewController.swift; sourceTree = "<group>"; };
 		2E6FB4F21D87DE44005B11AC /* autognosisTags.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = autognosisTags.json; sourceTree = "<group>"; };
 		2E6FB4F41D87DF99005B11AC /* CheckModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckModel.swift; sourceTree = "<group>"; };
@@ -391,6 +405,16 @@
 		2E6FB4FC1D881568005B11AC /* qd1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qd1.png; sourceTree = "<group>"; };
 		2E732A951D8995DA005AD9AB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2E732A971D899D3C005AD9AB /* 兔兔1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "兔兔1.jpg"; sourceTree = "<group>"; };
+		2EA389641D8E73AA00F68439 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
+		2EA389661D8E73E000F68439 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2EA389681D8E73ED00F68439 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		2EA3896B1D8E7D8200F68439 /* LBXPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXPermissions.swift; sourceTree = "<group>"; };
+		2EA3896C1D8E7D8200F68439 /* LBXScanLineAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanLineAnimation.swift; sourceTree = "<group>"; };
+		2EA3896D1D8E7D8200F68439 /* LBXScanNetAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanNetAnimation.swift; sourceTree = "<group>"; };
+		2EA3896E1D8E7D8200F68439 /* LBXScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanView.swift; sourceTree = "<group>"; };
+		2EA3896F1D8E7D8200F68439 /* LBXScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanViewController.swift; sourceTree = "<group>"; };
+		2EA389701D8E7D8200F68439 /* LBXScanViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanViewStyle.swift; sourceTree = "<group>"; };
+		2EA389711D8E7D8200F68439 /* LBXScanWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanWrapper.swift; sourceTree = "<group>"; };
 		2EF4EC081D7C6CEB003CD779 /* 726-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "726-star@2x.png"; sourceTree = "<group>"; };
 		2EF4EC091D7C6CEB003CD779 /* 726-star@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "726-star@3x.png"; sourceTree = "<group>"; };
 		2EF4EC0C1D7C7022003CD779 /* tab_c1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_c1.png; sourceTree = "<group>"; };
@@ -423,6 +447,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EA389691D8E73ED00F68439 /* AddressBook.framework in Frameworks */,
+				2EA389671D8E73E000F68439 /* AudioToolbox.framework in Frameworks */,
+				2EA389651D8E73AA00F68439 /* iflyMSC.framework in Frameworks */,
 				0C20C6BC9148867A2BB557C1 /* Pods_LoveDog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +499,7 @@
 		2E4689CF1D7C05D900529E44 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2EA389631D8E73AA00F68439 /* ThirdLib */,
 				2E4689D01D7C05D900529E44 /* ADScrollView */,
 				2E4689D51D7C05D900529E44 /* BaseRequest.swift */,
 				2E4689D61D7C05D900529E44 /* BridgerHeader.h */,
@@ -512,6 +540,7 @@
 				2EF4EC0F1D7C7711003CD779 /* ThankViewController.xib */,
 				2EF4EC191D7D994C003CD779 /* LikeDogViewController.swift */,
 				2EF4EC1B1D7DA72B003CD779 /* LikeDogCell.swift */,
+				2EA3896A1D8E7D1D00F68439 /* 扫一扫 */,
 			);
 			path = "个人";
 			sourceTree = "<group>";
@@ -608,6 +637,8 @@
 		2E468A0B1D7C05F500529E44 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				2E6A039F1D8AA4B80034F637 /* 615-sound-2@2x.png */,
+				2E6A03A01D8AA4B80034F637 /* 615-sound-2@3x.png */,
 				2E732A971D899D3C005AD9AB /* 兔兔1.jpg */,
 				2E6FB4FC1D881568005B11AC /* qd1.png */,
 				2E6FB4F21D87DE44005B11AC /* autognosisTags.json */,
@@ -775,6 +806,28 @@
 			path = "症状自查";
 			sourceTree = "<group>";
 		};
+		2EA389631D8E73AA00F68439 /* ThirdLib */ = {
+			isa = PBXGroup;
+			children = (
+				2EA389641D8E73AA00F68439 /* iflyMSC.framework */,
+			);
+			path = ThirdLib;
+			sourceTree = "<group>";
+		};
+		2EA3896A1D8E7D1D00F68439 /* 扫一扫 */ = {
+			isa = PBXGroup;
+			children = (
+				2EA3896B1D8E7D8200F68439 /* LBXPermissions.swift */,
+				2EA3896C1D8E7D8200F68439 /* LBXScanLineAnimation.swift */,
+				2EA3896D1D8E7D8200F68439 /* LBXScanNetAnimation.swift */,
+				2EA3896E1D8E7D8200F68439 /* LBXScanView.swift */,
+				2EA3896F1D8E7D8200F68439 /* LBXScanViewController.swift */,
+				2EA389701D8E7D8200F68439 /* LBXScanViewStyle.swift */,
+				2EA389711D8E7D8200F68439 /* LBXScanWrapper.swift */,
+			);
+			path = "扫一扫";
+			sourceTree = "<group>";
+		};
 		2EF4EC351D80460B003CD779 /* 圈子 */ = {
 			isa = PBXGroup;
 			children = (
@@ -798,6 +851,8 @@
 		B5BF4C75EF01DEC1ABF71B3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EA389681D8E73ED00F68439 /* AddressBook.framework */,
+				2EA389661D8E73E000F68439 /* AudioToolbox.framework */,
 				2F867E9D4A2D784DEEA583BD /* Pods_LoveDog.framework */,
 			);
 			name = Frameworks;
@@ -923,6 +978,7 @@
 				2E468AE91D7C05F500529E44 /* 161.png in Resources */,
 				2E468AC61D7C05F500529E44 /* 126.png in Resources */,
 				2E468AE71D7C05F500529E44 /* 159.png in Resources */,
+				2E6A03A11D8AA4B80034F637 /* 615-sound-2@2x.png in Resources */,
 				2E468AB31D7C05F500529E44 /* 107.png in Resources */,
 				2E468AC21D7C05F500529E44 /* 122.png in Resources */,
 				2E468AD71D7C05F500529E44 /* 143.png in Resources */,
@@ -955,6 +1011,7 @@
 				2EF4EC0A1D7C6CEB003CD779 /* 726-star@2x.png in Resources */,
 				2E468ADE1D7C05F500529E44 /* 150.png in Resources */,
 				2E468AEA1D7C05F500529E44 /* 162.png in Resources */,
+				2E6A03A21D8AA4B80034F637 /* 615-sound-2@3x.png in Resources */,
 				2E468B041D7C05F500529E44 /* 188.png in Resources */,
 				2E468AEF1D7C05F500529E44 /* 167.png in Resources */,
 				2E468AD11D7C05F500529E44 /* 137.png in Resources */,
@@ -1067,6 +1124,7 @@
 				2E4689DE1D7C05D900529E44 /* BaseRequest.swift in Sources */,
 				2E468AA11D7C05F500529E44 /* OtherPetsViewController.swift in Sources */,
 				2EF4EC371D804651003CD779 /* FeedsViewController.swift in Sources */,
+				2EA389721D8E7D8200F68439 /* LBXPermissions.swift in Sources */,
 				2E468A9E1D7C05F500529E44 /* DocCollectionViewCell.swift in Sources */,
 				2E468A911D7C05F500529E44 /* HealthDetailViewController.swift in Sources */,
 				2E6FB4F11D87D8B7005B11AC /* CheckSelfViewController.swift in Sources */,
@@ -1075,7 +1133,9 @@
 				2E468A901D7C05F500529E44 /* DogHealthViewController.swift in Sources */,
 				2E468A9A1D7C05F500529E44 /* DogModel.swift in Sources */,
 				2E468A921D7C05F500529E44 /* HospitalModel.swift in Sources */,
+				2EA389761D8E7D8200F68439 /* LBXScanViewController.swift in Sources */,
 				2E468A951D7C05F500529E44 /* QFRefeshHeader.swift in Sources */,
+				2EA389771D8E7D8200F68439 /* LBXScanViewStyle.swift in Sources */,
 				2EF4EC2C1D7F0FE8003CD779 /* OtherPetsCell.swift in Sources */,
 				2E468A8F1D7C05F500529E44 /* DoctorViewCell.swift in Sources */,
 				2E468A961D7C05F500529E44 /* LocationCell.swift in Sources */,
@@ -1096,9 +1156,11 @@
 				2E468AA61D7C05F500529E44 /* MainDetailCell.swift in Sources */,
 				2EF4EC311D7F1B82003CD779 /* OtherPetsCell2.swift in Sources */,
 				2E468A9B1D7C05F500529E44 /* KindSearchViewController.swift in Sources */,
+				2EA389731D8E7D8200F68439 /* LBXScanLineAnimation.swift in Sources */,
 				2E468AA71D7C05F500529E44 /* MainDetailViewController.swift in Sources */,
 				2E4689C01D7C054F00529E44 /* ViewController.swift in Sources */,
 				2E6FB4F51D87DF99005B11AC /* CheckModel.swift in Sources */,
+				2EA389751D8E7D8200F68439 /* LBXScanView.swift in Sources */,
 				2EF4EC2A1D7F0C74003CD779 /* NaviTitleView.swift in Sources */,
 				2E6FB4F91D87F7A5005B11AC /* CheckDetailViewController.swift in Sources */,
 				2EF4EC321D7F1B82003CD779 /* OtherPetsCell3.swift in Sources */,
@@ -1108,6 +1170,7 @@
 				2E468AA51D7C05F500529E44 /* CuringViewController.swift in Sources */,
 				2E468AA21D7C05F500529E44 /* CureDetailViewController.swift in Sources */,
 				2E732A961D8995DA005AD9AB /* SettingsViewController.swift in Sources */,
+				2EA389741D8E7D8200F68439 /* LBXScanNetAnimation.swift in Sources */,
 				2E4689BE1D7C054F00529E44 /* AppDelegate.swift in Sources */,
 				2E468A8E1D7C05F500529E44 /* DoctorNetworkManager.swift in Sources */,
 				2E468A9F1D7C05F500529E44 /* DocViewCell.swift in Sources */,
@@ -1117,6 +1180,7 @@
 				2E468AA41D7C05F500529E44 /* CuringModel.swift in Sources */,
 				2EF4EC301D7F1B82003CD779 /* OtherPetsCell1.swift in Sources */,
 				2E6FB4FB1D87F86C005B11AC /* CheckDetailModel.swift in Sources */,
+				2EA389781D8E7D8200F68439 /* LBXScanWrapper.swift in Sources */,
 				2E468AA91D7C05F500529E44 /* MainNetManager.swift in Sources */,
 				2EF4EC391D8046EE003CD779 /* FeedsCell.swift in Sources */,
 				2EF4EC101D7C7711003CD779 /* ThankViewController.swift in Sources */,
@@ -1168,6 +1232,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Boliang Liu (297RFZJENF)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1216,6 +1281,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Boliang Liu (297RFZJENF)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1242,6 +1308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/JSONModel\"",
@@ -1250,6 +1317,7 @@
 					"\"$PODS_CONFIGURATION_BUILD_DIR/SDWebImage\"",
 					"\"${PODS_ROOT}/MOBFoundation\"",
 					"\"${PODS_ROOT}/ShareSDK3/ShareSDK/Support/Optional\"",
+					"$(PROJECT_DIR)/Common/ThirdLib",
 				);
 				INFOPLIST_FILE = LoveDog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1269,6 +1337,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Common/ThirdLib",
+				);
 				INFOPLIST_FILE = LoveDog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

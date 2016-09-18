@@ -39,7 +39,7 @@ class DocViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
-        layout.itemSize = CGSizeMake(100, 180)
+        layout.itemSize = CGSizeMake(90, 170)
         layout.minimumLineSpacing = (SCREEN_W - 400) / 5
         layout.minimumInteritemSpacing = 5
         layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)

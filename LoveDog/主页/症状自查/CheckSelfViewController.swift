@@ -86,7 +86,7 @@ class CheckSelfViewController: UIViewController,UITableViewDelegate,UITableViewD
             var cell = tableView.dequeueReusableCellWithIdentifier("Check")
             if cell == nil{
                 cell = UITableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: "Check")
-                cell?.backgroundColor = UIColor.init(red: 25 / 255, green: 156 / 255, blue: 198 / 255, alpha: 1)
+                cell?.backgroundColor = BLUECOLOR
             }
             let model = dataArr[indexPath.row]
             cell?.textLabel?.text = model.name
@@ -129,7 +129,7 @@ class CheckSelfViewController: UIViewController,UITableViewDelegate,UITableViewD
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if tableView == self.tableView{
         let cell = tableView.cellForRowAtIndexPath(indexPath)
-        cell?.textLabel?.textColor = UIColor.init(red: 25 / 255, green: 156 / 255, blue: 198 / 255, alpha: 1)
+        cell?.textLabel?.textColor = BLUECOLOR
         //        不管用
         //        cell?.backgroundColor = UIColor.whiteColor()
         cell?.contentView.backgroundColor = UIColor.whiteColor()
@@ -149,7 +149,7 @@ class CheckSelfViewController: UIViewController,UITableViewDelegate,UITableViewD
         if tableView == self.tableView{
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         cell?.textLabel?.textColor = UIColor.whiteColor()
-        cell?.backgroundColor = UIColor.init(red: 25 / 255, green: 156 / 255, blue: 198 / 255, alpha: 1)
+        cell?.backgroundColor = BLUECOLOR
         }else{
             
         }

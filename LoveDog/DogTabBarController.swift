@@ -17,8 +17,9 @@ class DogTabBarController: UITabBarController {
         let vc1 = KindSearchViewController()
         let nvc1 = UINavigationController(rootViewController: vc1)
         vc1.tabBarItem.image = UIImage(named: "分类")
-        nvc1.navigationBar.barTintColor = GRAYCOLOR2
+//        nvc1.navigationBar.barTintColor = GRAYCOLOR2
         vc1.title = "种类"
+//        vc1.navigationController?.navigationBar.barTintColor = BLUECOLOR2
 
         //医生医院：添加地图功能，可搜索附近的医院医生
         let vc2 = DogHealthViewController()
@@ -48,8 +49,8 @@ class DogTabBarController: UITabBarController {
         //将四个导航控制器添加到标签栏
         self.viewControllers = [nvc3,nvc2,nvc1,nvc5,nvc4]
         //设置标签选中颜色
-        self.tabBar.barTintColor = GRAYCOLOR2
-        self.tabBar.tintColor = UIColor.orangeColor()
+//        self.tabBar.barTintColor = GRAYCOLOR2
+        self.tabBar.tintColor = BLUECOLOR2
     }
 
     override func didReceiveMemoryWarning() {

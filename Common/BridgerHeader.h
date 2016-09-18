@@ -27,4 +27,28 @@
 //微信SDK头文件
 #import "WXApi.h"
 
+
+//语音合成
+#import<UIKit/UIKit.h>
+#import"iflyMSC/IFlySpeechSynthesizerDelegate.h"
+#import<QuartzCore/QuartzCore.h>
+#import<AVFoundation/AVAudioSession.h>
+#import<AudioToolbox/AudioSession.h>
+#import"iflyMSC/IFlySpeechConstant.h"
+#import"iflyMSC/IFlySpeechUtility.h"
+#import"iflyMSC/IFlySpeechSynthesizer.h"
+#import "iflyMSC/IFlySpeechError.h"
+
+////高德地图
+//#import <AMapFoundationKit/AMapFoundationKit.h>
+//#import <AMapNaviKit/AMapNaviKit.h>//导航
+//#import <AMapNaviKit/AMapNaviKit.h>
+//
+//#import <AMapSearchKit/AMapSearchKit.h>//搜索
+//#import <MAMapKit/MAMapKit.h>
+//
+////高德地图 系统语音处理
+//#import <AVFoundation/AVSpeechSynthesis.h>
+//#import "SpeechSynthesizer.h"
+
 #endif /* BridgerHeader_h */
