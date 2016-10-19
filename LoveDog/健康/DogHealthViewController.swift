@@ -10,6 +10,26 @@ import UIKit
 import MBProgressHUD
 import MJRefresh
 import CoreLocation
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 
 class DogHealthViewController: UIViewController {
@@ -34,35 +54,35 @@ class DogHealthViewController: UIViewController {
     var sort = 1
     
     lazy var tableView1:UITableView = {
-        let tableView1 = UITableView.init(frame: CGRectMake(0, 64, SCREEN_W, SCREEN_H-64-49), style: UITableViewStyle.Plain)
+        let tableView1 = UITableView.init(frame: CGRect(x: 0, y: 64, width: SCREEN_W, height: SCREEN_H-64-49), style: UITableViewStyle.plain)
         self.view.addSubview(tableView1)
         tableView1.delegate = self
         tableView1.dataSource = self
-        let doctview = UIView.init(frame: CGRectMake(10, 0, SCREEN_W, 40))
+        let doctview = UIView.init(frame: CGRect(x: 10, y: 0, width: SCREEN_W, height: 40))
         doctview.backgroundColor = GRAYCOLOR2
-        var lable11 = UILabel.init(frame: CGRectMake(10, 0, 80, 40))
+        var lable11 = UILabel.init(frame: CGRect(x: 10, y: 0, width: 80, height: 40))
         lable11.text = "已选城市:"
-        lable11.font = UIFont.systemFontOfSize(17)
+        lable11.font = UIFont.systemFont(ofSize: 17)
         doctview.addSubview(lable11)
-        self.lable1 = UILabel.init(frame: CGRectMake(90, 0, 100, 40))
+        self.lable1 = UILabel.init(frame: CGRect(x: 90, y: 0, width: 100, height: 40))
         self.lable1.text = self.hosCity
-        self.lable1.font = UIFont.systemFontOfSize(17)
-        let button = UIButton.init(frame: CGRectMake(SCREEN_W - 120, 0, 120, 40))
-        button.setTitle("点击选择城市>", forState: .Normal)
-        button.titleLabel?.font = UIFont.systemFontOfSize(17)
-        button.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        button.addTarget(self, action: #selector(self.citySelect), forControlEvents: .TouchUpInside)
+        self.lable1.font = UIFont.systemFont(ofSize: 17)
+        let button = UIButton.init(frame: CGRect(x: SCREEN_W - 120, y: 0, width: 120, height: 40))
+        button.setTitle("点击选择城市>", for: UIControlState())
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 17)
+        button.setTitleColor(UIColor.black, for: UIControlState())
+        button.addTarget(self, action: #selector(self.citySelect), for: .touchUpInside)
         doctview.addSubview(self.lable1)
         doctview.addSubview(button)
         tableView1.tableHeaderView = doctview
-        tableView1.registerClass(HospViewCell.self, forCellReuseIdentifier: "HospViewCell")
+        tableView1.register(HospViewCell.self, forCellReuseIdentifier: "HospViewCell")
         
         tableView1.mj_header = QFRefeshHeader.init(refreshingBlock: {
             
             let header = self.tableView1.mj_header as! MJRefreshNormalHeader
-            header.setTitle("小八想你啦!", forState: .Idle)
-            header.setTitle("小八爱你哟!", forState: .Pulling)
-            header.setTitle("小八等你哟!", forState: .Refreshing)
+            header.setTitle("小八想你啦!", for: .idle)
+            header.setTitle("小八爱你哟!", for: .pulling)
+            header.setTitle("小八等你哟!", for: .refreshing)
             
             self.page1 = 1
             self.loadData1()
@@ -77,35 +97,35 @@ class DogHealthViewController: UIViewController {
     }()
     
     lazy var tableView2:UITableView = {
-        let tableView2 = UITableView.init(frame: CGRectMake(0, 64, SCREEN_W, SCREEN_H-64-49), style: UITableViewStyle.Plain)
+        let tableView2 = UITableView.init(frame: CGRect(x: 0, y: 64, width: SCREEN_W, height: SCREEN_H-64-49), style: UITableViewStyle.plain)
         self.view.addSubview(tableView2)
         tableView2.delegate = self
         tableView2.dataSource = self
-        let doctview = UIView.init(frame: CGRectMake(10, 0, SCREEN_W, 40))
+        let doctview = UIView.init(frame: CGRect(x: 10, y: 0, width: SCREEN_W, height: 40))
         doctview.backgroundColor = GRAYCOLOR2
-        var lable22 = UILabel.init(frame: CGRectMake(10, 0, 80, 40))
+        var lable22 = UILabel.init(frame: CGRect(x: 10, y: 0, width: 80, height: 40))
         lable22.text = "已选城市:"
-        lable22.font = UIFont.systemFontOfSize(17)
+        lable22.font = UIFont.systemFont(ofSize: 17)
         doctview.addSubview(lable22)
-        self.lable2 = UILabel.init(frame: CGRectMake(90, 0, 100, 40))
+        self.lable2 = UILabel.init(frame: CGRect(x: 90, y: 0, width: 100, height: 40))
         self.lable2.text = self.hosCity
-        self.lable2.font = UIFont.systemFontOfSize(17)
-        let button = UIButton.init(frame: CGRectMake(SCREEN_W - 120, 0, 120, 40))
-        button.setTitle("点击选择城市>", forState: .Normal)
-        button.titleLabel?.font = UIFont.systemFontOfSize(17)
-        button.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        button.addTarget(self, action: #selector(self.citySelect), forControlEvents: .TouchUpInside)
+        self.lable2.font = UIFont.systemFont(ofSize: 17)
+        let button = UIButton.init(frame: CGRect(x: SCREEN_W - 120, y: 0, width: 120, height: 40))
+        button.setTitle("点击选择城市>", for: UIControlState())
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 17)
+        button.setTitleColor(UIColor.black, for: UIControlState())
+        button.addTarget(self, action: #selector(self.citySelect), for: .touchUpInside)
         doctview.addSubview(self.lable2)
         doctview.addSubview(button)
         tableView2.tableHeaderView = doctview
-        tableView2.registerClass(DoctorViewCell.self, forCellReuseIdentifier: "DoctorViewCell")
+        tableView2.register(DoctorViewCell.self, forCellReuseIdentifier: "DoctorViewCell")
         
         tableView2.mj_header = QFRefeshHeader.init(refreshingBlock: {
             
             let header = self.tableView2.mj_header as! MJRefreshNormalHeader
-            header.setTitle("小八想你啦!", forState: .Idle)
-            header.setTitle("小八爱你哟!", forState: .Pulling)
-            header.setTitle("小八等你哟!", forState: .Refreshing)
+            header.setTitle("小八想你啦!", for: .idle)
+            header.setTitle("小八爱你哟!", for: .pulling)
+            header.setTitle("小八等你哟!", for: .refreshing)
             
             self.page2 = 1
             self.loadData2()
@@ -121,15 +141,15 @@ class DogHealthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         self.automaticallyAdjustsScrollViewInsets = false
         self.createSegment()//分割控制器
         self.loadData1()
         self.loadData2()
         
         //        //定位
-        rightItem = UIBarButtonItem.init(title: "定位", style: .Plain, target:self, action: #selector(self.locateCurrent))
-        rightItem?.tintColor = UIColor.blackColor()
+        rightItem = UIBarButtonItem.init(title: "定位", style: .plain, target:self, action: #selector(self.locateCurrent))
+        rightItem?.tintColor = UIColor.black
         self.navigationItem.rightBarButtonItem = rightItem
     }
     
@@ -145,29 +165,29 @@ class DogHealthViewController: UIViewController {
     }
     
     func createToolBar(){
-        self.navigationController!.toolbarHidden = false
+        self.navigationController!.isToolbarHidden = false
         //设置间隔
-        let spaceItem = UIBarButtonItem.init(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let spaceItem = UIBarButtonItem.init(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         //        不管用
         //        self.navigationController!.toolbar.center = CGPointMake(SCREEN_W / 2, 22)
         
-        let toolBar1 = UIBarButtonItem.init(title: "智能推荐", style: UIBarButtonItemStyle.Done, target: self, action: #selector(self.toolbarAction))
-        toolBar1.tintColor = UIColor.orangeColor()
+        let toolBar1 = UIBarButtonItem.init(title: "智能推荐", style: UIBarButtonItemStyle.done, target: self, action: #selector(self.toolbarAction))
+        toolBar1.tintColor = UIColor.orange
         toolBar1.tag = 101
         
         //        有问题，不按照顺序排序,  又好了
-        let toolBar2 = UIBarButtonItem.init(title: "距离最近", style: UIBarButtonItemStyle.Done, target: self, action: #selector(self.toolbarAction))
+        let toolBar2 = UIBarButtonItem.init(title: "距离最近", style: UIBarButtonItemStyle.done, target: self, action: #selector(self.toolbarAction))
         toolBar2.tag = 102
-        toolBar2.tintColor = UIColor.orangeColor()
-        let toolBar3 = UIBarButtonItem.init(title: "评价最高", style: UIBarButtonItemStyle.Done, target: self, action: #selector(self.toolbarAction))
+        toolBar2.tintColor = UIColor.orange
+        let toolBar3 = UIBarButtonItem.init(title: "评价最高", style: UIBarButtonItemStyle.done, target: self, action: #selector(self.toolbarAction))
         toolBar3.tag = 103
-        toolBar3.tintColor = UIColor.orangeColor()
+        toolBar3.tintColor = UIColor.orange
         
         toolbarItems = [spaceItem,toolBar1,spaceItem,toolBar2,spaceItem,toolBar3,spaceItem]
         
     }
     
-    func toolbarAction(buttonItem:UIBarButtonItem){
+    func toolbarAction(_ buttonItem:UIBarButtonItem){
         if buttonItem.tag == 101 {
             sort = 1
             if selectedIndex == 0 {
@@ -192,8 +212,8 @@ class DogHealthViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.segmentBtn.hidden = false
+    override func viewWillAppear(_ animated: Bool) {
+        self.segmentBtn.isHidden = false
 //        创建toolbar
         self.createToolBar()
         
@@ -202,7 +222,7 @@ class DogHealthViewController: UIViewController {
     func loadData1() {
         
         HDManager.startLoading()
-        HospitalModel.requestHosData(self.hosCity, page: self.page1, sort:self.sort,latitude: self.latitude,longitude: self.longtitude){ (hospitalArray, error) in
+        HospitalModel.requestHosData(self.hosCity, page: self.page1, sort: self.sort, latitude: NSNumber.init(value: self.latitude), longitude: NSNumber.init(value: self.longtitude)) { (hospitalArray, error) in
             if error == nil
             {
                 if self.page1 == 1
@@ -210,7 +230,7 @@ class DogHealthViewController: UIViewController {
                     self.hosArr.removeAllObjects()
                 }
                 
-                self.hosArr.addObjectsFromArray(hospitalArray!)
+                self.hosArr.addObjects(from: hospitalArray!)
                 self.tableView1.reloadData()
                 self.tableView1.mj_footer.endRefreshing()
                 self.tableView1.mj_header.endRefreshing()
@@ -220,7 +240,7 @@ class DogHealthViewController: UIViewController {
     }
     func loadData2() {
         HDManager.startLoading()
-        DoctorModel.requestDocData(self.docCity, page: self.page2, sort:self.sort,latitude: self.latitude,longitude: self.longtitude){ (doctorArray, error) in
+        DoctorModel.requestDocData(self.docCity, page: self.page2, sort:self.sort,latitude: NSNumber.init(value: self.latitude),longitude: NSNumber.init(value: self.longtitude)){ (doctorArray, error) in
             if error == nil
             {
                 if self.page2 == 1
@@ -228,7 +248,7 @@ class DogHealthViewController: UIViewController {
                     self.docArr.removeAllObjects()
                 }
                 
-                self.docArr.addObjectsFromArray(doctorArray!)
+                self.docArr.addObjects(from: doctorArray!)
                 self.tableView2.reloadData()
                 self.tableView2.mj_footer.endRefreshing()
                 self.tableView2.mj_header.endRefreshing()
@@ -236,7 +256,7 @@ class DogHealthViewController: UIViewController {
             }
             HDManager.stopLoading()
             if self.selectedIndex == 0{
-                self.view.bringSubviewToFront(self.tableView1)
+                self.view.bringSubview(toFront: self.tableView1)
             }
         }
     }
@@ -245,23 +265,23 @@ class DogHealthViewController: UIViewController {
     func createSegment(){
         let items = ["找医院","找医生"]
         segmentBtn = UISegmentedControl.init(items: items)
-        segmentBtn.frame = CGRectMake(100, 0, 200, 30)
-        segmentBtn.center = CGPointMake(SCREEN_W / 2, 25)
-        segmentBtn.enabled = true
+        segmentBtn.frame = CGRect(x: 100, y: 0, width: 200, height: 30)
+        segmentBtn.center = CGPoint(x: SCREEN_W / 2, y: 25)
+        segmentBtn.isEnabled = true
         segmentBtn.selectedSegmentIndex = 0
-        segmentBtn.addTarget(self, action: #selector(self.segmentAction(_:)), forControlEvents: .ValueChanged)
+        segmentBtn.addTarget(self, action: #selector(self.segmentAction(_:)), for: .valueChanged)
         self.navigationController?.navigationBar.addSubview(segmentBtn)
     }
     
     //分割控制器响应方法
-    func segmentAction(sender: UISegmentedControl) {
+    func segmentAction(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
             selectedIndex = 0
-            self.view.bringSubviewToFront(tableView1)
+            self.view.bringSubview(toFront: tableView1)
         default:
             selectedIndex = 1
-            self.view.bringSubviewToFront(tableView2)
+            self.view.bringSubview(toFront: tableView2)
             break
         }
     }
@@ -270,14 +290,14 @@ class DogHealthViewController: UIViewController {
         let cityVc = RegionViewController()
         cityVc.delegate = self
         cityVc.hidesBottomBarWhenPushed = true
-        self.segmentBtn.hidden = true
+        self.segmentBtn.isHidden = true
         self.navigationController?.pushViewController(cityVc, animated: true)
     }
 }
 
 extension DogHealthViewController: UITableViewDelegate, UITableViewDataSource{
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == tableView1{
             return hosArr.count
         }else {
@@ -285,17 +305,17 @@ extension DogHealthViewController: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let currentLocation = CLLocation.init(latitude: latitude, longitude: longtitude)
         
         if tableView == tableView1{
-            let cell = tableView.dequeueReusableCellWithIdentifier("HospViewCell", forIndexPath: indexPath) as! HospViewCell
-            let model = self.hosArr[indexPath.row] as! HospitalModel
-            cell.headImage.sd_setImageWithURL(NSURL.init(string: model.photo_url))
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HospViewCell", for: indexPath) as! HospViewCell
+            let model = self.hosArr[(indexPath as NSIndexPath).row] as! HospitalModel
+            cell.headImage.sd_setImage(with: URL.init(string: model.photo_url))
             
             let hosLocation = CLLocation.init(latitude: Double(model.latitude), longitude: Double(model.longitude))
-            let dis = currentLocation.distanceFromLocation(hosLocation)/1000
+            let dis = currentLocation.distance(from: hosLocation)/1000
             cell.disL.text = String.init(format:"%.1fkm",dis)
             
             cell.title.text = model.branch_name
@@ -304,16 +324,16 @@ extension DogHealthViewController: UITableViewDelegate, UITableViewDataSource{
             return cell
         }else {
             
-            let cell = tableView.dequeueReusableCellWithIdentifier("DoctorViewCell", forIndexPath: indexPath) as! DoctorViewCell
-            let model = self.docArr[indexPath.row] as! DoctorModel
-            cell.headImage.sd_setImageWithURL(NSURL.init(string: model.avatar))
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DoctorViewCell", for: indexPath) as! DoctorViewCell
+            let model = self.docArr[(indexPath as NSIndexPath).row] as! DoctorModel
+            cell.headImage.sd_setImage(with: URL.init(string: model.avatar))
             cell.name.text = model.name
             cell.job.text = model.job
             cell.intro.text = "医生简介:" + model.introduce
             cell.hos.text = model.hospital
             
             let hosLocation = CLLocation.init(latitude: Double(model.latitude), longitude: Double(model.longitude))
-            let dis = currentLocation.distanceFromLocation(hosLocation)/1000
+            let dis = currentLocation.distance(from: hosLocation)/1000
             cell.disL.text = String.init(format:"%.1fkm",dis)
             
             return cell
@@ -321,7 +341,7 @@ extension DogHealthViewController: UITableViewDelegate, UITableViewDataSource{
         
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if tableView == tableView1{
             return 100
         }else{
@@ -329,31 +349,31 @@ extension DogHealthViewController: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         if tableView == tableView1{
-            let model = self.hosArr[indexPath.row] as! HospitalModel
+            let model = self.hosArr[(indexPath as NSIndexPath).row] as! HospitalModel
             let detailVc = HealthDetailViewController()
-            detailVc.uid = String(model.id)
+            detailVc.uid = String(describing: model.id)
             detailVc.flag = 0
             detailVc.hidesBottomBarWhenPushed = true
-            self.segmentBtn.hidden = true
+            self.segmentBtn.isHidden = true
             self.navigationController?.pushViewController(detailVc, animated: true)
             
         }else{
-            let model = self.docArr[indexPath.row] as! DoctorModel
+            let model = self.docArr[(indexPath as NSIndexPath).row] as! DoctorModel
             let detailVc = HealthDetailViewController()
-            detailVc.uid = String(model.uid)
+            detailVc.uid = String(describing: model.uid)
             detailVc.flag = 1
             detailVc.hidesBottomBarWhenPushed = true
-            self.segmentBtn.hidden = true
+            self.segmentBtn.isHidden = true
             self.navigationController?.pushViewController(detailVc, animated: true)
         }
     }
 }
 
 extension DogHealthViewController:RegionViewControllerDelegate{
-    func sendText(city: String) {
+    func sendText(_ city: String) {
         
         if self.selectedIndex == 0{
             self.hosCity = city
@@ -370,7 +390,7 @@ extension DogHealthViewController:RegionViewControllerDelegate{
 }
 
 extension DogHealthViewController:CLLocationManagerDelegate{
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
         longtitude  = (location?.coordinate.longitude)! //经度 纬度 海拔
         latitude = (location?.coordinate.latitude)!
@@ -395,7 +415,7 @@ extension DogHealthViewController:CLLocationManagerDelegate{
         }
     }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         //NSLocationWhenInUseUsageDescription
     }
 }

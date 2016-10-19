@@ -15,11 +15,11 @@ class CuringViewController: UIViewController {
     var lable = UILabel()
     var dataArr = NSMutableArray()
     lazy var tableView:UITableView = {
-        let tableView = UITableView.init(frame: CGRectMake(0, 64, SCREEN_W, SCREEN_H-64), style: UITableViewStyle.Plain)
+        let tableView = UITableView.init(frame: CGRect(x: 0, y: 64, width: SCREEN_W, height: SCREEN_H-64), style: UITableViewStyle.plain)
         self.view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.registerClass(CuringCell.self, forCellReuseIdentifier: "CuringCell")
+        tableView.register(CuringCell.self, forCellReuseIdentifier: "CuringCell")
         
         tableView.mj_header = QFRefeshHeader.init(refreshingBlock: {
             self.page = 1
@@ -37,7 +37,7 @@ class CuringViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "养护手册"
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         self.automaticallyAdjustsScrollViewInsets = false
         self.loadData()
     }
@@ -53,7 +53,7 @@ class CuringViewController: UIViewController {
                     self.dataArr.removeAllObjects()
                 }
                 
-                self.dataArr.addObjectsFromArray(array!)
+                self.dataArr.addObjects(from: array!)
                 self.tableView.reloadData()
                 self.tableView.mj_footer.endRefreshing()
                 self.tableView.mj_header.endRefreshing()
@@ -65,16 +65,16 @@ class CuringViewController: UIViewController {
 
 extension CuringViewController: UITableViewDelegate, UITableViewDataSource{
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return dataArr.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("CuringCell", forIndexPath: indexPath) as! CuringCell
-        let model = self.dataArr[indexPath.row] as! CuringModel
-        cell.image1.sd_setImageWithURL(NSURL.init(string: model.thumb))
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CuringCell", for: indexPath) as! CuringCell
+        let model = self.dataArr[(indexPath as NSIndexPath).row] as! CuringModel
+        cell.image1.sd_setImage(with: URL.init(string: model.thumb))
         cell.title.text = model.title
         cell.summary.text = model.summary
         return cell
@@ -82,15 +82,15 @@ extension CuringViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let model = self.dataArr[indexPath.row] as! CuringModel
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let model = self.dataArr[(indexPath as NSIndexPath).row] as! CuringModel
         let cureVc = CureDetailViewController()
-        cureVc.uid = String(model.id)
+        cureVc.uid = String(describing: model.id)
         cureVc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(cureVc, animated: true)
     }

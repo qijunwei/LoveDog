@@ -12,9 +12,9 @@ import UIKit
 
 let HOME_URL = ""
 //屏幕的宽度
-let SCREEN_W = UIScreen.mainScreen().bounds.size.width
+let SCREEN_W = UIScreen.main.bounds.size.width
 //屏幕的高度
-let SCREEN_H = UIScreen.mainScreen().bounds.size.height
+let SCREEN_H = UIScreen.main.bounds.size.height
 //文字的浅灰色
 let TEXTGRYCOLOR = UIColor.init(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
 let GRAYCOLOR = UIColor.init(red: 0.95, green: 0.95, blue: 0.95, alpha: 1)

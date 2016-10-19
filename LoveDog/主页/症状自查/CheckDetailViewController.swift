@@ -18,7 +18,7 @@ class CheckDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = self.keyWord
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         self.createTableView()
         self.loadData()
 
@@ -32,11 +32,11 @@ class CheckDetailViewController: UIViewController {
     
     func createTableView(){
         self.automaticallyAdjustsScrollViewInsets = false
-        tableView = UITableView.init(frame: CGRectMake(0, 64, SCREEN_W, SCREEN_H-64), style: UITableViewStyle.Plain)
+        tableView = UITableView.init(frame: CGRect(x: 0, y: 64, width: SCREEN_W, height: SCREEN_H-64), style: UITableViewStyle.plain)
         self.view.addSubview(tableView)
         tableView.showsVerticalScrollIndicator = false
         tableView.allowsSelection = false
-        tableView.separatorColor = UIColor.whiteColor()
+        tableView.separatorColor = UIColor.white
         tableView.bounces = false
         tableView.delegate = self
         tableView.dataSource = self
@@ -49,7 +49,7 @@ class CheckDetailViewController: UIViewController {
             if error == nil{
 
                 self.dataArr.removeAllObjects()
-                self.dataArr.addObjectsFromArray(checkArray!)
+                self.dataArr.addObjects(from: checkArray!)
                 self.tableView.reloadData()
 
             }
@@ -61,23 +61,23 @@ class CheckDetailViewController: UIViewController {
 
 extension CheckDetailViewController: UITableViewDelegate, UITableViewDataSource{
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return dataArr.count
         
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("detail")
+        var cell = tableView.dequeueReusableCell(withIdentifier: "detail")
         if cell == nil{
-            cell = UITableViewCell.init(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "detail")
+            cell = UITableViewCell.init(style: UITableViewCellStyle.subtitle, reuseIdentifier: "detail")
         }
         
-        let model = self.dataArr[indexPath.row] as! List
+        let model = self.dataArr[(indexPath as NSIndexPath).row] as! List
         
         cell?.textLabel?.text = "●" + model.name
-        cell?.textLabel?.font = UIFont.boldSystemFontOfSize(17)
+        cell?.textLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         
         cell?.detailTextLabel?.text = model.define
         cell?.detailTextLabel?.numberOfLines = 0
@@ -87,9 +87,9 @@ extension CheckDetailViewController: UITableViewDelegate, UITableViewDataSource{
         
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        let comment = self.dataArr[indexPath.row] as! List
+        let comment = self.dataArr[(indexPath as NSIndexPath).row] as! List
         return 60 + comment.cellH//在模型中计算了高度
     }
 

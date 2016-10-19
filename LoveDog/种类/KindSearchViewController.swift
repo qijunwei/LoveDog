@@ -24,8 +24,8 @@ class KindSearchViewController: DogKindViewController, UISearchBarDelegate, UISe
         
         // Do any additional setup after loading the view
         self.newTableView = nil
-        self.view.backgroundColor = UIColor.whiteColor()
-        newTableView = UITableView(frame: CGRectMake(0, 64, SCREEN_W, SCREEN_H - 64 - 49), style: .Plain)
+        self.view.backgroundColor = UIColor.white
+        newTableView = UITableView(frame: CGRect(x: 0, y: 64, width: SCREEN_W, height: SCREEN_H - 64 - 49), style: .plain)
         newTableView?.dataSource = self
         newTableView?.delegate = self
         self.view.addSubview(newTableView!)
@@ -36,13 +36,13 @@ class KindSearchViewController: DogKindViewController, UISearchBarDelegate, UISe
         searchController?.searchBar.delegate = self
         searchController?.hidesNavigationBarDuringPresentation = true
         searchController?.dimsBackgroundDuringPresentation = false
-        searchController?.searchBar.searchBarStyle = .Default
+        searchController?.searchBar.searchBarStyle = .default
         searchController?.searchBar.sizeToFit()
         
         searchController?.searchBar.placeholder = "搜索"
         self.newTableView?.tableHeaderView = searchController?.searchBar
         
-        self.newTableView!.registerNib(UINib.init(nibName: "SearchDogCell", bundle: nil), forCellReuseIdentifier: "SearchDogCell")
+        self.newTableView!.register(UINib.init(nibName: "SearchDogCell", bundle: nil), forCellReuseIdentifier: "SearchDogCell")
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,68 +52,68 @@ class KindSearchViewController: DogKindViewController, UISearchBarDelegate, UISe
 }
 
 extension  KindSearchViewController{
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if searchController?.active == true{
+        if searchController?.isActive == true{
             return searchDataArr.count
         }else{
             return dataArr.count
         }
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentify = "SearchDogCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentify, forIndexPath: indexPath) as! SearchDogCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentify, for: indexPath) as! SearchDogCell
         
         var model : DogModel?
-        if searchController?.active == true{
-            model = searchDataArr[indexPath.row]
+        if searchController?.isActive == true{
+            model = searchDataArr[(indexPath as NSIndexPath).row]
         }else{
-            model = dataArr[indexPath.row]
+            model = dataArr[(indexPath as NSIndexPath).row]
         }
         
         cell.headImage.image = UIImage.init(named: model!.image!)
         cell.dogName.text = model!.name
-        cell.dogName.font = UIFont.boldSystemFontOfSize(15)
+        cell.dogName.font = UIFont.boldSystemFont(ofSize: 15)
         cell.detail.text = model!.details
         
         return cell
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: IndexPath) {
         //显示时的3D效果
             cell.layer.transform = CATransform3DMakeScale(0.8, 0.8, 1);
-            UIView.animateWithDuration(0.4, delay: 0, options: UIViewAnimationOptions.AllowUserInteraction, animations: {
+            UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions.allowUserInteraction, animations: {
                 cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
                 }, completion: nil)
         
-        if searchController?.active == true{
-            tableView.frame = CGRectMake(0, 20, SCREEN_W, SCREEN_H - 20 - 49)
+        if searchController?.isActive == true{
+            tableView.frame = CGRect(x: 0, y: 20, width: SCREEN_W, height: SCREEN_H - 20 - 49)
         }else{
-            tableView.frame = CGRectMake(0, 64, SCREEN_W, SCREEN_H - 64 - 49)
+            tableView.frame = CGRect(x: 0, y: 64, width: SCREEN_W, height: SCREEN_H - 64 - 49)
         }
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         searchController?.resignFirstResponder()
         //选中时，传值，并推出下一页面
         var model : DogModel?
-        if searchController?.active == true{
-            model = searchDataArr[indexPath.row]
+        if searchController?.isActive == true{
+            model = searchDataArr[(indexPath as NSIndexPath).row]
         }else{
-            model = dataArr[indexPath.row]
+            model = dataArr[(indexPath as NSIndexPath).row]
         }
         
         let detailVC = DogDetailViewController()
         detailVC.model = model!
         detailVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(detailVC, animated: true)
-        searchController?.active = false
+        searchController?.isActive = false
         
     }
     
-    func willPresentSearchController(searchController: UISearchController) {
+    func willPresentSearchController(_ searchController: UISearchController) {
         for view:UIView in (searchController.searchBar.subviews)
         {
             for subView:UIView in (view.subviews)
@@ -121,26 +121,26 @@ extension  KindSearchViewController{
                 if ( subView is UIButton )
                 {
                     let cancelBut = subView as! UIButton
-                    cancelBut.setTitle("取消", forState: .Normal)
+                    cancelBut.setTitle("取消", for: UIControlState())
                 }
             }
         }
     }
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
 
     }
 }
 
 extension  KindSearchViewController: UISearchResultsUpdating{
     
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
+    func updateSearchResults(for searchController: UISearchController) {
         
-        searchDataArr.removeAll(keepCapacity: false)
+        searchDataArr.removeAll(keepingCapacity: false)
         
         let searchText = searchController.searchBar.text!
         for model in dataArr{
-            let name : NSString = model.name!
-            if name.containsString(searchText) == true{
+            let name : NSString = model.name! as NSString
+            if name.contains(searchText) == true{
                 searchDataArr.append(model)
             }
         }

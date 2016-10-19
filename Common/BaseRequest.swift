@@ -10,61 +10,60 @@ import UIKit
 
 class BaseRequest{
     
-    class func getWithURL(url:String!,para:NSDictionary?,callBack:(data:NSData?,error:NSError?)->Void)->Void
+    class func getWithURL(_ url:String!,para:NSDictionary?,callBack:@escaping (_ data:Foundation.Data?,_ error:NSError?)->Void)->Void
     {
-        let session = NSURLSession.sharedSession()
+        let session = URLSession.shared
         
         let urlStr = NSMutableString.init(string: url)
         if para != nil {
 //            urlStr.appendString(self.parasToString(para as! [String:String]))
-            urlStr.appendString(self.encodeUniCode(self.parasToString(para!)) as String)
+            urlStr.append(self.encodeUniCode(self.parasToString(para!) as NSString) as String)
             
         }
-        let request = NSMutableURLRequest.init(URL: (NSURL.init(string: urlStr as String))!)
-        request.HTTPMethod = "GET"
-        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) in
+        var request = URLRequest.init(url: (URL.init(string: urlStr as String))!)
+        request.httpMethod = "GET"
+        let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) in
             if error != nil{
-                callBack(data: nil, error: error)
+                callBack(nil, error as NSError?)
                 return
             }
-            let res:NSHTTPURLResponse = response as! NSHTTPURLResponse
+            let res:HTTPURLResponse = response as! HTTPURLResponse
             if res.statusCode == 200
             {
-                callBack(data:data,error:nil)
+                callBack(data,nil)
             }else
             {
-                callBack(data:nil,error:error)
+                callBack(nil,error as NSError?)
             }
-        }
+        }) 
         //启动请求任务
         dataTask .resume()
     }
     
-    class func postWithURL(url:String!,para:NSDictionary?,callBack:(data:NSData?,error:NSError?)->Void)->Void{
-        let session = NSURLSession.sharedSession()
+    class func postWithURL(_ url:String!,para:NSDictionary?,callBack:@escaping (_ data:Foundation.Data?,_ error:NSError?)->Void)->Void{
+        let session = URLSession.shared
         
-        let urlStr = NSMutableString.init(string: url)
+        var urlStr = ""
         if para != nil {
-            urlStr.appendString(self.encodeUniCode(self.parasToString(para!)) as String)
+            urlStr = url + self.encodeUniCode(self.parasToString(para!) as NSString)
         }
-        let request = NSMutableURLRequest.init(URL: (NSURL.init(string: urlStr as String))!)
-        request.HTTPMethod = "POST"
-        let dataTask = session.dataTaskWithRequest(request) { (data, response, error) in
-            
+        var request = URLRequest.init(url: URL.init(string: urlStr)!)
+        request.httpMethod = "POST"
+        let dataTask = session.dataTask(with: request) { (data, response, error) in
             
             if error == nil
             {
-                callBack(data:data,error:nil)
+                callBack(data,nil)
             }else
             {
-                callBack(data:nil,error:error)
+                callBack(nil,error as NSError?)
             }
         }
         //启动请求任务
-        dataTask .resume()
+        dataTask.resume()
     }
     
-    class func parasToString(para:NSDictionary?)->String
+    class func parasToString(_ para:NSDictionary?)->String
     {
         let paraStr = NSMutableString.init(string: "?")
         for (key,value) in para as! [String :String]
@@ -72,7 +71,7 @@ class BaseRequest{
             paraStr.appendFormat("%@=%@&", key,value)
         }
         if paraStr.hasSuffix("&"){
-            paraStr.deleteCharactersInRange(NSMakeRange(paraStr.length - 1, 1))
+            paraStr.deleteCharacters(in: NSMakeRange(paraStr.length - 1, 1))
         }
         //将URL中的特殊字符进行转吗
 //        paraStr.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
@@ -81,9 +80,9 @@ class BaseRequest{
         return String(paraStr)
     }
     
-    class func encodeUniCode(string:NSString)->NSString
+    class func encodeUniCode(_ string:NSString) -> String
     {
-        return string.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())!
+        return string.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlFragmentAllowed)!
     }
 
     

@@ -17,10 +17,10 @@ class LikeDogCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        headImage.frame = CGRectMake(16, 5, 35, 35)
+        headImage.frame = CGRect(x: 16, y: 5, width: 35, height: 35)
         self.contentView.addSubview(headImage)
         
-        title.frame = CGRectMake(60, 5, SCREEN_W - 100, 35)
+        title.frame = CGRect(x: 60, y: 5, width: SCREEN_W - 100, height: 35)
         title.font = UIFont.init(name: "STHeitiSC-Light", size: 18)
         self.contentView.addSubview(title)
 
@@ -34,7 +34,7 @@ class LikeDogCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

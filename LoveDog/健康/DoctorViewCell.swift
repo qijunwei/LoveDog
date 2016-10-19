@@ -22,25 +22,25 @@ class DoctorViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        headImage.frame = CGRectMake(16, 10, 70, 70)
+        headImage.frame = CGRect(x: 16, y: 10, width: 70, height: 70)
         self.contentView.addSubview(headImage)
         
-        job.frame = CGRectMake(20, 85, 100, 20)
+        job.frame = CGRect(x: 20, y: 85, width: 100, height: 20)
         job.font = UIFont.init(name: "STHeitiSC-Light", size: 15)
         self.contentView.addSubview(job)
         
-        name.frame = CGRectMake(110, 10, SCREEN_W - 195, 20)
+        name.frame = CGRect(x: 110, y: 10, width: SCREEN_W - 195, height: 20)
         name.font = UIFont.init(name: "STHeitiSC-Light", size: 17)
         self.contentView.addSubview(name)
         
-        disL.frame = CGRectMake(SCREEN_W - 60, 10, 60, 20)
+        disL.frame = CGRect(x: SCREEN_W - 60, y: 10, width: 60, height: 20)
         disL.font = UIFont.init(name: "STHeitiSC-Light", size: 12)
         self.contentView.addSubview(disL)
         
-        hos.frame = CGRectMake(110, 35, SCREEN_W - 115, 20)
+        hos.frame = CGRect(x: 110, y: 35, width: SCREEN_W - 115, height: 20)
         self.contentView.addSubview(hos)
         
-        intro.frame = CGRectMake(110, 60, SCREEN_W - 115, 40)
+        intro.frame = CGRect(x: 110, y: 60, width: SCREEN_W - 115, height: 40)
         intro.font = UIFont.init(name: "STHeitiSC-Light", size: 13)
         intro.numberOfLines = 2
         self.contentView.addSubview(intro)
@@ -60,7 +60,7 @@ class DoctorViewCell: UITableViewCell {
         
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state

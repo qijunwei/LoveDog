@@ -23,32 +23,32 @@ class HospViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        headImage.frame = CGRectMake(16, 10, 100, 70)
+        headImage.frame = CGRect(x: 16, y: 10, width: 100, height: 70)
         self.contentView.addSubview(headImage)
         
-        title.frame = CGRectMake(140, 10, SCREEN_W - 220, 20)
-        title.font = UIFont.systemFontOfSize(17)
+        title.frame = CGRect(x: 140, y: 10, width: SCREEN_W - 220, height: 20)
+        title.font = UIFont.systemFont(ofSize: 17)
         self.contentView.addSubview(title)
         
-        disL.frame = CGRectMake(SCREEN_W - 60, 10, 60, 20)
+        disL.frame = CGRect(x: SCREEN_W - 60, y: 10, width: 60, height: 20)
         disL.font = UIFont.init(name: "STHeitiSC-Light", size: 12)
         self.contentView.addSubview(disL)
         
-        tel.frame = CGRectMake(140, 30, SCREEN_W - 145, 30)
+        tel.frame = CGRect(x: 140, y: 30, width: SCREEN_W - 145, height: 30)
         tel.font = UIFont.init(name: "STHeitiSC-Light", size: 15)
         self.contentView.addSubview(tel)
         
-        address.frame = CGRectMake(140, 50, SCREEN_W - 145, 50)
+        address.frame = CGRect(x: 140, y: 50, width: SCREEN_W - 145, height: 50)
         address.font = UIFont.init(name: "STHeitiSC-Light", size: 15)
         address.numberOfLines = 2
         self.contentView.addSubview(address)
         
         //“查看全部”cell单独列出来，
-        seemore.frame = CGRectMake((SCREEN_W - 100) / 2, 10, 100, 20)
+        seemore.frame = CGRect(x: (SCREEN_W - 100) / 2, y: 10, width: 100, height: 20)
         seemore.center.x = SCREEN_W / 2
-        seemore.textAlignment = .Center
-        seemore.font = UIFont.systemFontOfSize(15)
-        seemore.textColor = UIColor.grayColor()
+        seemore.textAlignment = .center
+        seemore.font = UIFont.systemFont(ofSize: 15)
+        seemore.textColor = UIColor.gray
         self.contentView.addSubview(seemore)
      
     }
@@ -66,7 +66,7 @@ class HospViewCell: UITableViewCell {
         
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state

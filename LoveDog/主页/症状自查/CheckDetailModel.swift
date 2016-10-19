@@ -11,10 +11,10 @@ import SwiftyJSON
 
 extension CheckDetailModel {
     //http://api.5ichong.com/v2.3/diagnosis?keyword=%E5%91%95%E5%90%90
-    class func requestCheckData(keyword:String,callBack:(checkArray:[AnyObject]?,error:NSError?)->Void)->Void{
+    class func requestCheckData(_ keyword:String,callBack:@escaping (_ checkArray:[AnyObject]?,_ error:NSError?)->Void)->Void{
         
         let para = ["keyword":keyword]
-        BaseRequest.getWithURL("http://api.5ichong.com/v2.3/diagnosis", para: para) { (data, error) in
+        BaseRequest.getWithURL("http://api.5ichong.com/v2.3/diagnosis", para: para as NSDictionary?) { (data, error) in
             
             let checkArray = NSMutableArray()
             if error == nil{
@@ -23,17 +23,17 @@ extension CheckDetailModel {
                     let array = json["data"]["list"].arrayValue
                     for subjson in array {
                         let model = List.init(fromJson: subjson)
-                        checkArray.addObject(model)
+                        checkArray.add(model)
                     }
                 }
-                dispatch_async(dispatch_get_main_queue(), {
+                DispatchQueue.main.async(execute: {
                     //请求成功的时候回调
-                    callBack(checkArray:checkArray as [AnyObject],error:nil)
+                    callBack(checkArray as [AnyObject],nil)
                 })
             }else{
                 //失败回调
-                dispatch_async(dispatch_get_main_queue(), {
-                    callBack(checkArray: nil,error: error)
+                DispatchQueue.main.async(execute: {
+                    callBack(nil,error)
                 })
             }
             
@@ -159,7 +159,7 @@ class List{
     var attr:NSMutableAttributedString!{
         var atrSring:NSMutableAttributedString? = nil
         let content:NSMutableString = NSMutableString.init(string: "")
-        content.appendString(self.define)
+        content.append(self.define)
         atrSring = NSMutableAttributedString.init(string: content as String)
         return atrSring!
     }
@@ -167,7 +167,7 @@ class List{
         //给定一个尺寸，宽、高计算一个字符串的大小
         let str = NSString.init(string: self.attr.string)
         
-        let rect = str.boundingRectWithSize(CGSizeMake(SCREEN_W - 20, 99999), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:UIFont.init(name: "STHeitiSC-Light", size: 15)!], context: nil)
+        let rect = str.boundingRect(with: CGSize(width: SCREEN_W - 20, height: 99999), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName:UIFont.init(name: "STHeitiSC-Light", size: 15)!], context: nil)
         return rect.size.height
     }
     

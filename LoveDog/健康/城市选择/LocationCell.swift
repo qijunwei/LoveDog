@@ -8,6 +8,26 @@
 
 import UIKit
 import CoreLocation
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 ////iOS8之后需要在info.plist中添加NSLocationAlwaysUseageDescription和NSLocationWhenInUseUseageDescrition 字段
 class LocationCell: UITableViewCell,CLLocationManagerDelegate {
 
@@ -17,8 +37,8 @@ class LocationCell: UITableViewCell,CLLocationManagerDelegate {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        currentcity.frame = CGRectMake(10, 10, 260, 20)
-        currentcity.font = UIFont.boldSystemFontOfSize(20)
+        currentcity.frame = CGRect(x: 10, y: 10, width: 260, height: 20)
+        currentcity.font = UIFont.boldSystemFont(ofSize: 20)
         self.contentView.addSubview(currentcity)
         
         locationManger = CLLocationManager() //位置管理器.提供位置信息和高度信息
@@ -40,23 +60,23 @@ class LocationCell: UITableViewCell,CLLocationManagerDelegate {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
     //MARK:代理
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         //判断用户是否允许
         switch status {
-        case CLAuthorizationStatus.AuthorizedWhenInUse: //用户授权可以定位
+        case CLAuthorizationStatus.authorizedWhenInUse: //用户授权可以定位
             locationManger.startUpdatingHeading()
         default:
             locationManger.stopUpdatingHeading()
         }
     }
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
         
         let geocoder = CLGeocoder.init()
@@ -77,7 +97,7 @@ class LocationCell: UITableViewCell,CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         //NSLocationWhenInUseUsageDescription
     }
 }

@@ -26,7 +26,16 @@ DEPENDENCIES:
   - ShareSDK3
   - ShareSDK3/ShareSDKPlatforms/WeChat
   - ShareSDK3/ShareSDKUI
-  - SwiftyJSON
+  - SwiftyJSON (from `https://github.com/IBM-Swift/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/IBM-Swift/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: d8de7c8f71df7c939f3d47e7d1fb53f344b471fa
+    :git: https://github.com/IBM-Swift/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
@@ -38,6 +47,6 @@ SPEC CHECKSUMS:
   ShareSDK3: e7bcdfeb95338f89efd6fff82b4793d2bfee76f8
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 5482c6483cb9883e4748d1ce34bdfd9f119275aa
+PODFILE CHECKSUM: ee736bcd762c4753cd83f891e2520519d7ae43a8
 
 COCOAPODS: 1.0.1

@@ -20,7 +20,7 @@ class FMDBDataManager: NSObject {
     override init() {
         
         //拼接出数据库的路径
-        let path = NSHomeDirectory().stringByAppendingString("/Documents/wqjLike.db")
+        let path = NSHomeDirectory() + "/Documents/wqjLike.db"
         
         //使用路径构造数据库管理者
         fmdb = FMDatabase.init(path: path)
@@ -42,7 +42,7 @@ class FMDBDataManager: NSObject {
         }
     }
     
-    func insertWith(model: DogModel) -> Void {
+    func insertWith(_ model: DogModel) -> Void {
         //插入数据的sql语句(参数需要以通配符的形式设置)
         let insertSql = "insert into likeInfo(id, name) values(?, ?)"
         do {
@@ -52,7 +52,7 @@ class FMDBDataManager: NSObject {
         }
     }
     
-    func updateWith(model: DogModel, uid: String) -> Void {
+    func updateWith(_ model: DogModel, uid: String) -> Void {
         //修改某个id的数据
         let updateSql = "update likeInfo set id = ?, name = ? where id = ?"
         do {
@@ -71,8 +71,8 @@ class FMDBDataManager: NSObject {
             while rs.next() {
                 //在这个循环内部，rs会分别代表所有的查询结果
                 let model = DogModel()
-                model.id = rs.stringForColumn("id")
-                model.name = rs.stringForColumn("name")
+                model.id = rs.string(forColumn: "id")
+                model.name = rs.string(forColumn: "name")
                 tmpArr.append(model)
             }
         } catch {
@@ -82,7 +82,7 @@ class FMDBDataManager: NSObject {
     }
 
     //删除数据
-    func deleteSql(model: DogModel, uid: String){
+    func deleteSql(_ model: DogModel, uid: String){
         let deleteSql = "delete from likeInfo where id = ?"
         do{
             try fmdb.executeUpdate(deleteSql, values: [uid])

@@ -17,11 +17,11 @@ class CureDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         webView = UIWebView.init(frame: self.view.bounds)
         self.urlStr = "http://m.5ichong.com/article/detail/" + self.uid
-        let url = NSURL.init(string: self.urlStr)
-        let request = NSURLRequest.init(URL: url!)
+        let url = URL.init(string: self.urlStr)
+        let request = URLRequest.init(url: url!)
         self.webView.loadRequest(request)
         self.view.addSubview(self.webView)
     }

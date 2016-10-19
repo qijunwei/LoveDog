@@ -17,7 +17,7 @@ class HealthDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         webView = UIWebView.init(frame: self.view.bounds)
         if self.flag == 0{
             self.urlStr = "http://m.5ichong.com/hospital/" + self.uid
@@ -25,13 +25,13 @@ class HealthDetailViewController: UIViewController {
             self.urlStr = "http://m.5ichong.com/doctor/" + self.uid
         }
         
-        let url = NSURL.init(string: self.urlStr)
-        let request = NSURLRequest.init(URL: url!)
+        let url = URL.init(string: self.urlStr)
+        let request = URLRequest.init(url: url!)
         self.webView.loadRequest(request)
         self.view.addSubview(self.webView)
         
 //        隐藏toolbar
-        self.navigationController!.toolbarHidden = true
+        self.navigationController!.isToolbarHidden = true
 
     }
     

@@ -17,15 +17,15 @@ class CuringCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        image1.frame = CGRectMake(16, 10, 80, 60)
+        image1.frame = CGRect(x: 16, y: 10, width: 80, height: 60)
         self.contentView.addSubview(image1)
         
-        title.frame = CGRectMake(110, 10, SCREEN_W - 115, 50)
+        title.frame = CGRect(x: 110, y: 10, width: SCREEN_W - 115, height: 50)
         title.numberOfLines = 2
         title.font = UIFont.init(name: "STHeitiSC-Light", size: 15)
         self.contentView.addSubview(title)
         
-        summary.frame = CGRectMake(110, 50, SCREEN_W - 105, 30)
+        summary.frame = CGRect(x: 110, y: 50, width: SCREEN_W - 105, height: 30)
         summary.font = UIFont.init(name: "STHeitiSC-Light", size: 13)
         self.contentView.addSubview(summary)
         
@@ -39,7 +39,7 @@ class CuringCell: UITableViewCell {
         // Initialization code
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state

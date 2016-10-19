@@ -9,7 +9,7 @@
 import UIKit
 
 protocol RegionViewControllerDelegate:class {
-    func sendText(city:String)->Void
+    func sendText(_ city:String)->Void
 }
 
 class RegionViewController: UIViewController {
@@ -25,7 +25,7 @@ class RegionViewController: UIViewController {
     //加定位，加城市列表，返回前面的城市
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         self.automaticallyAdjustsScrollViewInsets = false
         self.createTableView()
 
@@ -33,13 +33,13 @@ class RegionViewController: UIViewController {
         
         alphabet = [String]()
         for i in 0..<26{
-            let title = String(Character(UnicodeScalar(i + 65)))
+            let title = String(Character(UnicodeScalar(i + 65)!))
             alphabet.append(title)
         }
     }
     
     func createTableView() {
-        tableView = UITableView.init(frame: CGRectMake(0, 64, SCREEN_W, SCREEN_H-64), style: UITableViewStyle.Plain)
+        tableView = UITableView.init(frame: CGRect(x: 0, y: 64, width: SCREEN_W, height: SCREEN_H-64), style: UITableViewStyle.plain)
         self.view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
@@ -49,43 +49,43 @@ class RegionViewController: UIViewController {
 }
 extension RegionViewController: UITableViewDelegate, UITableViewDataSource{
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return dataArr.count
     }
     
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
-        let sectionArray = self.dataArr.objectAtIndex(section) as! [AnyObject]
+        let sectionArray = self.dataArr.object(at: section) as! [AnyObject]
         return sectionArray.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("city")
+        var cell = tableView.dequeueReusableCell(withIdentifier: "city")
         if cell == nil {
-            cell = UITableViewCell.init(style: .Default, reuseIdentifier: "city")
+            cell = UITableViewCell.init(style: .default, reuseIdentifier: "city")
         }
-        let array = self.dataArr.objectAtIndex(indexPath.section) as! NSArray
-        let model = array[indexPath.row] as! String
+        let array = self.dataArr.object(at: (indexPath as NSIndexPath).section) as! NSArray
+        let model = array[(indexPath as NSIndexPath).row] as! String
         cell?.textLabel?.text = model
         return cell!
         
     }
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let array = self.dataArr.objectAtIndex(indexPath.section) as! NSArray
-        let model = array[indexPath.row] as! String
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let array = self.dataArr.object(at: (indexPath as NSIndexPath).section) as! NSArray
+        let model = array[(indexPath as NSIndexPath).row] as! String
         delegate?.sendText(model)
-        self.navigationController?.popViewControllerAnimated(true)
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let viewS = UIView.init(frame: CGRectMake(0, 0, SCREEN_W, 20))
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let viewS = UIView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_W, height: 20))
         viewS.backgroundColor = GRAYCOLOR2
-        let label = UILabel.init(frame: CGRectMake(20, 10, SCREEN_W, 20))
-        label.font = UIFont.boldSystemFontOfSize(16)
+        let label = UILabel.init(frame: CGRect(x: 20, y: 10, width: SCREEN_W, height: 20))
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         
         let arr = ["热门城市","A","B","C","D","E","F","G","H","J","K","L","M","N","P","Q","R","S","T","W","X","Y","Z"]
         for i in 0...23{
@@ -97,14 +97,14 @@ extension RegionViewController: UITableViewDelegate, UITableViewDataSource{
         return viewS
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.1
     }
     
-    func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         //返回一个 A~Z的索引数组
         return alphabet
     }

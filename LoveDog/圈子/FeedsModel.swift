@@ -13,11 +13,11 @@ extension FeedModel{
     
 //    http://api.wsq.umeng.com/v2/feeds/stream?os=iOS&ak=5587b6d167e58e151a0056be&count=20&anonymous=1&sdkv=2.2.1&openudidopenudid=3a0f9c6a417b25a73457a925e96602b279cc8c25 start=20
     
-    class func requestFeedsData(page: NSInteger, callBack:(feedArray:[AnyObject]?,error:NSError?)->Void)->Void{
+    class func requestFeedsData(_ page: NSInteger, callBack:@escaping (_ feedArray:[AnyObject]?,_ error:NSError?)->Void)->Void{
     
         let start = String(20 * page)
         let para = ["os":"iOS","ak":"5587b6d167e58e151a0056be","count":"20","anonymous":"1","sdkv":"2.2.1","openudidopenudid":"3a0f9c6a417b25a73457a925e96602b279cc8c25","start":start]
-        BaseRequest.getWithURL("http://api.wsq.umeng.com/v2/feeds/stream", para: para) { (data, error) in
+        BaseRequest.getWithURL("http://api.wsq.umeng.com/v2/feeds/stream", para: para as NSDictionary?) { (data, error) in
             
             if error == nil{
                 let json = JSON(data: data!)
@@ -25,16 +25,16 @@ extension FeedModel{
                 let array = json["items"].arrayValue
                 for subjson in array {
                     let model = FeedModel.init(fromJson: subjson)
-                    feedArray.addObject(model)
+                    feedArray.add(model)
                 }
-                dispatch_async(dispatch_get_main_queue(), {
+                DispatchQueue.main.async(execute: {
                     //请求成功的时候回调
-                    callBack(feedArray:feedArray as [AnyObject],error:nil)
+                    callBack(feedArray as [AnyObject],nil)
                 })
             }else{
                 //失败回调
-                dispatch_async(dispatch_get_main_queue(), {
-                    callBack(feedArray: nil,error: error)
+                DispatchQueue.main.async(execute: {
+                    callBack(nil,error)
                 })
             }
         
@@ -46,7 +46,7 @@ extension FeedModel{
     var attr:NSMutableAttributedString!{
         var atrSring:NSMutableAttributedString? = nil
         let content:NSMutableString = NSMutableString.init(string: "")
-            content.appendString(self.content)
+            content.append(self.content)
             atrSring = NSMutableAttributedString.init(string: content as String)
             return atrSring!
     }
@@ -54,7 +54,7 @@ extension FeedModel{
         //给定一个尺寸，宽、高计算一个字符串的大小
         let str = NSString.init(string: self.attr.string)
         
-        let rect = str.boundingRectWithSize(CGSizeMake(SCREEN_W - 20, 99999), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(15)], context: nil)
+        let rect = str.boundingRect(with: CGSize(width: SCREEN_W - 20, height: 99999), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 15)], context: nil)
         return rect.size.height
     }
 }
@@ -124,27 +124,27 @@ class FeedModel{
         }
         isRecommended = json["is_recommended"].boolValue
         isTop = json["is_top"].intValue
-        isTopicTop = json["is_topic_top"].stringValue
+        isTopicTop = json["is_topic_top"].stringValue as AnyObject!
         liked = json["liked"].boolValue
         likesCount = json["likes_count"].intValue
-        location = json["location"].stringValue
+        location = json["location"].stringValue as AnyObject!
         mediaInfo = [AnyObject]()
         let mediaInfoArray = json["media_info"].arrayValue
         for mediaInfoJson in mediaInfoArray{
-            mediaInfo.append(mediaInfoJson.stringValue)
+            mediaInfo.append(mediaInfoJson.stringValue as AnyObject)
         }
         mediaType = json["media_type"].intValue
         originFeed = [AnyObject]()
         let originFeedArray = json["origin_feed"].arrayValue
         for originFeedJson in originFeedArray{
-            originFeed.append(originFeedJson.stringValue)
+            originFeed.append(originFeedJson.stringValue as AnyObject)
         }
         parentFeedId = json["parent_feed_id"].stringValue
         permission = json["permission"].intValue
         relatedUser = [AnyObject]()
         let relatedUserArray = json["related_user"].arrayValue
         for relatedUserJson in relatedUserArray{
-            relatedUser.append(relatedUserJson.stringValue)
+            relatedUser.append(relatedUserJson.stringValue as AnyObject)
         }
         richText = json["rich_text"].stringValue
         richTextUrl = json["rich_text_url"].stringValue
@@ -156,7 +156,7 @@ class FeedModel{
         topics = [AnyObject]()
         let topicsArray = json["topics"].arrayValue
         for topicsJson in topicsArray{
-            topics.append(topicsJson.stringValue)
+            topics.append(topicsJson.stringValue as AnyObject)
         }
         type = json["type"].intValue
         userMark = json["user_mark"].intValue
@@ -221,7 +221,7 @@ class Creator{
         medalList = [AnyObject]()
         let medalListArray = json["medal_list"].arrayValue
         for medalListJson in medalListArray{
-            medalList.append(medalListJson.stringValue)
+            medalList.append(medalListJson.stringValue as AnyObject)
         }
         name = json["name"].stringValue
         relation = json["relation"].intValue

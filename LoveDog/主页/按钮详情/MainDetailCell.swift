@@ -17,14 +17,14 @@ class MainDetailCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        image1.frame = CGRectMake(16, 10, 80, 60)
+        image1.frame = CGRect(x: 16, y: 10, width: 80, height: 60)
         self.contentView.addSubview(image1)
         
-        title.frame = CGRectMake(110, 10, SCREEN_W - 105, 20)
+        title.frame = CGRect(x: 110, y: 10, width: SCREEN_W - 105, height: 20)
         title.font = UIFont.init(name: "STHeitiSC-Light", size: 16)
         self.contentView.addSubview(title)
         
-        good.frame = CGRectMake(110, 50, SCREEN_W - 105, 30)
+        good.frame = CGRect(x: 110, y: 50, width: SCREEN_W - 105, height: 30)
         good.font = UIFont.init(name: "STHeitiSC-Light", size: 13)
         self.contentView.addSubview(good)
 
@@ -38,7 +38,7 @@ class MainDetailCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

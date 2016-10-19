@@ -18,11 +18,11 @@ class CheckSelfViewController: UIViewController,UITableViewDelegate,UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "症状自查"
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
-        let path = NSBundle.mainBundle().pathForResource("autognosisTags", ofType: "json")!
-        let data = NSData.init(contentsOfFile: path)!
-        let arr = try! NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments) as? [NSDictionary]
+        let path = Bundle.main.path(forResource: "autognosisTags", ofType: "json")!
+        let data = try! Foundation.Data.init(contentsOf: URL(fileURLWithPath: path))
+        let arr = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [NSDictionary]
         for dic in arr! {
             let model = CheckModel()
             model.name = dic["name"] as? String
@@ -48,10 +48,10 @@ class CheckSelfViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     func createTableView(){
         self.automaticallyAdjustsScrollViewInsets = false
-        tableView = UITableView.init(frame: CGRectMake(0, 64, SCREEN_W / 3, SCREEN_H-64), style: UITableViewStyle.Plain)
+        tableView = UITableView.init(frame: CGRect(x: 0, y: 64, width: SCREEN_W / 3, height: SCREEN_H-64), style: UITableViewStyle.plain)
         self.view.addSubview(tableView)
         tableView.showsVerticalScrollIndicator = false
-        tableView.separatorColor = UIColor.whiteColor()
+        tableView.separatorColor = UIColor.white
         tableView.bounces = false
         tableView.delegate = self
         tableView.dataSource = self
@@ -59,7 +59,7 @@ class CheckSelfViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     func createSubTable(){
         self.automaticallyAdjustsScrollViewInsets = false
-        subTable = UITableView.init(frame: CGRectMake(SCREEN_W / 3, 64, 2 * (SCREEN_W / 3), SCREEN_H-64), style: UITableViewStyle.Plain)
+        subTable = UITableView.init(frame: CGRect(x: SCREEN_W / 3, y: 64, width: 2 * (SCREEN_W / 3), height: SCREEN_H-64), style: UITableViewStyle.plain)
         self.view.addSubview(subTable)
         subTable.showsVerticalScrollIndicator = false
         subTable.bounces = false
@@ -72,7 +72,7 @@ class CheckSelfViewController: UIViewController,UITableViewDelegate,UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == self.tableView{
             return dataArr.count
         }else{
@@ -80,37 +80,37 @@ class CheckSelfViewController: UIViewController,UITableViewDelegate,UITableViewD
         }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if tableView == self.tableView{
-            var cell = tableView.dequeueReusableCellWithIdentifier("Check")
+            var cell = tableView.dequeueReusableCell(withIdentifier: "Check")
             if cell == nil{
-                cell = UITableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: "Check")
+                cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "Check")
                 cell?.backgroundColor = BLUECOLOR
             }
-            let model = dataArr[indexPath.row]
+            let model = dataArr[(indexPath as NSIndexPath).row]
             cell?.textLabel?.text = model.name
 //            太宽的时候，字变小，挤一挤
             cell?.textLabel?.adjustsFontSizeToFitWidth = true
             
-            cell?.textLabel?.textColor = UIColor.whiteColor()
-            cell?.textLabel?.font = UIFont.systemFontOfSize(15)
-            cell?.textLabel?.textAlignment = .Center
+            cell?.textLabel?.textColor = UIColor.white
+            cell?.textLabel?.font = UIFont.systemFont(ofSize: 15)
+            cell?.textLabel?.textAlignment = .center
             return cell!
         }else{
-            var cell = tableView.dequeueReusableCellWithIdentifier("sub")
+            var cell = tableView.dequeueReusableCell(withIdentifier: "sub")
             if cell == nil{
-                cell = UITableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: "sub")
+                cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "sub")
                 
             //引导用户点击进入下一界面的图标：>
-                let imageView = UIImageView.init(frame: CGRectMake(2 * SCREEN_W / 3 - 20, 15, 10, 15))
+                let imageView = UIImageView.init(frame: CGRect(x: 2 * SCREEN_W / 3 - 20, y: 15, width: 10, height: 15))
                 imageView.image = UIImage.init(named: "766-arrow-right-selected")
                 cell?.contentView.addSubview(imageView)
 //                将默认的选中风格选为无，不然背景颜色的更改没有效果
-                cell?.selectionStyle = .None
+                cell?.selectionStyle = .none
             }
             
-            let model = dataArr[selectIndex].tags[indexPath.row]
+            let model = dataArr[selectIndex].tags[(indexPath as NSIndexPath).row]
             cell?.textLabel?.text = model
             cell?.textLabel?.font = UIFont.init(name: "STHeitiSC-Light", size: 15)
             return cell!
@@ -118,7 +118,7 @@ class CheckSelfViewController: UIViewController,UITableViewDelegate,UITableViewD
         
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if tableView == self.tableView{
             return 60
         }else{
@@ -126,29 +126,29 @@ class CheckSelfViewController: UIViewController,UITableViewDelegate,UITableViewD
         }
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == self.tableView{
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        let cell = tableView.cellForRow(at: indexPath)
         cell?.textLabel?.textColor = BLUECOLOR
         //        不管用
         //        cell?.backgroundColor = UIColor.whiteColor()
-        cell?.contentView.backgroundColor = UIColor.whiteColor()
-        selectIndex = indexPath.row
+        cell?.contentView.backgroundColor = UIColor.white
+        selectIndex = (indexPath as NSIndexPath).row
             subTable.reloadData()
         }else{
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
             let checkDetail = CheckDetailViewController()
-            checkDetail.keyWord = dataArr[selectIndex].tags[indexPath.row]
+            checkDetail.keyWord = dataArr[selectIndex].tags[(indexPath as NSIndexPath).row]
             checkDetail.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(checkDetail, animated: true)
             
         }
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if tableView == self.tableView{
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
-        cell?.textLabel?.textColor = UIColor.whiteColor()
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.textLabel?.textColor = UIColor.white
         cell?.backgroundColor = BLUECOLOR
         }else{
             
