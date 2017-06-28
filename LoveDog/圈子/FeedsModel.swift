@@ -101,7 +101,7 @@ class FeedModel{
      * Instantiate the instance using the passed json values to set the properties values
      */
     init(fromJson json: JSON!){
-        if json == nil{
+        if json == .null {
             return
         }
         banUser = json["ban_user"].boolValue
@@ -177,7 +177,7 @@ class ImageUrl{
      * Instantiate the instance using the passed json values to set the properties values
      */
     init(fromJson json: JSON!){
-        if json == nil{
+        if json == .null {
             return
         }
         a360 = json["360"].stringValue
@@ -205,7 +205,7 @@ class Creator{
     
 
     init(fromJson json: JSON!){
-        if json == nil{
+        if json == .null {
             return
         }
         atype = json["atype"].intValue
@@ -243,7 +243,7 @@ class IconUrl{
      * Instantiate the instance using the passed json values to set the properties values
      */
     init(fromJson json: JSON!){
-        if json == nil{
+        if json == .null {
             return
         }
         a240 = json["240"].stringValue

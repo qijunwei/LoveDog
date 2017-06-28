@@ -214,10 +214,10 @@ open class LBXScanWrapper: NSObject,AVCaptureMetadataOutputObjectsDelegate {
                 
                 //码类型
                 let codeType = code.type
-                print("code type:%@",codeType)
+                print("code type:\(codeType ?? "")")
                 //码内容
                 let codeContent = code.stringValue
-                print("code string:%@",codeContent)
+                print("code string:\(codeContent ?? "")")
                 
                 //4个字典，分别 左上角-右上角-右下角-左下角的 坐标百分百，可以使用这个比例抠出码的图像
                // let arrayRatio = code.corners
@@ -672,7 +672,7 @@ open class LBXScanWrapper: NSObject,AVCaptureMetadataOutputObjectsDelegate {
         
         switch (orientation) {
         case UIImageOrientation.left:
-            rotate = M_PI_2;
+            rotate = .pi;
             rect = CGRect(x: 0, y: 0, width: image.size.height, height: image.size.width);
             translateX = 0;
             translateY = -rect.size.width;
@@ -680,7 +680,7 @@ open class LBXScanWrapper: NSObject,AVCaptureMetadataOutputObjectsDelegate {
             scaleX = rect.size.height/rect.size.width;
             break;
         case UIImageOrientation.right:
-            rotate = 3 * M_PI_2;
+            rotate = 3 * .pi;
             rect = CGRect(x: 0, y: 0, width: image.size.height, height: image.size.width);
             translateX = -rect.size.height;
             translateY = 0;
@@ -688,7 +688,7 @@ open class LBXScanWrapper: NSObject,AVCaptureMetadataOutputObjectsDelegate {
             scaleX = rect.size.height/rect.size.width;
             break;
         case UIImageOrientation.down:
-            rotate = M_PI;
+            rotate = .pi;
             rect = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height);
             translateX = -rect.size.width;
             translateY = -rect.size.height;

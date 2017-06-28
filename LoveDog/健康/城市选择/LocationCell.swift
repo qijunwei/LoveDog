@@ -92,7 +92,7 @@ class LocationCell: UITableViewCell,CLLocationManagerDelegate {
             }else if (error == nil && array?.count == 0){
                 print("没有返回结果")
             }else if error != nil {
-                print(error)
+                print(error!)
             }
         }
     }

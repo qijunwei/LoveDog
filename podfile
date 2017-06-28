@@ -6,7 +6,7 @@ target 'LoveDog' do
   pod 'MBProgressHUD'
   pod 'MJRefresh'
   pod 'MOBFoundation'
-  pod 'SwiftyJSON', :git => 'https://github.com/IBM-Swift/SwiftyJSON.git'
+  pod 'SwiftyJSON' #, :git => 'https://github.com/IBM-Swift/SwiftyJSON.git'
   pod 'FMDB'
   pod 'ShareSDK3'
 # UI模块(非必须，需要用到ShareSDK提供的分享菜单栏和分享编辑页面需要以下1行)
@@ -21,10 +21,10 @@ target 'LoveDog' do
 
 end
 
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      config.build_settings[‘ENABLE_BITCODE‘] = ‘NO‘
-    end
-  end
-end
+#post_install do |installer|
+#  installer.pods_project.targets.each do |target|
+#    target.build_configurations.each do |config|
+#      config.build_settings['ENABLE_BITCODE'] = 'NO'
+#    end
+#  end
+#end

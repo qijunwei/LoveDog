@@ -1,4 +1,6 @@
 
-.DS_Store
-
 Pods/
+xcuserdata/
+*.xcworkspacedata
+*.DS_Store
+

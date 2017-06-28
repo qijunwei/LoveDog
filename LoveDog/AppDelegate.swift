@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func shareQQAndWechat(){
         //初始化SDK、初始化三方平台,SDK和三方平台的SDK建立一个连接，需要的时候就触发
-        ShareSDK.registerApp(Appkey, activePlatforms: [SSDKPlatformType.typeWechat.rawValue,SSDKPlatformType.typeQQ.rawValue], onImport: { (platformType) in
+        ShareSDK.registerActivePlatforms([SSDKPlatformType.typeWechat.rawValue,SSDKPlatformType.typeQQ.rawValue], onImport: { (platformType) in
             switch platformType {
             case SSDKPlatformType.typeWechat:
                 ShareSDKConnector.connectWeChat(WXApi.classForCoder())

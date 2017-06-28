@@ -53,11 +53,11 @@ class CheckDetailModel{
     var status : Int!
     
     init(fromJson json: JSON!){
-        if json == nil{
+        if json == .null {
             return
         }
         let dataJson = json["data"]
-        if dataJson != JSON.null{
+        if dataJson != JSON.null {
             data = Data(fromJson: dataJson)
         }
         message = json["message"].stringValue
@@ -75,7 +75,7 @@ class Data{
     
     
     init(fromJson json: JSON!){
-        if json == nil{
+        if json == .null {
             return
         }
         keyword = json["keyword"].stringValue
@@ -112,7 +112,7 @@ class Tag{
      * Instantiate the instance using the passed json values to set the properties values
      */
     init(fromJson json: JSON!){
-        if json == nil{
+        if json == .null {
             return
         }
         a0 = json["0"].stringValue
@@ -143,7 +143,7 @@ class List{
      * Instantiate the instance using the passed json values to set the properties values
      */
     init(fromJson json: JSON!){
-        if json == nil{
+        if json == .null {
             return
         }
         define = json["define"].stringValue

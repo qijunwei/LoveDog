@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C20C6BC9148867A2BB557C1 /* Pods_LoveDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F867E9D4A2D784DEEA583BD /* Pods_LoveDog.framework */; };
 		2E4689BE1D7C054F00529E44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4689BD1D7C054F00529E44 /* AppDelegate.swift */; };
 		2E4689C01D7C054F00529E44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4689BF1D7C054F00529E44 /* ViewController.swift */; };
 		2E4689C31D7C054F00529E44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4689C11D7C054F00529E44 /* Main.storyboard */; };
@@ -218,10 +217,10 @@
 		2EF4EC391D8046EE003CD779 /* FeedsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC381D8046EE003CD779 /* FeedsCell.swift */; };
 		2EF4EC3B1D8047F6003CD779 /* FeedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */; };
 		2EF4EC631D838EBA003CD779 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4EC621D838EBA003CD779 /* PhotoViewController.swift */; };
+		D0734308DC6544D6E4899D91 /* Pods_LoveDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D79FFD6151FB003EBA5653 /* Pods_LoveDog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		08B49F9B0B570A495650E4F2 /* Pods-LoveDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveDog.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog.release.xcconfig"; sourceTree = "<group>"; };
 		2E4689BA1D7C054F00529E44 /* LoveDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4689BD1D7C054F00529E44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E4689BF1D7C054F00529E44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -438,8 +437,9 @@
 		2EF4EC381D8046EE003CD779 /* FeedsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsCell.swift; sourceTree = "<group>"; };
 		2EF4EC3A1D8047F6003CD779 /* FeedsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsModel.swift; sourceTree = "<group>"; };
 		2EF4EC621D838EBA003CD779 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		2F867E9D4A2D784DEEA583BD /* Pods_LoveDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		87B5D8266DFB1053C14C8520 /* Pods-LoveDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog.debug.xcconfig"; sourceTree = "<group>"; };
+		77A3D619016BC37110D6302E /* Pods-LoveDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog.debug.xcconfig"; sourceTree = "<group>"; };
+		919A4E914F01484DE014B04A /* Pods-LoveDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveDog.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog.release.xcconfig"; sourceTree = "<group>"; };
+		95D79FFD6151FB003EBA5653 /* Pods_LoveDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -450,7 +450,7 @@
 				2EA389691D8E73ED00F68439 /* AddressBook.framework in Frameworks */,
 				2EA389671D8E73E000F68439 /* AudioToolbox.framework in Frameworks */,
 				2EA389651D8E73AA00F68439 /* iflyMSC.framework in Frameworks */,
-				0C20C6BC9148867A2BB557C1 /* Pods_LoveDog.framework in Frameworks */,
+				D0734308DC6544D6E4899D91 /* Pods_LoveDog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,8 +463,8 @@
 				2E4689CF1D7C05D900529E44 /* Common */,
 				2E4689BC1D7C054F00529E44 /* LoveDog */,
 				2E4689BB1D7C054F00529E44 /* Products */,
-				A52E216D3EAA7EEFFE7896EB /* Pods */,
 				B5BF4C75EF01DEC1ABF71B3B /* Frameworks */,
+				8F55BE2B05B3EACC2807660A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -839,11 +839,11 @@
 			path = "圈子";
 			sourceTree = "<group>";
 		};
-		A52E216D3EAA7EEFFE7896EB /* Pods */ = {
+		8F55BE2B05B3EACC2807660A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				87B5D8266DFB1053C14C8520 /* Pods-LoveDog.debug.xcconfig */,
-				08B49F9B0B570A495650E4F2 /* Pods-LoveDog.release.xcconfig */,
+				77A3D619016BC37110D6302E /* Pods-LoveDog.debug.xcconfig */,
+				919A4E914F01484DE014B04A /* Pods-LoveDog.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -853,7 +853,7 @@
 			children = (
 				2EA389681D8E73ED00F68439 /* AddressBook.framework */,
 				2EA389661D8E73E000F68439 /* AudioToolbox.framework */,
-				2F867E9D4A2D784DEEA583BD /* Pods_LoveDog.framework */,
+				95D79FFD6151FB003EBA5653 /* Pods_LoveDog.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -865,12 +865,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E4689CC1D7C054F00529E44 /* Build configuration list for PBXNativeTarget "LoveDog" */;
 			buildPhases = (
-				105AC560E3C3F0009F6F5E3E /* [CP] Check Pods Manifest.lock */,
+				DB9F32677C00950B654B990D /* [CP] Check Pods Manifest.lock */,
 				2E4689B61D7C054F00529E44 /* Sources */,
 				2E4689B71D7C054F00529E44 /* Frameworks */,
 				2E4689B81D7C054F00529E44 /* Resources */,
-				378D37B42EF97196933427DC /* [CP] Embed Pods Frameworks */,
-				1DE492DE1B43E5604D17F62D /* [CP] Copy Pods Resources */,
+				DB9974D044BE379E263EFA3A /* [CP] Embed Pods Frameworks */,
+				F62B6A55EE39485CD4030E55 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -893,8 +893,9 @@
 				TargetAttributes = {
 					2E4689B91D7C054F00529E44 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 297RFZJENF;
+						DevelopmentTeam = MXJJEEMF3U;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1070,49 +1071,69 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		105AC560E3C3F0009F6F5E3E /* [CP] Check Pods Manifest.lock */ = {
+		DB9974D044BE379E263EFA3A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		1DE492DE1B43E5604D17F62D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		378D37B42EF97196933427DC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB9F32677C00950B654B990D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoveDog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F62B6A55EE39485CD4030E55 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog-resources.sh",
+				"${PODS_ROOT}/ShareSDK3/SDK/ShareSDK/Support/Required/ShareSDK.bundle",
+				"${PODS_ROOT}/ShareSDK3/SDK/ShareSDK/Support/Optional/ShareSDKUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoveDog/Pods-LoveDog-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1235,7 +1256,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Boliang Liu (297RFZJENF)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1286,7 +1307,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Boliang Liu (297RFZJENF)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1309,13 +1330,13 @@
 		};
 		2E4689CD1D7C054F00529E44 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87B5D8266DFB1053C14C8520 /* Pods-LoveDog.debug.xcconfig */;
+			baseConfigurationReference = 77A3D619016BC37110D6302E /* Pods-LoveDog.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Boliang Liu (297RFZJENF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Boliang Liu (297RFZJENF)";
-				DEVELOPMENT_TEAM = 297RFZJENF;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MXJJEEMF3U;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1330,10 +1351,10 @@
 				INFOPLIST_FILE = LoveDog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WQJ.LoveDog;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.WQJ.Love-Dog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ab3a70f5-2a24-472c-b6ea-a3ba11afb6e3";
-				PROVISIONING_PROFILE_SPECIFIER = LoveDog_0914;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Common/BridgerHeader.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1342,13 +1363,13 @@
 		};
 		2E4689CE1D7C054F00529E44 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08B49F9B0B570A495650E4F2 /* Pods-LoveDog.release.xcconfig */;
+			baseConfigurationReference = 919A4E914F01484DE014B04A /* Pods-LoveDog.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Boliang Liu (297RFZJENF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Boliang Liu (297RFZJENF)";
-				DEVELOPMENT_TEAM = 297RFZJENF;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MXJJEEMF3U;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1357,10 +1378,10 @@
 				INFOPLIST_FILE = LoveDog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WQJ.LoveDog;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.WQJ.Love-Dog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ab3a70f5-2a24-472c-b6ea-a3ba11afb6e3";
-				PROVISIONING_PROFILE_SPECIFIER = LoveDog_0914;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Common/BridgerHeader.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
